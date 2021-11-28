@@ -13,6 +13,7 @@
 		A75F06572753CC7D000FCF3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F06552753CC7D000FCF3E /* Main.storyboard */; };
 		A75F06592753CC7F000FCF3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75F06582753CC7F000FCF3E /* Assets.xcassets */; };
 		A75F065C2753CC7F000FCF3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F065A2753CC7F000FCF3E /* LaunchScreen.storyboard */; };
+		A75F066E2753D445000FCF3E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F066D2753D445000FCF3E /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A75F06582753CC7F000FCF3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A75F065B2753CC7F000FCF3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A75F065D2753CC7F000FCF3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A75F066D2753D445000FCF3E /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,8 @@
 		A75F064E2753CC7D000FCF3E /* mpt-noticias */ = {
 			isa = PBXGroup;
 			children = (
+				A75F064F2753CC7D000FCF3E /* AppDelegate.swift */,
+				A75F06512753CC7D000FCF3E /* SceneDelegate.swift */,
 				A75F06652753CE8E000FCF3E /* LaunchScreen */,
 				A75F066B2753D288000FCF3E /* Onboarding */,
 				A75F06642753CE7F000FCF3E /* Home */,
@@ -65,8 +69,6 @@
 				A75F06672753D086000FCF3E /* Saved */,
 				A75F06662753D083000FCF3E /* Util */,
 				A75F066C2753D314000FCF3E /* Model */,
-				A75F064F2753CC7D000FCF3E /* AppDelegate.swift */,
-				A75F06512753CC7D000FCF3E /* SceneDelegate.swift */,
 				A75F06582753CC7F000FCF3E /* Assets.xcassets */,
 				A75F065D2753CC7F000FCF3E /* Info.plist */,
 			);
@@ -93,6 +95,7 @@
 		A75F06662753D083000FCF3E /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				A75F066D2753D445000FCF3E /* Configuration.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				A75F06542753CC7D000FCF3E /* ViewController.swift in Sources */,
 				A75F06502753CC7D000FCF3E /* AppDelegate.swift in Sources */,
+				A75F066E2753D445000FCF3E /* Configuration.swift in Sources */,
 				A75F06522753CC7D000FCF3E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
