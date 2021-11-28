@@ -30,6 +30,11 @@ class TermsOfUseViewController: UIViewController {
     }
     */
 
+    @IBAction func agreeWithTerms(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
