@@ -57,6 +57,17 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJD-3G-8yz">
+                                <rect key="frame" x="138" y="382" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="YBu-YM-ylS" kind="presentation" modalPresentationStyle="overFullScreen" id="rkx-Cz-4Xu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -66,7 +77,99 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888" y="61"/>
+            <point key="canvasLocation" x="984" y="61"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="LS1-Vb-sJD">
+            <objects>
+                <viewController id="YBu-YM-ylS" customClass="TermsOfUseViewController" customModule="mpt_noticias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5QA-nv-maS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Termos de uso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaC-vk-O1O">
+                                <rect key="frame" x="132" y="76" width="150.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" name="vermelho-mpt"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E54-EH-3iE">
+                                <rect key="frame" x="15" y="137" width="384" height="661"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0s-ih-Yz0">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="836.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9A-4c-9BR">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="2739"/>
+                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque varius neque, id tincidunt lectus consequat ut. Pellentesque felis nisi, vulputate vel fermentum sagittis, mollis ut lacus. Suspendisse mollis pharetra nibh, ultricies cursus urna pulvinar eget. In ut augue consequat, ultrices odio at, tristique magna. Proin eget ante rutrum, iaculis purus accumsan, pretium enim. Phasellus a hendrerit neque, eu sagittis orci. Sed finibus ligula ac dui bibendum, vel cursus urna sodales. Cras et risus sit amet purus ornare iaculis rhoncus quis nulla. Maecenas eu risus ut elit ornare interdum. Phasellus eget tempor sem, id semper nisi. Etiam rutrum leo id risus laoreet, vitae egestas nunc pretium. Nam sapien libero, efficitur vitae felis et, semper finibus sem.
+
+Nam vitae ex vitae augue efficitur cursus. Aliquam euismod ligula et mauris malesuada fringilla. Mauris consequat condimentum mollis. Integer maximus augue eu turpis feugiat, et feugiat lacus ultricies. In bibendum, nisi ut vehicula blandit, sapien nibh mattis sapien, ut venenatis felis libero nec lectus. Sed auctor leo eget diam elementum, id efficitur massa eleifend. Vestibulum viverra nisl neque, eu mollis quam luctus vel. Proin accumsan in lorem et commodo. Vivamus suscipit suscipit gravida. Mauris non dignissim justo, et sollicitudin erat. Vivamus non bibendum neque.
+
+Phasellus bibendum felis ut laoreet finibus. Maecenas enim lectus, sodales ut enim sed, lacinia malesuada nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed tempor rhoncus finibus. Donec ac ex venenatis, consequat nibh vel, egestas dolor. Curabitur egestas massa est, quis semper ligula luctus commodo. Nam consectetur dictum quam, non pharetra eros suscipit ut. Mauris venenatis massa blandit rutrum pretium. Nam sed felis egestas, porta orci in, bibendum odio. Nullam et turpis porta, dignissim nisi ut, ornare ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean vehicula vitae ante a luctus.
+
+Quisque in molestie dui. Duis tincidunt fringilla lacinia. Morbi a mollis nibh. Sed iaculis eget orci nec pellentesque. Fusce massa urna, laoreet eget sem quis, vehicula feugiat purus. Praesent vel sem vel arcu fringilla auctor. Phasellus fermentum dictum interdum. Praesent eget congue felis. Proin tristique ullamcorper dolor, eu commodo velit sollicitudin eget. Duis viverra neque nibh, vitae placerat tortor convallis non. Duis id blandit risus. In aliquet augue et lacus suscipit, ac pulvinar sapien tempus. Proin volutpat aliquet velit. Morbi sit amet egestas est. Duis eget auctor enim.
+
+Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae fringilla elementum, nulla tellus eleifend nibh, in ultrices dui nunc ac mi. Proin turpis purus, rhoncus sed diam consequat, commodo mattis nibh. Vivamus quis dui a augue rutrum suscipit ut vitae ligula. Donec at aliquet magna. Nam iaculis euismod est at molestie. Nam aliquam finibus mauris, vitae placerat metus aliquet eget. Nunc sodales consectetur sollicitudin. Ut fermentum accumsan purus nec vehicula. Quisque vestibulum suscipit venenatis. Etiam sodales elit a eros tincidunt congue.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque varius neque, id tincidunt lectus consequat ut. Pellentesque felis nisi, vulputate vel fermentum sagittis, mollis ut lacus. Suspendisse mollis pharetra nibh, ultricies cursus urna pulvinar eget. In ut augue consequat, ultrices odio at, tristique magna. Proin eget ante rutrum, iaculis purus accumsan, pretium enim. Phasellus a hendrerit neque, eu sagittis orci. Sed finibus ligula ac dui bibendum, vel cursus urna sodales. Cras et risus sit amet purus ornare iaculis rhoncus quis nulla. Maecenas eu risus ut elit ornare interdum. Phasellus eget tempor sem, id semper nisi. Etiam rutrum leo id risus laoreet, vitae egestas nunc pretium. Nam sapien libero, efficitur vitae felis et, semper finibus sem.
+
+Nam vitae ex vitae augue efficitur cursus. Aliquam euismod ligula et mauris malesuada fringilla. Mauris consequat condimentum mollis. Integer maximus augue eu turpis feugiat, et feugiat lacus ultricies. In bibendum, nisi ut vehicula blandit, sapien nibh mattis sapien, ut venenatis felis libero nec lectus. Sed auctor leo eget diam elementum, id efficitur massa eleifend. Vestibulum viverra nisl neque, eu mollis quam luctus vel. Proin accumsan in lorem et commodo. Vivamus suscipit suscipit gravida. Mauris non dignissim justo, et sollicitudin erat. Vivamus non bibendum neque.
+
+Phasellus bibendum felis ut laoreet finibus. Maecenas enim lectus, sodales ut enim sed, lacinia malesuada nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed tempor rhoncus finibus. Donec ac ex venenatis, consequat nibh vel, egestas dolor. Curabitur egestas massa est, quis semper ligula luctus commodo. Nam consectetur dictum quam, non pharetra eros suscipit ut. Mauris venenatis massa blandit rutrum pretium. Nam sed felis egestas, porta orci in, bibendum odio. Nullam et turpis porta, dignissim nisi ut, ornare ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean vehicula vitae ante a luctus.
+
+Quisque in molestie dui. Duis tincidunt fringilla lacinia. Morbi a mollis nibh. Sed iaculis eget orci nec pellentesque. Fusce massa urna, laoreet eget sem quis, vehicula feugiat purus. Praesent vel sem vel arcu fringilla auctor. Phasellus fermentum dictum interdum. Praesent eget congue felis. Proin tristique ullamcorper dolor, eu commodo velit sollicitudin eget. Duis viverra neque nibh, vitae placerat tortor convallis non. Duis id blandit risus. In aliquet augue et lacus suscipit, ac pulvinar sapien tempus. Proin volutpat aliquet velit. Morbi sit amet egestas est. Duis eget auctor enim.
+
+Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae fringilla elementum, nulla tellus eleifend nibh, in ultrices dui nunc ac mi. Proin turpis purus, rhoncus sed diam consequat, commodo mattis nibh. Vivamus quis dui a augue rutrum suscipit ut vitae ligula. Donec at aliquet magna. Nam iaculis euismod est at molestie. Nam aliquam finibus mauris, vitae placerat metus aliquet eget. Nunc sodales consectetur sollicitudin. Ut fermentum accumsan purus nec vehicula. Quisque vestibulum suscipit venenatis. Etiam sodales elit a eros tincidunt congue.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="P9A-4c-9BR" firstAttribute="top" secondItem="Y0s-ih-Yz0" secondAttribute="top" id="2US-EZ-u8v"/>
+                                            <constraint firstAttribute="trailing" secondItem="P9A-4c-9BR" secondAttribute="trailing" id="uO3-eb-DZL"/>
+                                            <constraint firstItem="P9A-4c-9BR" firstAttribute="leading" secondItem="Y0s-ih-Yz0" secondAttribute="leading" id="wqQ-if-9UK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Y0s-ih-Yz0" firstAttribute="width" secondItem="E54-EH-3iE" secondAttribute="width" multiplier="1.07812" id="9vH-go-T7f"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y0s-ih-Yz0" secondAttribute="trailing" id="UBD-JU-BW1"/>
+                                    <constraint firstItem="Y0s-ih-Yz0" firstAttribute="height" secondItem="E54-EH-3iE" secondAttribute="height" multiplier="1.26554" id="ZYg-9M-GvN"/>
+                                    <constraint firstItem="Y0s-ih-Yz0" firstAttribute="leading" secondItem="E54-EH-3iE" secondAttribute="leading" id="iGj-E6-ebb"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y0s-ih-Yz0" secondAttribute="bottom" id="irn-eY-T2h"/>
+                                    <constraint firstItem="Y0s-ih-Yz0" firstAttribute="top" secondItem="E54-EH-3iE" secondAttribute="top" id="zxg-TL-z4s"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grg-FQ-rRs">
+                                <rect key="frame" x="172.5" y="847" width="69" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Fechar">
+                                    <color key="baseBackgroundColor" name="vermelho-mpt"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="back:" destination="YBu-YM-ylS" eventType="touchUpInside" id="srP-FS-ri8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NO4-TG-DIE"/>
+                        <color key="backgroundColor" name="background#1"/>
+                        <constraints>
+                            <constraint firstItem="E54-EH-3iE" firstAttribute="top" secondItem="XaC-vk-O1O" secondAttribute="bottom" constant="32" id="Kyg-gI-8MW"/>
+                            <constraint firstItem="NO4-TG-DIE" firstAttribute="trailing" secondItem="E54-EH-3iE" secondAttribute="trailing" constant="15" id="PoX-3X-9q4"/>
+                            <constraint firstItem="XaC-vk-O1O" firstAttribute="centerX" secondItem="5QA-nv-maS" secondAttribute="centerX" id="b9m-GE-eFp"/>
+                            <constraint firstItem="E54-EH-3iE" firstAttribute="bottom" secondItem="NO4-TG-DIE" secondAttribute="bottom" constant="-64" id="bsp-0a-Te8"/>
+                            <constraint firstItem="grg-FQ-rRs" firstAttribute="centerX" secondItem="5QA-nv-maS" secondAttribute="centerX" id="hQR-ab-3Fl"/>
+                            <constraint firstItem="E54-EH-3iE" firstAttribute="leading" secondItem="NO4-TG-DIE" secondAttribute="leading" constant="15" id="lNN-v6-ofV"/>
+                            <constraint firstItem="XaC-vk-O1O" firstAttribute="top" secondItem="NO4-TG-DIE" secondAttribute="top" constant="32" id="msJ-qu-gdQ"/>
+                            <constraint firstItem="grg-FQ-rRs" firstAttribute="bottom" secondItem="NO4-TG-DIE" secondAttribute="bottom" constant="16" id="wPe-Z0-zrd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="UoZ-nh-KYD"/>
+                    <navigationItem key="navigationItem" id="cZS-Gt-l7y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvH-Eg-7ej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752.1739130434785" y="61.607142857142854"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="J5I-8i-dnu">

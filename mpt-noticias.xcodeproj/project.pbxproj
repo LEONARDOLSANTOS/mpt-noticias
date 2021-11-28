@@ -22,6 +22,7 @@
 		A75F067A2753F7F3000FCF3E /* BancoDeImagens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F06792753F7F3000FCF3E /* BancoDeImagens.storyboard */; };
 		A75F067C2753F808000FCF3E /* Publicacoes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F067B2753F808000FCF3E /* Publicacoes.storyboard */; };
 		A75F067E2753F929000FCF3E /* Saved.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F067D2753F929000FCF3E /* Saved.storyboard */; };
+		A75F068027540570000FCF3E /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F067F27540570000FCF3E /* TermsOfUseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		A75F06792753F7F3000FCF3E /* BancoDeImagens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BancoDeImagens.storyboard; sourceTree = "<group>"; };
 		A75F067B2753F808000FCF3E /* Publicacoes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Publicacoes.storyboard; sourceTree = "<group>"; };
 		A75F067D2753F929000FCF3E /* Saved.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Saved.storyboard; sourceTree = "<group>"; };
+		A75F067F27540570000FCF3E /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				A75F06532753CC7D000FCF3E /* ViewController.swift */,
 				A75F06552753CC7D000FCF3E /* Main.storyboard */,
+				A75F067F27540570000FCF3E /* TermsOfUseViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				A75F066E2753D445000FCF3E /* Configuration.swift in Sources */,
 				A75F06522753CC7D000FCF3E /* SceneDelegate.swift in Sources */,
 				A75F06762753D658000FCF3E /* OnboardingViewController.swift in Sources */,
+				A75F068027540570000FCF3E /* TermsOfUseViewController.swift in Sources */,
 				A75F06702753D556000FCF3E /* OnBoardingSlide.swift in Sources */,
 				A75F06752753D658000FCF3E /* OnboardingCollectionViewCell.swift in Sources */,
 			);
