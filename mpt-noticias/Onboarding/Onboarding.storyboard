@@ -39,13 +39,13 @@
                                                     <rect key="frame" x="0.0" y="32" width="410" height="267.33333333333331"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo do app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyg-lD-r6X">
-                                                    <rect key="frame" x="70" y="370.33333333333331" width="270" height="60"/>
-                                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="48"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="51.333333333333343" y="370.33333333333331" width="307.66666666666663" height="57"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="49"/>
+                                                    <color key="textColor" name="vermelho-mpt"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdW-3A-IVv">
-                                                    <rect key="frame" x="8" y="462.33333333333331" width="394" height="189.66666666666669"/>
+                                                    <rect key="frame" x="8" y="459.33333333333331" width="394" height="192.66666666666669"/>
                                                     <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nisl augue, malesuada a ligula vel, aliquam sagittis tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus consequat iaculis quam, non lacinia tortor varius sed. Ut condime</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -91,13 +91,15 @@
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2Jd-UW-Egs">
                                 <rect key="frame" x="129.33333333333331" y="596.66666666666663" width="155.33333333333331" height="107.33333333333337"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="pageIndicatorTintColor" name="primary-button#5"/>
-                                <color key="currentPageIndicatorTintColor" name="primary-button#2"/>
+                                <color key="pageIndicatorTintColor" name="background#1"/>
+                                <color key="currentPageIndicatorTintColor" name="vermelho-mpt"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOZ-A4-IW0">
                                 <rect key="frame" x="292.66666666666669" y="635" width="76.666666666666686" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Próximo"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Próximo">
+                                    <color key="baseForegroundColor" name="vermelho-mpt"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="nextBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="enJ-A3-WmK"/>
                                 </connections>
@@ -105,7 +107,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coy-cj-LOT">
                                 <rect key="frame" x="64.333333333333329" y="635" width="57" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Pular"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pular">
+                                    <color key="baseForegroundColor" name="vermelho-mpt"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="prevBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6pH-mg-uLe"/>
                                 </connections>
@@ -151,11 +155,11 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="primary-button#2">
-            <color red="0.14117647058823529" green="0.59215686274509804" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="background#1">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="primary-button#5">
-            <color red="0.90588235294117647" green="0.95686274509803926" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="vermelho-mpt">
+            <color red="0.56470588235294117" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
