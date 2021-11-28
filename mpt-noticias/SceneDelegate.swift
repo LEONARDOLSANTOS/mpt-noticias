@@ -17,16 +17,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             let config = Configuration.shared
             print("ja usou o aplicativo? \(config.alreadyUsed)")
-            config.alreadyUsed = false // todo: essa linha será apagada
+            
             window = UIWindow(windowScene: winScene)
             if !config.alreadyUsed { // primeira vez no app
-                //config.alreadyUsed = true
+                config.alreadyUsed = true
                 let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
                 let initialViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewControllerID")
                 window?.rootViewController = initialViewController
                 window?.makeKeyAndVisible()
             }else{
-                let storyboard = UIStoryboard(name: "Homepage", bundle: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeID")
                 window?.rootViewController = initialViewController
                 window?.makeKeyAndVisible()
