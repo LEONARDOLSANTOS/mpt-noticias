@@ -33,8 +33,8 @@ final class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let appName = "MPT Notícias"
-        slides.append(OnboardingSlide(title: appName, description: "Obrigado por usar o MPT Notícias o seu aplicaitvo com as novidades da atuação do  Minitério público do trabalho. ", image:  "onboarding-1.png"))
-        slides.append(OnboardingSlide(title: appName, description: "No MPT NOTÍCIAS você vai ficar informado com as novidades sobre  o combate ao Trabalho escravo, sobre o combate ao trabalho infantil e todas as áreas de atuação do MPT.", image:  "onboarding-2.png"))
+        slides.append(OnboardingSlide(title: appName, description: "Obrigado por usar o MPT Notíciias o seu aplicaitvo com as novidades da atuação do  Minitério público do trabalho. ", image:  "onboarding-1.png"))
+        slides.append(OnboardingSlide(title: appName, description: "No MPT NOTÍCIAS você vai ficar informado com as novidades sobre  o combate ao Trabalho escravo, sobre o combate ao trabalho infantil e todas as areas de atuação do MPT.", image:  "onboarding-2.png"))
         slides.append(OnboardingSlide(title: appName, description: "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...", image:  "onboarding-3.png"))
     
     }
