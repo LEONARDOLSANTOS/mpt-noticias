@@ -58,13 +58,29 @@
 			children = (
 				A75F064F2753CC7D000FCF3E /* AppDelegate.swift */,
 				A75F06512753CC7D000FCF3E /* SceneDelegate.swift */,
-				A75F06532753CC7D000FCF3E /* ViewController.swift */,
-				A75F06552753CC7D000FCF3E /* Main.storyboard */,
+				A75F06652753CE8E000FCF3E /* LaunchScreen */,
+				A75F06642753CE7F000FCF3E /* Home */,
 				A75F06582753CC7F000FCF3E /* Assets.xcassets */,
-				A75F065A2753CC7F000FCF3E /* LaunchScreen.storyboard */,
 				A75F065D2753CC7F000FCF3E /* Info.plist */,
 			);
 			path = "mpt-noticias";
+			sourceTree = "<group>";
+		};
+		A75F06642753CE7F000FCF3E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A75F06532753CC7D000FCF3E /* ViewController.swift */,
+				A75F06552753CC7D000FCF3E /* Main.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A75F06652753CE8E000FCF3E /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A75F065A2753CC7F000FCF3E /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +322,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,7 +350,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
