@@ -6,17 +6,20 @@
 //
 
 import Foundation
+import UIKit
 
-class Noticias{
+class Noticia{
     var titulo: String
     var resumo: String
     var body: String
     var info: String
+    var image: UIImage
     
-    init(titulo: String, resumo: String, body: String, info: String){
+    init(titulo: String, resumo: String, body: String, info: String, image: UIImage){
         self.titulo = titulo
         self.resumo = resumo
         self.info = info
         self.body = body
+        self.image = image
     }
 }
