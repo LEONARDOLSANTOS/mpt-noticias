@@ -24,6 +24,7 @@
 		A75F067E2753F929000FCF3E /* Saved.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F067D2753F929000FCF3E /* Saved.storyboard */; };
 		A75F068027540570000FCF3E /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F067F27540570000FCF3E /* TermsOfUseViewController.swift */; };
 		A75F068A27553EF6000FCF3E /* Noticias.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F068927553EF6000FCF3E /* Noticias.swift */; };
+		A75F068C275544B2000FCF3E /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F068B275544B2000FCF3E /* NewsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A75F067D2753F929000FCF3E /* Saved.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Saved.storyboard; sourceTree = "<group>"; };
 		A75F067F27540570000FCF3E /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
 		A75F068927553EF6000FCF3E /* Noticias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noticias.swift; sourceTree = "<group>"; };
+		A75F068B275544B2000FCF3E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				A75F06532753CC7D000FCF3E /* ViewController.swift */,
 				A75F06552753CC7D000FCF3E /* Main.storyboard */,
+				A75F068B275544B2000FCF3E /* NewsTableViewCell.swift */,
 				A75F067F27540570000FCF3E /* TermsOfUseViewController.swift */,
 			);
 			path = Home;
@@ -250,6 +253,7 @@
 			files = (
 				A75F06542753CC7D000FCF3E /* ViewController.swift in Sources */,
 				A75F06502753CC7D000FCF3E /* AppDelegate.swift in Sources */,
+				A75F068C275544B2000FCF3E /* NewsTableViewCell.swift in Sources */,
 				A75F066E2753D445000FCF3E /* Configuration.swift in Sources */,
 				A75F06522753CC7D000FCF3E /* SceneDelegate.swift in Sources */,
 				A75F06762753D658000FCF3E /* OnboardingViewController.swift in Sources */,

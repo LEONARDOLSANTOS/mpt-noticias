@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var tvNews: UITableView!
     var news: [Noticias] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,17 +25,28 @@ class ViewController: UIViewController {
             self.present(vc, animated: true, completion: nil)
         }
         
+        news = getAllNews()
+        
+    }
+    
+    func getAllNews() -> [Noticias]{
+        var fakenews: [Noticias] = []
+        fakenews.append(Noticias(titulo: "titulo 1", resumo: "o resumo da noticias", body: "aqiu vai o <strong>html</strong> ", info: "feito ontem - tarde da noite"))
+        fakenews.append(Noticias(titulo: "titulo maior", resumo: "o resumo da noticias", body: "aqiu vai o <strong>html</strong> ", info: "feito hoje - depois do almoço"))
+        return fakenews
     }
 
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return news.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tvNews.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tvNews.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
+        
+        cell.lbTitulo?.text = news[indexPath.row].titulo
         //cell.textLabel?.text = news[indexPath.row]
         return cell
     }
