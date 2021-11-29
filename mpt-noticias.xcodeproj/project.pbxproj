@@ -25,6 +25,7 @@
 		A75F068027540570000FCF3E /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F067F27540570000FCF3E /* TermsOfUseViewController.swift */; };
 		A75F068A27553EF6000FCF3E /* Noticia.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F068927553EF6000FCF3E /* Noticia.swift */; };
 		A75F068C275544B2000FCF3E /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F068B275544B2000FCF3E /* NewsTableViewCell.swift */; };
+		A7B1F69A27558539008FA773 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B1F69927558539008FA773 /* NewsDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		A75F067F27540570000FCF3E /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
 		A75F068927553EF6000FCF3E /* Noticia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noticia.swift; sourceTree = "<group>"; };
 		A75F068B275544B2000FCF3E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		A7B1F69927558539008FA773 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				A75F06532753CC7D000FCF3E /* ViewController.swift */,
 				A75F06552753CC7D000FCF3E /* Main.storyboard */,
+				A7B1F69927558539008FA773 /* NewsDetailViewController.swift */,
 				A75F068B275544B2000FCF3E /* NewsTableViewCell.swift */,
 				A75F067F27540570000FCF3E /* TermsOfUseViewController.swift */,
 			);
@@ -257,6 +260,7 @@
 				A75F066E2753D445000FCF3E /* Configuration.swift in Sources */,
 				A75F06522753CC7D000FCF3E /* SceneDelegate.swift in Sources */,
 				A75F06762753D658000FCF3E /* OnboardingViewController.swift in Sources */,
+				A7B1F69A27558539008FA773 /* NewsDetailViewController.swift in Sources */,
 				A75F068027540570000FCF3E /* TermsOfUseViewController.swift in Sources */,
 				A75F06702753D556000FCF3E /* OnBoardingSlide.swift in Sources */,
 				A75F068A27553EF6000FCF3E /* Noticia.swift in Sources */,

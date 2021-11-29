@@ -49,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="-487" y="530"/>
         </scene>
-        <!--Home-->
+        <!--View Controller-->
         <scene sceneID="qfa-OM-G1H">
             <objects>
                 <viewController id="jQa-ax-lwp" customClass="ViewController" customModule="mpt_noticias" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,10 +58,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-MQ-dBv">
-                                <rect key="frame" x="0.0" y="203" width="414" height="610"/>
+                                <rect key="frame" x="0.0" y="247" width="414" height="566"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="300" id="uDL-so-xGx" customClass="NewsTableViewCell" customModule="mpt_noticias" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="300" id="uDL-so-xGx" customClass="NewsTableViewCell" customModule="mpt_noticias" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uDL-so-xGx" id="Nal-BN-LmG">
@@ -111,6 +111,7 @@
                                             <outlet property="lbDescricao" destination="6Es-Jr-aEk" id="wzS-aY-L5v"/>
                                             <outlet property="lbInfo" destination="6rT-rl-EMo" id="YjI-Db-Wle"/>
                                             <outlet property="lbTitulo" destination="GyF-eI-eEY" id="h8D-lZ-FCt"/>
+                                            <segue destination="J2w-s6-rmg" kind="show" id="Pic-7C-Gct"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -120,16 +121,16 @@
                                 </connections>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-header" translatesAutoresizingMaskIntoConstraints="NO" id="0QP-ls-1YX">
-                                <rect key="frame" x="16" y="60" width="267" height="38"/>
+                                <rect key="frame" x="16" y="104" width="267" height="38"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Busca" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="dZW-un-csx">
-                                <rect key="frame" x="16" y="114" width="382" height="34"/>
+                                <rect key="frame" x="16" y="158" width="382" height="34"/>
                                 <color key="backgroundColor" name="background#1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ultímas Notçias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5P-ie-2GM">
-                                <rect key="frame" x="16" y="164" width="143" height="23"/>
+                                <rect key="frame" x="16" y="208" width="143" height="23"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" name="foreground#2"/>
                                 <nil key="highlightedColor"/>
@@ -151,14 +152,57 @@
                             <constraint firstItem="M5P-ie-2GM" firstAttribute="top" secondItem="dZW-un-csx" secondAttribute="bottom" constant="16" id="xvV-ZT-Src"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="lde-EX-2IW"/>
+                    <navigationItem key="navigationItem" id="FVC-WI-W3C"/>
                     <connections>
                         <outlet property="tvNews" destination="x8J-MQ-dBv" id="cCk-BG-hEI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9C6-kM-h7D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908.69565217391312" y="60.9375"/>
+            <point key="canvasLocation" x="1818.840579710145" y="60.9375"/>
+        </scene>
+        <!--News Detail View Controller-->
+        <scene sceneID="ZOO-C5-DaT">
+            <objects>
+                <viewController id="J2w-s6-rmg" customClass="NewsDetailViewController" customModule="mpt_noticias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zaq-3p-uuD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="news1.png" translatesAutoresizingMaskIntoConstraints="NO" id="vnt-fj-Z0N">
+                                <rect key="frame" x="61" y="149" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qq-V7-6Vb">
+                                <rect key="frame" x="61" y="416" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5N-iE-Uhs">
+                                <rect key="frame" x="61" y="489" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgO-m4-YcW">
+                                <rect key="frame" x="61" y="334" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DBK-n5-jo1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zew-OR-ZHq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dex-XE-ZoQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2592" y="64"/>
         </scene>
         <!--Item-->
         <scene sceneID="LS1-Vb-sJD">
@@ -352,7 +396,7 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="jQa-ax-lwp" kind="relationship" relationship="viewControllers" id="isG-Be-zk8"/>
+                        <segue destination="RY6-eQ-YNH" kind="relationship" relationship="viewControllers" id="isG-Be-zk8"/>
                         <segue destination="xpS-3z-RNN" kind="relationship" relationship="viewControllers" id="HHc-9D-vFG"/>
                         <segue destination="TcL-hS-aUt" kind="relationship" relationship="viewControllers" id="X4X-YR-akr"/>
                         <segue destination="zCy-FI-U2a" kind="relationship" relationship="viewControllers" id="c7l-yv-10j"/>
@@ -363,10 +407,30 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="60.9375"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="Gq7-sx-z6K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RY6-eQ-YNH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="lde-EX-2IW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rks-E4-4cf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jQa-ax-lwp" kind="relationship" relationship="rootViewController" id="9t0-1P-YPw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDe-eJ-SHO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="60.9375"/>
+        </scene>
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="logo-header" width="267" height="38"/>
+        <image name="news1.png" width="375" height="181"/>
         <namedColor name="background#1">
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

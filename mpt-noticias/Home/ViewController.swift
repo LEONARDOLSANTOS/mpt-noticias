@@ -29,6 +29,12 @@ class ViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! NewsDetailViewController
+        let noticia = news[tvNews.indexPathForSelectedRow!.row]
+        vc.new = noticia
+    }
+    
     func getAllNews() -> [Noticia]{
         var fakenews: [Noticia] = []
         fakenews.append(Noticia(titulo: "Eternit e Sama são obrigadas a realizar exames médicos de controle em ex-empregados", resumo: "Trabalhadores tiveram contato com o amianto, que pode causar doenças respiratórias graves e até câncer", body: "aqiu vai o <strong>html</strong> ", info: "Meio Ambiente do Trabalho - Ontem", image: UIImage(named: "news2.jpeg")!) )
@@ -53,7 +59,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tvNews.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
         
-        cell.setNew(with: news[indexPath.row])
+        cell.Prepare(with: news[indexPath.row])
        
         return cell
     }
