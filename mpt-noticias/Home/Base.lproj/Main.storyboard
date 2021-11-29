@@ -152,7 +152,9 @@
                             <constraint firstItem="M5P-ie-2GM" firstAttribute="top" secondItem="dZW-un-csx" secondAttribute="bottom" constant="16" id="xvV-ZT-Src"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FVC-WI-W3C"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="FVC-WI-W3C">
+                        <barButtonItem key="backBarButtonItem" title=" " id="7se-Yq-9QN"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tvNews" destination="x8J-MQ-dBv" id="cCk-BG-hEI"/>
                     </connections>
@@ -161,7 +163,7 @@
             </objects>
             <point key="canvasLocation" x="1818.840579710145" y="60.9375"/>
         </scene>
-        <!--News Detail View Controller-->
+        <!--MPT Notícias-->
         <scene sceneID="ZOO-C5-DaT">
             <objects>
                 <viewController id="J2w-s6-rmg" customClass="NewsDetailViewController" customModule="mpt_noticias" customModuleProvider="target" sceneMemberID="viewController">
@@ -169,36 +171,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="news1.png" translatesAutoresizingMaskIntoConstraints="NO" id="vnt-fj-Z0N">
-                                <rect key="frame" x="61" y="149" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vnt-fj-Z0N">
+                                <rect key="frame" x="0.0" y="96" width="414" height="221"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vnt-fj-Z0N" secondAttribute="height" multiplier="15:8" id="HBB-EN-vkN"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qq-V7-6Vb">
-                                <rect key="frame" x="61" y="416" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qq-V7-6Vb">
+                                <rect key="frame" x="16" y="360" width="382" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5N-iE-Uhs">
+                                <rect key="frame" x="16" y="394" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5N-iE-Uhs">
-                                <rect key="frame" x="61" y="489" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVW-Ti-1en">
+                                <rect key="frame" x="16" y="430.5" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgO-m4-YcW">
-                                <rect key="frame" x="61" y="334" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgO-m4-YcW">
+                                <rect key="frame" x="16" y="329" width="382" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" name="foreground#2"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DBK-n5-jo1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b5N-iE-Uhs" firstAttribute="leading" secondItem="DBK-n5-jo1" secondAttribute="leading" constant="16" id="6kf-Vn-jF7"/>
+                            <constraint firstItem="4qq-V7-6Vb" firstAttribute="leading" secondItem="DBK-n5-jo1" secondAttribute="leading" constant="16" id="ERy-xB-Sc5"/>
+                            <constraint firstItem="IgO-m4-YcW" firstAttribute="leading" secondItem="DBK-n5-jo1" secondAttribute="leading" constant="16" id="Fhy-ed-KKN"/>
+                            <constraint firstItem="DBK-n5-jo1" firstAttribute="trailing" secondItem="vnt-fj-Z0N" secondAttribute="trailing" id="LCb-DM-59t"/>
+                            <constraint firstItem="rVW-Ti-1en" firstAttribute="leading" secondItem="DBK-n5-jo1" secondAttribute="leading" constant="16" id="Mh3-rH-Yav"/>
+                            <constraint firstItem="DBK-n5-jo1" firstAttribute="trailing" secondItem="4qq-V7-6Vb" secondAttribute="trailing" constant="16" id="PKN-qS-QlS"/>
+                            <constraint firstItem="vnt-fj-Z0N" firstAttribute="leading" secondItem="DBK-n5-jo1" secondAttribute="leading" id="SGI-wh-56S"/>
+                            <constraint firstItem="vnt-fj-Z0N" firstAttribute="top" secondItem="DBK-n5-jo1" secondAttribute="top" constant="8" id="SLp-5Z-Wbz"/>
+                            <constraint firstItem="b5N-iE-Uhs" firstAttribute="top" secondItem="4qq-V7-6Vb" secondAttribute="bottom" constant="16" id="TUB-z5-Tpx"/>
+                            <constraint firstItem="rVW-Ti-1en" firstAttribute="top" secondItem="b5N-iE-Uhs" secondAttribute="bottom" constant="16" id="WTl-mF-FGM"/>
+                            <constraint firstItem="DBK-n5-jo1" firstAttribute="trailing" secondItem="rVW-Ti-1en" secondAttribute="trailing" constant="16" id="aHP-rd-74T"/>
+                            <constraint firstItem="4qq-V7-6Vb" firstAttribute="top" secondItem="IgO-m4-YcW" secondAttribute="bottom" constant="8" id="eg9-qp-yes"/>
+                            <constraint firstItem="DBK-n5-jo1" firstAttribute="trailing" secondItem="IgO-m4-YcW" secondAttribute="trailing" constant="16" id="ofB-ml-Ajk"/>
+                            <constraint firstItem="DBK-n5-jo1" firstAttribute="trailing" secondItem="b5N-iE-Uhs" secondAttribute="trailing" constant="16" id="trz-Oa-FlW"/>
+                            <constraint firstItem="IgO-m4-YcW" firstAttribute="top" secondItem="vnt-fj-Z0N" secondAttribute="bottom" constant="12" id="wOf-C7-ybb"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Zew-OR-ZHq"/>
+                    <navigationItem key="navigationItem" title="MPT Notícias" largeTitleDisplayMode="always" id="Zew-OR-ZHq">
+                        <barButtonItem key="backBarButtonItem" title=" " id="0z8-58-9Wc"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="bookmark" catalog="system" id="bPd-qX-agM">
+                                <color key="tintColor" name="vermelho-mpt"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="share" id="cf4-UD-PNz"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ivNew" destination="vnt-fj-Z0N" id="khr-JE-4Ua"/>
+                        <outlet property="lbBody" destination="rVW-Ti-1en" id="3wa-jY-fjR"/>
+                        <outlet property="lbInfo" destination="4qq-V7-6Vb" id="jnS-FA-R4V"/>
+                        <outlet property="lbResume" destination="b5N-iE-Uhs" id="lzN-O9-CzU"/>
+                        <outlet property="lbTitle" destination="IgO-m4-YcW" id="kQK-Oj-Enz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dex-XE-ZoQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -294,7 +333,7 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvH-Eg-7ej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3055" y="-643"/>
+            <point key="canvasLocation" x="2591" y="-644"/>
         </scene>
         <!--Terms Of Use View Controller-->
         <scene sceneID="jRe-Oy-Eum">
@@ -375,7 +414,7 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBX-SN-mOB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2007" y="-643"/>
+            <point key="canvasLocation" x="1819" y="-644"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="J5I-8i-dnu">
@@ -416,6 +455,13 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rks-E4-4cf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="vermelho-mpt"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="vermelho-mpt"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="vermelho-mpt"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -428,9 +474,10 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
         </scene>
     </scenes>
     <resources>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="logo-header" width="267" height="38"/>
-        <image name="news1.png" width="375" height="181"/>
+        <image name="share" width="24" height="24"/>
         <namedColor name="background#1">
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
