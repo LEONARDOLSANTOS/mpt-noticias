@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var tvNews: UITableView!
+    var news: [Noticias] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,6 +26,19 @@ class ViewController: UIViewController {
         
     }
 
-
 }
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tvNews.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        //cell.textLabel?.text = news[indexPath.row]
+        return cell
+    }
+    
+    
+    
+}
