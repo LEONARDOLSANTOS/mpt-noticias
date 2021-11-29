@@ -31,8 +31,8 @@ class ViewController: UIViewController {
     
     func getAllNews() -> [Noticias]{
         var fakenews: [Noticias] = []
-        fakenews.append(Noticias(titulo: "titulo 1", resumo: "o resumo da noticias", body: "aqiu vai o <strong>html</strong> ", info: "feito ontem - tarde da noite"))
-        fakenews.append(Noticias(titulo: "titulo maior", resumo: "o resumo da noticias", body: "aqiu vai o <strong>html</strong> ", info: "feito hoje - depois do almoço"))
+        fakenews.append(Noticias(titulo: "Eternit e Sama são obrigadas a realizar exames médicos de controle em ex-empregados", resumo: "Trabalhadores tiveram contato com o amianto, que pode causar doenças respiratórias graves e até câncer", body: "aqiu vai o <strong>html</strong> ", info: "Meio Ambiente do Trabalho - Ontem"))
+        fakenews.append(Noticias(titulo: "Trabalho em frigoríficos: audiências públicas no PR e SC discutem revisão da NR 36", resumo: "Eliminação de pausas ameaça segurança de mais de 550 mil empregados do setor no Brasil", body: "aqiu vai o <strong>html</strong> ", info: "Trabalho escravo - Hoje"))
         return fakenews
     }
 
@@ -46,8 +46,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tvNews.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
         
-        cell.lbTitulo?.text = news[indexPath.row].titulo
-        //cell.textLabel?.text = news[indexPath.row]
+        cell.setNew(with: news[indexPath.row])
+       
         return cell
     }
     

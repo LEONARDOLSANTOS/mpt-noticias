@@ -10,6 +10,13 @@ import UIKit
 class NewsTableViewCell: UITableViewCell {
 
     @IBOutlet var lbTitulo: UILabel!
+    @IBOutlet var lbInfo: UILabel!
+    @IBOutlet var lbDescricao: UILabel!
     
-
+    func setNew(with new: Noticias){
+        self.lbTitulo.text = new.titulo
+        self.lbInfo.text = new.info
+        self.lbDescricao.text = new.resumo
+    }
+    
 }

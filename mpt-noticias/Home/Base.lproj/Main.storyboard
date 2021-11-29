@@ -58,26 +58,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-MQ-dBv">
-                                <rect key="frame" x="0.0" y="201" width="414" height="612"/>
+                                <rect key="frame" x="0.0" y="203" width="414" height="610"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="uDL-so-xGx" customClass="NewsTableViewCell" customModule="mpt_noticias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="uDL-so-xGx" customClass="NewsTableViewCell" customModule="mpt_noticias" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uDL-so-xGx" id="Nal-BN-LmG">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyF-eI-eEY">
-                                                    <rect key="frame" x="57" y="11" width="178" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyF-eI-eEY">
+                                                    <rect key="frame" x="20" y="17" width="374" height="29.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" name="vermelho-mpt"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6rT-rl-EMo">
+                                                    <rect key="frame" x="20" y="50.5" width="374" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Descricao" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Es-Jr-aEk">
+                                                    <rect key="frame" x="20" y="76.5" width="394" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6Es-Jr-aEk" firstAttribute="bottom" secondItem="Nal-BN-LmG" secondAttribute="bottomMargin" constant="8" id="BM1-Es-75K"/>
+                                                <constraint firstItem="GyF-eI-eEY" firstAttribute="top" secondItem="Nal-BN-LmG" secondAttribute="topMargin" constant="6" id="CPH-gh-pml"/>
+                                                <constraint firstItem="GyF-eI-eEY" firstAttribute="leading" secondItem="Nal-BN-LmG" secondAttribute="leadingMargin" id="Cv9-6k-a8R"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6rT-rl-EMo" secondAttribute="trailing" id="D3y-O2-kxv"/>
+                                                <constraint firstItem="6Es-Jr-aEk" firstAttribute="top" secondItem="6rT-rl-EMo" secondAttribute="bottom" constant="8" id="NiT-W2-48O"/>
+                                                <constraint firstAttribute="trailing" secondItem="6Es-Jr-aEk" secondAttribute="trailing" id="VRZ-nm-NNL"/>
+                                                <constraint firstItem="6rT-rl-EMo" firstAttribute="top" secondItem="GyF-eI-eEY" secondAttribute="bottom" constant="4" id="YtE-TE-VAL"/>
+                                                <constraint firstItem="6Es-Jr-aEk" firstAttribute="leading" secondItem="Nal-BN-LmG" secondAttribute="leadingMargin" id="bw7-r9-edH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GyF-eI-eEY" secondAttribute="trailing" id="fzn-4n-KTL"/>
+                                                <constraint firstItem="6rT-rl-EMo" firstAttribute="leading" secondItem="Nal-BN-LmG" secondAttribute="leadingMargin" id="vh3-Ai-jlL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="lbDescricao" destination="6Es-Jr-aEk" id="wzS-aY-L5v"/>
+                                            <outlet property="lbInfo" destination="6rT-rl-EMo" id="YjI-Db-Wle"/>
                                             <outlet property="lbTitulo" destination="GyF-eI-eEY" id="h8D-lZ-FCt"/>
                                         </connections>
                                     </tableViewCell>
@@ -97,8 +122,8 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ultímas Notçias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5P-ie-2GM">
-                                <rect key="frame" x="16" y="164" width="128.5" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <rect key="frame" x="16" y="164" width="143" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" name="foreground#2"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -321,10 +346,10 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
                     </tabBar>
                     <connections>
                         <segue destination="jQa-ax-lwp" kind="relationship" relationship="viewControllers" id="isG-Be-zk8"/>
-                        <segue destination="cUl-xf-phv" kind="relationship" relationship="viewControllers" id="kX2-Wv-ZSB"/>
+                        <segue destination="xpS-3z-RNN" kind="relationship" relationship="viewControllers" id="HHc-9D-vFG"/>
                         <segue destination="TcL-hS-aUt" kind="relationship" relationship="viewControllers" id="X4X-YR-akr"/>
                         <segue destination="zCy-FI-U2a" kind="relationship" relationship="viewControllers" id="c7l-yv-10j"/>
-                        <segue destination="xpS-3z-RNN" kind="relationship" relationship="viewControllers" id="HHc-9D-vFG"/>
+                        <segue destination="cUl-xf-phv" kind="relationship" relationship="viewControllers" id="kX2-Wv-ZSB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6P4-qU-ipN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
