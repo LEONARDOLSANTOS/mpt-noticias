@@ -23,6 +23,7 @@
 		A75F067C2753F808000FCF3E /* Publicacoes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F067B2753F808000FCF3E /* Publicacoes.storyboard */; };
 		A75F067E2753F929000FCF3E /* Saved.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F067D2753F929000FCF3E /* Saved.storyboard */; };
 		A75F068027540570000FCF3E /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F067F27540570000FCF3E /* TermsOfUseViewController.swift */; };
+		A75F0688275524B9000FCF3E /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F0687275524B9000FCF3E /* NewsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		A75F067B2753F808000FCF3E /* Publicacoes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Publicacoes.storyboard; sourceTree = "<group>"; };
 		A75F067D2753F929000FCF3E /* Saved.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Saved.storyboard; sourceTree = "<group>"; };
 		A75F067F27540570000FCF3E /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
+		A75F0687275524B9000FCF3E /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				A75F06532753CC7D000FCF3E /* ViewController.swift */,
 				A75F06552753CC7D000FCF3E /* Main.storyboard */,
 				A75F067F27540570000FCF3E /* TermsOfUseViewController.swift */,
+				A75F0687275524B9000FCF3E /* NewsTableViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				A75F068027540570000FCF3E /* TermsOfUseViewController.swift in Sources */,
 				A75F06702753D556000FCF3E /* OnBoardingSlide.swift in Sources */,
 				A75F06752753D658000FCF3E /* OnboardingCollectionViewCell.swift in Sources */,
+				A75F0688275524B9000FCF3E /* NewsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

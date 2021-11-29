@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -51,22 +50,33 @@
             <point key="canvasLocation" x="-487" y="530"/>
         </scene>
         <!--Home-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="GUi-a8-QDn">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mpt_noticias" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="I6P-TK-f0d" customClass="NewsTableViewController" customModule="mpt_noticias" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="0J5-vT-Ian">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="eE0-Ph-LnS">
-                        <imageReference key="image" image="house" catalog="system" symbolScale="default"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CN9-qR-bmA">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CN9-qR-bmA" id="vYn-5P-7d9">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="I6P-TK-f0d" id="ItJ-3g-UML"/>
+                            <outlet property="delegate" destination="I6P-TK-f0d" id="cFe-SY-vNr"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="4XN-vs-pQr"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ok-RL-YMc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="61"/>
+            <point key="canvasLocation" x="946" y="61"/>
         </scene>
         <!--Item-->
         <scene sceneID="LS1-Vb-sJD">
@@ -90,7 +100,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9A-4c-9BR">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="2739"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque varius neque, id tincidunt lectus consequat ut. Pellentesque felis nisi, vulputate vel fermentum sagittis, mollis ut lacus. Suspendisse mollis pharetra nibh, ultricies cursus urna pulvinar eget. In ut augue consequat, ultrices odio at, tristique magna. Proin eget ante rutrum, iaculis purus accumsan, pretium enim. Phasellus a hendrerit neque, eu sagittis orci. Sed finibus ligula ac dui bibendum, vel cursus urna sodales. Cras et risus sit amet purus ornare iaculis rhoncus quis nulla. Maecenas eu risus ut elit ornare interdum. Phasellus eget tempor sem, id semper nisi. Etiam rutrum leo id risus laoreet, vitae egestas nunc pretium. Nam sapien libero, efficitur vitae felis et, semper finibus sem.
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque varius neque, id tincidunt lectus consequat ut. Pellentesque felis nisi, vulputate vel fermentum sagittis, mollis ut lacus. Suspendisse mollis pharetra nibh, ultricies cursus urna pulvinar eget. In ut augue consequat, ultrices odio at, tristique magna. Proin eget ante rutrum, iaculis purus accumsan, pretium enim. Phasellus a hendrerit neque, eu sagittis orci. Sed finibus ligula ac dui bibendum, vel cursus urna sodales. Cras et risus sit amet purus ornare iaculis rhoncus quis nulla. Maecenas eu risus ut elit ornare interdum. Phasellus eget tempor sem, id semper nisi. Etiam rutrum leo id risus laoreet, vitae egestas nunc pretium. Nam sapien libero, efficitur vitae felis et, semper finibus sem.
 
 Nam vitae ex vitae augue efficitur cursus. Aliquam euismod ligula et mauris malesuada fringilla. Mauris consequat condimentum mollis. Integer maximus augue eu turpis feugiat, et feugiat lacus ultricies. In bibendum, nisi ut vehicula blandit, sapien nibh mattis sapien, ut venenatis felis libero nec lectus. Sed auctor leo eget diam elementum, id efficitur massa eleifend. Vestibulum viverra nisl neque, eu mollis quam luctus vel. Proin accumsan in lorem et commodo. Vivamus suscipit suscipit gravida. Mauris non dignissim justo, et sollicitudin erat. Vivamus non bibendum neque.
 
@@ -106,7 +116,7 @@ Phasellus bibendum felis ut laoreet finibus. Maecenas enim lectus, sodales ut en
 
 Quisque in molestie dui. Duis tincidunt fringilla lacinia. Morbi a mollis nibh. Sed iaculis eget orci nec pellentesque. Fusce massa urna, laoreet eget sem quis, vehicula feugiat purus. Praesent vel sem vel arcu fringilla auctor. Phasellus fermentum dictum interdum. Praesent eget congue felis. Proin tristique ullamcorper dolor, eu commodo velit sollicitudin eget. Duis viverra neque nibh, vitae placerat tortor convallis non. Duis id blandit risus. In aliquet augue et lacus suscipit, ac pulvinar sapien tempus. Proin volutpat aliquet velit. Morbi sit amet egestas est. Duis eget auctor enim.
 
-Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae fringilla elementum, nulla tellus eleifend nibh, in ultrices dui nunc ac mi. Proin turpis purus, rhoncus sed diam consequat, commodo mattis nibh. Vivamus quis dui a augue rutrum suscipit ut vitae ligula. Donec at aliquet magna. Nam iaculis euismod est at molestie. Nam aliquam finibus mauris, vitae placerat metus aliquet eget. Nunc sodales consectetur sollicitudin. Ut fermentum accumsan purus nec vehicula. Quisque vestibulum suscipit venenatis. Etiam sodales elit a eros tincidunt congue.</mutableString>
+Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae fringilla elementum, nulla tellus eleifend nibh, in ultrices dui nunc ac mi. Proin turpis purus, rhoncus sed diam consequat, commodo mattis nibh. Vivamus quis dui a augue rutrum suscipit ut vitae ligula. Donec at aliquet magna. Nam iaculis euismod est at molestie. Nam aliquam finibus mauris, vitae placerat metus aliquet eget. Nunc sodales consectetur sollicitudin. Ut fermentum accumsan purus nec vehicula. Quisque vestibulum suscipit venenatis. Etiam sodales elit a eros tincidunt congue.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -158,7 +168,7 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvH-Eg-7ej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3093" y="61"/>
+            <point key="canvasLocation" x="3055" y="-643"/>
         </scene>
         <!--Terms Of Use View Controller-->
         <scene sceneID="jRe-Oy-Eum">
@@ -239,7 +249,7 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBX-SN-mOB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2044.9275362318842" y="60.9375"/>
+            <point key="canvasLocation" x="2007" y="-643"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="J5I-8i-dnu">
@@ -247,6 +257,7 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
                 <tabBarController storyboardIdentifier="HomeID" automaticallyAdjustsScrollViewInsets="NO" id="R2A-0W-7WF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iCh-UT-Ake">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="background#1"/>
                         <userDefinedRuntimeAttributes>
@@ -259,7 +270,7 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="FZZ-CN-TFO"/>
+                        <segue destination="I6P-TK-f0d" kind="relationship" relationship="viewControllers" id="6rx-ch-vIU"/>
                         <segue destination="TcL-hS-aUt" kind="relationship" relationship="viewControllers" id="X4X-YR-akr"/>
                         <segue destination="zCy-FI-U2a" kind="relationship" relationship="viewControllers" id="c7l-yv-10j"/>
                         <segue destination="xpS-3z-RNN" kind="relationship" relationship="viewControllers" id="HHc-9D-vFG"/>
@@ -274,13 +285,13 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
         <namedColor name="background#1">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="foreground#1">
             <color red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="vermelho-mpt">
-            <color red="0.56470588235294117" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.56499999761581421" green="0.15700000524520874" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
