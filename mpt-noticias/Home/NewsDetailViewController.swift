@@ -24,6 +24,13 @@ class NewsDetailViewController: UIViewController {
         config()
     }
     
+    @IBAction func shareNews(_ sender: Any) {
+        
+        let items = [new.titulo]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(ac, animated: true)
+        
+    }
     func config(){
         lbTitle.text = new.titulo
         lbInfo.text = new.info
