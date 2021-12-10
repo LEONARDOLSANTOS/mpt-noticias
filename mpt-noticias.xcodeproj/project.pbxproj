@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25DFAADE276181D60088EEC3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25DFAADD276181D60088EEC3 /* Login.storyboard */; };
 		A75F06502753CC7D000FCF3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F064F2753CC7D000FCF3E /* AppDelegate.swift */; };
 		A75F06522753CC7D000FCF3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F06512753CC7D000FCF3E /* SceneDelegate.swift */; };
 		A75F06542753CC7D000FCF3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F06532753CC7D000FCF3E /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25DFAADD276181D60088EEC3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A75F064C2753CC7D000FCF3E /* mpt-noticias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mpt-noticias.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F064F2753CC7D000FCF3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75F06512753CC7D000FCF3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25DFAADC276180AD0088EEC3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				25DFAADD276181D60088EEC3 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		A75F06432753CC7D000FCF3E = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +96,7 @@
 				A75F06512753CC7D000FCF3E /* SceneDelegate.swift */,
 				A75F06652753CE8E000FCF3E /* LaunchScreen */,
 				A75F066B2753D288000FCF3E /* Onboarding */,
+				25DFAADC276180AD0088EEC3 /* Login */,
 				A75F06642753CE7F000FCF3E /* Home */,
 				A75F066A2753D285000FCF3E /* Videos */,
 				A75F06692753D08D000FCF3E /* BancoDeImagens */,
@@ -244,6 +255,7 @@
 				A75F06782753F7CC000FCF3E /* Videos.storyboard in Resources */,
 				A75F06742753D658000FCF3E /* Onboarding.storyboard in Resources */,
 				A75F067C2753F808000FCF3E /* Publicacoes.storyboard in Resources */,
+				25DFAADE276181D60088EEC3 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -396,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -413,12 +425,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6R98N4JJF2;
+				DEVELOPMENT_TEAM = 489ZVWUGPK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mpt-noticias/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -441,12 +453,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6R98N4JJF2;
+				DEVELOPMENT_TEAM = 489ZVWUGPK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mpt-noticias/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
