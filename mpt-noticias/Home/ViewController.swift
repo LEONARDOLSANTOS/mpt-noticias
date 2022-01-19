@@ -22,6 +22,14 @@ class ViewController: UIViewController {
                     fatalError("Dont find view controller of terms of use")
             }
             vc.modalPresentationStyle = .fullScreen
+            
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = CATransitionType.push
+            transition.subtype = CATransitionSubtype.fromBottom
+            transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+            vc.view.window?.layer.add(transition, forKey: kCATransition)
+            
             self.present(vc, animated: true, completion: nil)
         }
         

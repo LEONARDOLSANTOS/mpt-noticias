@@ -29,6 +29,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeID")
+                
+                
+                // para testar
+//                let storyboard = UIStoryboard(name: "Login", bundle: nil)
+//                let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginId")
                 window?.rootViewController = initialViewController
                 window?.makeKeyAndVisible()
             }
