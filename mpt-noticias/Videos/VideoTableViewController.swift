@@ -13,15 +13,30 @@ class VideoTableViewController: UIViewController {
 
     // MARK: - Outlets
     
-    @IBOutlet weak var player: VideoPlayer!
+    @IBOutlet weak var playerView: UIView!
     @IBOutlet weak var lbVideoTitle: UILabel!
     @IBOutlet weak var lbVideoTime: UILabel!
     @IBOutlet weak var tvVideoTable: UITableView!
     
-    // MARK: - Constants and Variables
+    
+    
+    //MARK: - Player Outlets
+    
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var btVolume: UIButton!
+    @IBOutlet weak var btBackforward: UIButton!
+    @IBOutlet weak var btPlay: UIButton!
+    @IBOutlet weak var btFastforward: UIButton!
+    @IBOutlet weak var btFullScreen: UIButton!
+    
+
+    
+        // MARK: - Constants and Variables
     
     let reusedCellIdentifier = "videoCell"
- //   var player: AVPlayer?
+    var originalVideoPlayerBounds : CGRect?
+    var videoPlayer: AVPlayer = AVPlayer()
+    var isPlaying: Bool = false
    
 //    let playerItems = [
 //        PlayerItem(title: "Driving a Cycle experience.", url: "https://content.jwplatform.com/manifests/yp34SRmf.m3u8", thumbnail: "2"),
@@ -35,10 +50,17 @@ class VideoTableViewController: UIViewController {
         //iniciatePlayer()
         //initial()
         
+        
+        
         tvVideoTable.restorationIdentifier = reusedCellIdentifier
         tvVideoTable.delegate = self
         tvVideoTable.dataSource = self
         tvVideoTable.tableHeaderView = UIView()
+        
+        fetchVideos { data in
+            dump(data)
+            
+        }
 //        vid()
         // Do any additional setup after loading the view.
     }
@@ -58,12 +80,148 @@ class VideoTableViewController: UIViewController {
 //        player?.pause()
     }
     
+//MARK: - Observer Method
     
-    internal func vid(){
-        let  urlString = "https://content.jwplatform.com/manifests/yp34SRmf.m3u8"
-        player.playVideoWith(URL: urlString)
+    override class func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "timeControlStatus",
+            let change = change,
+            let newValue = change[.newKey] as? Int,
+           let oldValue = change[.oldKey] as? Int {
+            
+            let oldStatus = AVPlayer.TimeControlStatus(rawValue: oldValue)
+            let newStatus = AVPlayer.TimeControlStatus(rawValue: newValue)
+            
+            if newStatus != oldStatus {
+                DispatchQueue.main.async {
+                    if newStatus == .playing || newStatus == .paused {
+                        //TODO:
+                       // self?.loaderView.isHidden = true
+                    } else {
+                        //TODO: 
+                        // self.loaderView.isHidden = false
+                    }
+                    
+                }
+            }
+        }
+    }
+    //MARK: - Video Player Functions
+    internal func setupPlayer(){
+        let playerLayer = AVPlayerLayer(player: videoPlayer)
+        playerLayer.frame = playerView.bounds
+        playerLayer.videoGravity = .resizeAspectFill
+        playerView.layer.addSublayer(playerLayer)
+        setupVideoPlayerProgressBar()
+        createVideoObserver()
         
     }
+    
+    internal func playVideo(){
+        
+//        guard let play = (videoPlayer.currentItem?.asset as? AVURLAsset)?.url else {
+//            return
+//        }
+        videoPlayer.play()
+        isPlaying = true
+    }
+    
+    internal func playVideo(withURL url: URL){
+        
+        let asset = AVAsset(url: url)
+        let playerItem = AVPlayerItem(asset: asset)
+        videoPlayer.replaceCurrentItem(with: playerItem)
+        videoPlayer.play()
+        isPlaying = true
+    }
+    
+    internal func playVideosInAQueue(withURLs urls: [URL]){
+        var playerItems = [AVPlayerItem]()
+        
+        urls.forEach { url  in
+            let asset = AVAsset(url: url)
+            let playerItem = AVPlayerItem(asset: asset)
+            playerItems.append(playerItem)
+        }
+        
+        
+    }
+    
+    internal func pauseVideo() {
+        if isPlaying {
+            videoPlayer.pause()
+        }
+        isPlaying = false
+    }
+    
+    
+    internal func switchVideoVolume(){
+        videoPlayer.isMuted = !videoPlayer.isMuted
+    }
+    
+    
+    func rewindVideo(by seconds: Float64){
+        
+        let currentTime = videoPlayer.currentTime()
+        var newTime = CMTimeGetSeconds(currentTime) - seconds
+        if newTime <= 0 {
+            newTime = 0
+        }
+        videoPlayer.seek(to: CMTime(value: CMTimeValue(newTime * 1000), timescale: 1000)) { isCompleted in
+            //TODO: Do something after changing the playback time
+        }
+    }
+    
+    func forwadVideo(by seconds: Float64){
+        let currentTime = videoPlayer.currentTime()
+        guard let duration = videoPlayer.currentItem?.duration else {
+            print("Error getting the duration of current Item of Video Player")
+            return
+        }
+        
+        var newTime = CMTimeGetSeconds(currentTime) + seconds
+        if newTime >= CMTimeGetSeconds(duration){
+            newTime = CMTimeGetSeconds(duration)
+        }
+        
+        videoPlayer.seek(to: CMTime(value: CMTimeValue(newTime * 1000), timescale: 1000)) { [weak self] isCompleted  in
+            //TODO: Do something after changing the playback time
+        }
+    }
+    
+    internal func setupVideoPlayerProgressBar(){
+        
+                
+        videoPlayer.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 2), queue: .main) { [weak self] progressTime  in
+            
+            guard (self?.videoPlayer.currentItem?.duration) != nil else {
+                print("Error getting the duration of current Item of Video Player")
+                return
+            }
+            
+            let duration = self?.videoPlayer.currentItem?.duration
+            let durationSeconds = CMTimeGetSeconds(duration!)
+            let seconds = CMTimeGetSeconds(progressTime)
+            let progress = Float(seconds/durationSeconds)
+            self?.progressBar.progress = progress
+            if progress >= 1.0 {
+                self?.progressBar.progress = 0.0
+            }
+        }
+    }
+    
+    internal func createVideoObserver(){
+        videoPlayer.addObserver(self, forKeyPath: "timeControlStatus", options: [.old, .new], context: nil)
+    }
+    
+    
+    
+    
+//    
+//    internal func vid(){
+//        let  urlString = "https://content.jwplatform.com/manifests/yp34SRmf.m3u8"
+//        player.playVideoWith(URL: urlString)
+//        
+//    }
     
     /*
     internal func initial(){
@@ -165,4 +323,40 @@ extension VideoTableViewController: UITableViewDataSource {
     }
     
     
+}
+
+
+//Testing api
+extension VideoTableViewController {
+    
+    func fetchVideos(handler: @escaping((Any?) -> Void)  ){
+        
+        guard let url = URL(string: "https://mpt.mp.br/pgt/videos/@search?fullobjects&portal_type=video") else {
+            print("Cannot convert string to URL")
+            return handler(nil)
+        }
+        
+        let configuration : URLSessionConfiguration = {
+            let configuration = URLSessionConfiguration.default
+            configuration.httpAdditionalHeaders = [
+                "Content-Type": "application/json", "Accept": "application/json"]
+           return configuration
+        }()
+        
+        let session = URLSession(configuration: configuration)
+        let task = session.dataTask(with: url) { data, response, error in
+            if error != nil {
+                print("Found error: \(error?.localizedDescription)")
+            } else {
+                if let data = data,  let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                    
+                    let welcome = try! JSONDecoder().decode(Welcome.self, from: data)
+                    return handler(welcome)
+                }
+            }
+            
+        }
+        
+        task.resume()
+    }
 }

@@ -18,15 +18,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-header" translatesAutoresizingMaskIntoConstraints="NO" id="XGK-Mh-BWW">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="logo-header" image="logo-header" translatesAutoresizingMaskIntoConstraints="NO" id="XGK-Mh-BWW" userLabel="logo-header">
                                 <rect key="frame" x="16" y="60" width="267" height="38"/>
+                                <accessibility key="accessibilityConfiguration" identifier="logo-header"/>
                             </imageView>
                             <view contentMode="scaleToFill" restorationIdentifier="videoPlayer" translatesAutoresizingMaskIntoConstraints="NO" id="fRc-Jd-qWL" userLabel="vwVideoPlayer">
                                 <rect key="frame" x="0.0" y="106" width="414" height="223"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" restorationIdentifier="vwControlLane" translatesAutoresizingMaskIntoConstraints="NO" id="rwD-GV-EZo" userLabel="vwControlLane">
+                                        <rect key="frame" x="0.0" y="175" width="414" height="48"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vtR-0p-pNh">
+                                                <rect key="frame" x="0.0" y="22" width="414" height="4"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPl-C0-alk">
+                                                <rect key="frame" x="187.5" y="8.5" width="39" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabel.text" value=""/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbX-N8-hfN">
+                                                <rect key="frame" x="246.5" y="8.5" width="56" height="31"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" image="rotateRight"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="forward.fill" catalog="system" title="">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="black"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gE-K2-twY">
+                                                <rect key="frame" x="111.5" y="8.5" width="56" height="31"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" image="rotateRight"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="backward.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="black"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabel.text" value=""/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vk-gQ-a8K">
+                                                <rect key="frame" x="10" y="8.5" width="44" height="31"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" image="rotateRight"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="speaker.slash.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="black"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabel.text" value=""/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Et-pt-ZEz">
+                                                <rect key="frame" x="355" y="8.5" width="49" height="31"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" image="rotateRight"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.up.left.and.down.right.and.arrow.up.right.and.down.left" catalog="system" title="">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="black"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="vwControlLane"/>
+                                        <constraints>
+                                            <constraint firstItem="2Et-pt-ZEz" firstAttribute="centerY" secondItem="rwD-GV-EZo" secondAttribute="centerY" id="3UA-cu-rhl"/>
+                                            <constraint firstItem="hbX-N8-hfN" firstAttribute="centerY" secondItem="rwD-GV-EZo" secondAttribute="centerY" id="4b0-Y5-42v"/>
+                                            <constraint firstItem="hbX-N8-hfN" firstAttribute="leading" secondItem="bPl-C0-alk" secondAttribute="trailing" priority="999" constant="20" id="80b-q6-49e"/>
+                                            <constraint firstItem="3Vk-gQ-a8K" firstAttribute="centerY" secondItem="rwD-GV-EZo" secondAttribute="centerY" id="JBs-gm-Nga"/>
+                                            <constraint firstItem="3Vk-gQ-a8K" firstAttribute="leading" secondItem="rwD-GV-EZo" secondAttribute="leading" constant="10" id="Lzj-Uo-8Xu"/>
+                                            <constraint firstItem="vtR-0p-pNh" firstAttribute="top" secondItem="rwD-GV-EZo" secondAttribute="top" constant="22" id="VvO-82-QgC"/>
+                                            <constraint firstAttribute="trailing" secondItem="vtR-0p-pNh" secondAttribute="trailing" id="YNq-ci-9zR"/>
+                                            <constraint firstItem="bPl-C0-alk" firstAttribute="leading" secondItem="4gE-K2-twY" secondAttribute="trailing" priority="999" constant="20" id="YwQ-7B-SR7"/>
+                                            <constraint firstItem="4gE-K2-twY" firstAttribute="centerY" secondItem="rwD-GV-EZo" secondAttribute="centerY" id="g0N-CW-PVQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Et-pt-ZEz" secondAttribute="trailing" constant="10" id="g52-bi-tXW"/>
+                                            <constraint firstItem="bPl-C0-alk" firstAttribute="centerY" secondItem="rwD-GV-EZo" secondAttribute="centerY" id="kKy-av-4kU"/>
+                                            <constraint firstItem="vtR-0p-pNh" firstAttribute="leading" secondItem="rwD-GV-EZo" secondAttribute="leading" id="kUz-K3-dSP"/>
+                                            <constraint firstItem="bPl-C0-alk" firstAttribute="centerX" secondItem="rwD-GV-EZo" secondAttribute="centerX" id="wV2-3Z-Kd0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rwD-GV-EZo" secondAttribute="trailing" id="5fc-h6-Itd"/>
+                                    <constraint firstAttribute="bottom" secondItem="rwD-GV-EZo" secondAttribute="bottom" id="Ctc-eg-4wm"/>
+                                    <constraint firstItem="rwD-GV-EZo" firstAttribute="leading" secondItem="fRc-Jd-qWL" secondAttribute="leading" id="VgD-fb-3MF"/>
+                                    <constraint firstItem="rwD-GV-EZo" firstAttribute="height" secondItem="fRc-Jd-qWL" secondAttribute="height" multiplier="0.215247" id="gxH-fC-OSN"/>
                                     <constraint firstAttribute="width" secondItem="fRc-Jd-qWL" secondAttribute="height" multiplier="414:223" id="hW9-s4-ZIG"/>
-                                    <constraint firstAttribute="height" constant="223" id="hrp-ma-L9Q"/>
+                                    <constraint firstAttribute="height" priority="999" constant="223" id="hrp-ma-L9Q"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vídeo encontro PGT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v95-Em-vfO" userLabel="lbVideoTitle">
@@ -48,33 +126,36 @@
                                 <rect key="frame" x="0.0" y="406" width="414" height="407"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="videoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="videoTableVideoCell" rowHeight="73" id="SFH-7n-xkA" customClass="videoTableViewCell" customModule="mpt_noticias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="73"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="videoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="videoTableVideoCell" rowHeight="93" id="SFH-7n-xkA" customClass="videoTableViewCell" customModule="mpt_noticias" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SFH-7n-xkA" id="e4a-vg-FVt">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="liA-ir-M14">
-                                                    <rect key="frame" x="7" y="7" width="96" height="59"/>
+                                                    <rect key="frame" x="7" y="7" width="128.5" height="79"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="liA-ir-M14" secondAttribute="height" multiplier="96:59" id="7r1-6v-fDK"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASM-w6-iPG">
-                                                    <rect key="frame" x="121" y="7" width="286" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Lorem ipsum dolor sit amet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASM-w6-iPG">
+                                                    <rect key="frame" x="153.5" y="7" width="253.5" height="16"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                                     <color key="textColor" name="foreground#1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nullam vitae ullamcorper arcu. Donec id dolor laoreet, rhoncus enim sit amet, rhoncus enim sit amet," textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5H-ED-mBC">
-                                                    <rect key="frame" x="121" y="26" width="286" height="22.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nullam vitae ullamcorper arcu. Donec id dolor laoreet, rhoncus enim sit amet, rhoncus enim sit amet," textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5H-ED-mBC">
+                                                    <rect key="frame" x="153.5" y="26" width="253.5" height="43"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 dias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77l-mQ-O3S">
-                                                    <rect key="frame" x="121" y="52" width="286" height="14"/>
+                                                    <rect key="frame" x="153.5" y="74" width="253.5" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="12" id="kek-zX-3aR"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                                     <color key="textColor" name="foreground#1"/>
                                                     <nil key="highlightedColor"/>
@@ -88,8 +169,10 @@
                                                 <constraint firstItem="ASM-w6-iPG" firstAttribute="leading" secondItem="liA-ir-M14" secondAttribute="trailing" constant="18" id="Fh4-Pt-3Jk"/>
                                                 <constraint firstItem="77l-mQ-O3S" firstAttribute="trailing" secondItem="O5H-ED-mBC" secondAttribute="trailing" id="JGU-o1-grP"/>
                                                 <constraint firstItem="77l-mQ-O3S" firstAttribute="leading" secondItem="O5H-ED-mBC" secondAttribute="leading" id="M0F-Lt-1XR"/>
-                                                <constraint firstItem="O5H-ED-mBC" firstAttribute="top" secondItem="ASM-w6-iPG" secondAttribute="bottom" constant="3" id="hgl-tF-f7x"/>
+                                                <constraint firstItem="O5H-ED-mBC" firstAttribute="top" secondItem="ASM-w6-iPG" secondAttribute="bottom" constant="3" id="Sm4-FA-uow"/>
+                                                <constraint firstItem="77l-mQ-O3S" firstAttribute="top" secondItem="O5H-ED-mBC" secondAttribute="bottom" constant="5" id="df0-S9-bFF"/>
                                                 <constraint firstItem="77l-mQ-O3S" firstAttribute="bottom" secondItem="liA-ir-M14" secondAttribute="bottom" id="nPX-5Y-y45"/>
+                                                <constraint firstItem="ASM-w6-iPG" firstAttribute="leading" secondItem="liA-ir-M14" secondAttribute="trailing" constant="18" id="zpF-o1-HWO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="apple_button_color"/>
@@ -133,9 +216,15 @@
                     <navigationItem key="navigationItem" title="Title" id="4KQ-ho-E8r"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="btBackforward" destination="4gE-K2-twY" id="OD0-Gv-ofq"/>
+                        <outlet property="btFastforward" destination="hbX-N8-hfN" id="wEZ-tV-I4U"/>
+                        <outlet property="btFullScreen" destination="2Et-pt-ZEz" id="YEc-gO-zpL"/>
+                        <outlet property="btPlay" destination="bPl-C0-alk" id="mxG-V3-OBN"/>
+                        <outlet property="btVolume" destination="3Vk-gQ-a8K" id="Df9-5g-7Rj"/>
                         <outlet property="lbVideoTime" destination="rS9-vW-xEu" id="bdE-Ba-pRx"/>
                         <outlet property="lbVideoTitle" destination="v95-Em-vfO" id="VCG-LP-G1v"/>
-                        <outlet property="player" destination="fRc-Jd-qWL" id="6pP-Vp-VI4"/>
+                        <outlet property="playerView" destination="fRc-Jd-qWL" id="K00-3r-akK"/>
+                        <outlet property="progressBar" destination="vtR-0p-pNh" id="0sO-vS-4F5"/>
                         <outlet property="tvVideoTable" destination="UiX-cI-KXl" id="RUB-xQ-PEs"/>
                     </connections>
                 </viewController>
@@ -160,8 +249,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.up.left.and.down.right.and.arrow.up.right.and.down.left" catalog="system" width="128" height="115"/>
+        <image name="backward.fill" catalog="system" width="128" height="79"/>
+        <image name="forward.fill" catalog="system" width="128" height="79"/>
         <image name="logo-header" width="267" height="38"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="play.rectangle.on.rectangle" catalog="system" width="128" height="97"/>
+        <image name="rotateRight" width="50" height="50"/>
+        <image name="speaker.slash.fill" catalog="system" width="124" height="128"/>
         <namedColor name="apple_button_color">
             <color red="0.94901960784313721" green="0.79607843137254897" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

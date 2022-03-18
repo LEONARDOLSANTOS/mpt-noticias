@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B44D3B56B862BBF5543ADD8C4E07BAE /* GPVideoPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C961CF83C2BA00FD78DA9A9BBB4768B5 /* GPVideoPlayer-dummy.m */; };
+		142710FFEEF6026D802AC8FB0F05B112 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		19FFDF6A346CA5D924EA05E4924AC0C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		473F27CC8B10BFDDD9BE7A203BC361F1 /* Pods-mpt-noticias-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B19351AFB3968201FF9E61EF215DF83F /* Pods-mpt-noticias-dummy.m */; };
+		5E71BAF42D185023BDE2B1A476C05CD5 /* GPVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7263D9EB5D9693B167AA9E4D367DAAA /* GPVideoPlayer.swift */; };
+		728FF1D6364689CFDC95F70C01F34983 /* GPVideoPlayerHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B57CB5503471D69DE00B3241104080 /* GPVideoPlayerHelpers.swift */; };
+		7D5F0F2450C1E9FCFB1732960FBF2BC6 /* GPVideoPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C7E02336D06C6A5F5ECDCAC9C979DC9C /* GPVideoPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF80971D31A6CD726E8F4CF3A761B2E /* GPVideoPlayerAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE2FFE63B9AA7559BF2739DD762E0E66 /* GPVideoPlayerAssets.xcassets */; };
+		BB2CF776D4AB93DF34A64B0CB3FCC8F3 /* GPVideoPlayer.xib in Sources */ = {isa = PBXBuildFile; fileRef = F082C4A9E7417765993620D591BFE9BF /* GPVideoPlayer.xib */; };
+		F2DF57018DB307ADAEE5BF4E4717DD63 /* Pods-mpt-noticias-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2798FB89F15C021FC251F76B838D788A /* Pods-mpt-noticias-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		270A5320276B38605D499D61503C0517 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEF604583FAF7F8302A0B9018408CC1A;
+			remoteInfo = GPVideoPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2798FB89F15C021FC251F76B838D788A /* Pods-mpt-noticias-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mpt-noticias-umbrella.h"; sourceTree = "<group>"; };
+		2CAC3B028516B231449592378806CD16 /* Pods-mpt-noticias.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-mpt-noticias.modulemap"; sourceTree = "<group>"; };
+		3924D547C22849F8B0D8923C60B580DD /* Pods-mpt-noticias-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mpt-noticias-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3F227692D767DC7FC03AD267C766050A /* Pods-mpt-noticias-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mpt-noticias-frameworks.sh"; sourceTree = "<group>"; };
+		41ED8313A224CC1D6D1F6D7AC65D36EB /* GPVideoPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GPVideoPlayer.modulemap; sourceTree = "<group>"; };
+		5C812CCD8ABABCCE854C8641636F8FB1 /* Pods-mpt-noticias */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-mpt-noticias"; path = Pods_mpt_noticias.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		75CEAEF2C33F9DDB55A4C7BC4A4002A4 /* Pods-mpt-noticias-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mpt-noticias-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0B57CB5503471D69DE00B3241104080 /* GPVideoPlayerHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPVideoPlayerHelpers.swift; path = GPVideoPlayer/Classes/GPVideoPlayerHelpers.swift; sourceTree = "<group>"; };
+		AE2FFE63B9AA7559BF2739DD762E0E66 /* GPVideoPlayerAssets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = GPVideoPlayerAssets.xcassets; path = GPVideoPlayer/Assets/GPVideoPlayerAssets.xcassets; sourceTree = "<group>"; };
+		B19351AFB3968201FF9E61EF215DF83F /* Pods-mpt-noticias-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mpt-noticias-dummy.m"; sourceTree = "<group>"; };
+		B34995CCA1C060AC2F7F0ECAABE611A6 /* GPVideoPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GPVideoPlayer-prefix.pch"; sourceTree = "<group>"; };
+		BA6D9D5C9F0FA757FD6418A06B583BFE /* Pods-mpt-noticias.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mpt-noticias.debug.xcconfig"; sourceTree = "<group>"; };
+		BB610553DE055B1AAC0A40D4A400048F /* Pods-mpt-noticias.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mpt-noticias.release.xcconfig"; sourceTree = "<group>"; };
+		BEBBEDD4DBA01A25F8E9AF04BAF07997 /* GPVideoPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GPVideoPlayer.debug.xcconfig; sourceTree = "<group>"; };
+		BFFF45C7B7291AE84BA92D482F8ABA2F /* Pods-mpt-noticias-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mpt-noticias-Info.plist"; sourceTree = "<group>"; };
+		C24F6167C51EFC1031AF2C718E73E18D /* GPVideoPlayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GPVideoPlayer-Info.plist"; sourceTree = "<group>"; };
+		C7E02336D06C6A5F5ECDCAC9C979DC9C /* GPVideoPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GPVideoPlayer-umbrella.h"; sourceTree = "<group>"; };
+		C961CF83C2BA00FD78DA9A9BBB4768B5 /* GPVideoPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GPVideoPlayer-dummy.m"; sourceTree = "<group>"; };
+		D777A9207DB079750A58EF0D9B924094 /* GPVideoPlayer */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GPVideoPlayer; path = GPVideoPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7263D9EB5D9693B167AA9E4D367DAAA /* GPVideoPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPVideoPlayer.swift; path = GPVideoPlayer/Classes/GPVideoPlayer.swift; sourceTree = "<group>"; };
+		F082C4A9E7417765993620D591BFE9BF /* GPVideoPlayer.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = GPVideoPlayer.xib; path = GPVideoPlayer/Classes/GPVideoPlayer.xib; sourceTree = "<group>"; };
+		FF7CA29E0F0D1B4F4B536C9023AF0FD6 /* GPVideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GPVideoPlayer.release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03479E8FAF9A9478E41D842846E5E996 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				142710FFEEF6026D802AC8FB0F05B112 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46FAC0EE35DD704FEB488739C0DBC2C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19FFDF6A346CA5D924EA05E4924AC0C6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		092F58168B178BA520D05E520157BD92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D777A9207DB079750A58EF0D9B924094 /* GPVideoPlayer */,
+				5C812CCD8ABABCCE854C8641636F8FB1 /* Pods-mpt-noticias */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		80F171F72D3F8191DF3808359C557227 /* Pods-mpt-noticias */ = {
+			isa = PBXGroup;
+			children = (
+				2CAC3B028516B231449592378806CD16 /* Pods-mpt-noticias.modulemap */,
+				3924D547C22849F8B0D8923C60B580DD /* Pods-mpt-noticias-acknowledgements.markdown */,
+				75CEAEF2C33F9DDB55A4C7BC4A4002A4 /* Pods-mpt-noticias-acknowledgements.plist */,
+				B19351AFB3968201FF9E61EF215DF83F /* Pods-mpt-noticias-dummy.m */,
+				3F227692D767DC7FC03AD267C766050A /* Pods-mpt-noticias-frameworks.sh */,
+				BFFF45C7B7291AE84BA92D482F8ABA2F /* Pods-mpt-noticias-Info.plist */,
+				2798FB89F15C021FC251F76B838D788A /* Pods-mpt-noticias-umbrella.h */,
+				BA6D9D5C9F0FA757FD6418A06B583BFE /* Pods-mpt-noticias.debug.xcconfig */,
+				BB610553DE055B1AAC0A40D4A400048F /* Pods-mpt-noticias.release.xcconfig */,
+			);
+			name = "Pods-mpt-noticias";
+			path = "Target Support Files/Pods-mpt-noticias";
+			sourceTree = "<group>";
+		};
+		9B74CE504F2B99452F917C63FF7A5E1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A29AE731934E39DC976224CBA4E930B2 /* GPVideoPlayer */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A29AE731934E39DC976224CBA4E930B2 /* GPVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				E7263D9EB5D9693B167AA9E4D367DAAA /* GPVideoPlayer.swift */,
+				F082C4A9E7417765993620D591BFE9BF /* GPVideoPlayer.xib */,
+				A0B57CB5503471D69DE00B3241104080 /* GPVideoPlayerHelpers.swift */,
+				B81C4B164E4C5CC4202F658F2524D32A /* Resources */,
+				D7B9AF89001903258FA00E91A11742E9 /* Support Files */,
+			);
+			name = GPVideoPlayer;
+			path = GPVideoPlayer;
+			sourceTree = "<group>";
+		};
+		B81C4B164E4C5CC4202F658F2524D32A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE2FFE63B9AA7559BF2739DD762E0E66 /* GPVideoPlayerAssets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C9B058B51B3B4E211243C46D1A089C5E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				80F171F72D3F8191DF3808359C557227 /* Pods-mpt-noticias */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				9B74CE504F2B99452F917C63FF7A5E1B /* Pods */,
+				092F58168B178BA520D05E520157BD92 /* Products */,
+				C9B058B51B3B4E211243C46D1A089C5E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7B9AF89001903258FA00E91A11742E9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				41ED8313A224CC1D6D1F6D7AC65D36EB /* GPVideoPlayer.modulemap */,
+				C961CF83C2BA00FD78DA9A9BBB4768B5 /* GPVideoPlayer-dummy.m */,
+				C24F6167C51EFC1031AF2C718E73E18D /* GPVideoPlayer-Info.plist */,
+				B34995CCA1C060AC2F7F0ECAABE611A6 /* GPVideoPlayer-prefix.pch */,
+				C7E02336D06C6A5F5ECDCAC9C979DC9C /* GPVideoPlayer-umbrella.h */,
+				BEBBEDD4DBA01A25F8E9AF04BAF07997 /* GPVideoPlayer.debug.xcconfig */,
+				FF7CA29E0F0D1B4F4B536C9023AF0FD6 /* GPVideoPlayer.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GPVideoPlayer";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		33D84EAE5088CF51B0B923D90DBD233B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2DF57018DB307ADAEE5BF4E4717DD63 /* Pods-mpt-noticias-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8FDE1AE7EA139D1DE78332EC0F35C9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5F0F2450C1E9FCFB1732960FBF2BC6 /* GPVideoPlayer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B42A267C883466904CDE02842BA04E0B /* Pods-mpt-noticias */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49B469F86DC9F3D018043067D01C88D0 /* Build configuration list for PBXNativeTarget "Pods-mpt-noticias" */;
+			buildPhases = (
+				33D84EAE5088CF51B0B923D90DBD233B /* Headers */,
+				B507FAEF0346166997FECA64D96BFECA /* Sources */,
+				03479E8FAF9A9478E41D842846E5E996 /* Frameworks */,
+				4383024B3EEDAEC3D0C53BACB3120480 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4279B5B784CA0B21E0910F25F576DE94 /* PBXTargetDependency */,
+			);
+			name = "Pods-mpt-noticias";
+			productName = Pods_mpt_noticias;
+			productReference = 5C812CCD8ABABCCE854C8641636F8FB1 /* Pods-mpt-noticias */;
+			productType = "com.apple.product-type.framework";
+		};
+		FEF604583FAF7F8302A0B9018408CC1A /* GPVideoPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B9C1138FF256DF55D53381682A0BF3A /* Build configuration list for PBXNativeTarget "GPVideoPlayer" */;
+			buildPhases = (
+				EE8FDE1AE7EA139D1DE78332EC0F35C9 /* Headers */,
+				9BA9396E7D589F0B686D8D0E95CF63DF /* Sources */,
+				46FAC0EE35DD704FEB488739C0DBC2C2 /* Frameworks */,
+				A91E50DDB6252D3165D50C4E5BDD7681 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GPVideoPlayer;
+			productName = GPVideoPlayer;
+			productReference = D777A9207DB079750A58EF0D9B924094 /* GPVideoPlayer */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 092F58168B178BA520D05E520157BD92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEF604583FAF7F8302A0B9018408CC1A /* GPVideoPlayer */,
+				B42A267C883466904CDE02842BA04E0B /* Pods-mpt-noticias */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4383024B3EEDAEC3D0C53BACB3120480 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A91E50DDB6252D3165D50C4E5BDD7681 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF80971D31A6CD726E8F4CF3A761B2E /* GPVideoPlayerAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BA9396E7D589F0B686D8D0E95CF63DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E71BAF42D185023BDE2B1A476C05CD5 /* GPVideoPlayer.swift in Sources */,
+				BB2CF776D4AB93DF34A64B0CB3FCC8F3 /* GPVideoPlayer.xib in Sources */,
+				0B44D3B56B862BBF5543ADD8C4E07BAE /* GPVideoPlayer-dummy.m in Sources */,
+				728FF1D6364689CFDC95F70C01F34983 /* GPVideoPlayerHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B507FAEF0346166997FECA64D96BFECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				473F27CC8B10BFDDD9BE7A203BC361F1 /* Pods-mpt-noticias-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4279B5B784CA0B21E0910F25F576DE94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPVideoPlayer;
+			target = FEF604583FAF7F8302A0B9018408CC1A /* GPVideoPlayer */;
+			targetProxy = 270A5320276B38605D499D61503C0517 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2E18B24D146D8A9345A90C45194DEE4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		64A28C5571E4A8A87682D1712C6CD23A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF7CA29E0F0D1B4F4B536C9023AF0FD6 /* GPVideoPlayer.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GPVideoPlayer/GPVideoPlayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GPVideoPlayer/GPVideoPlayer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/GPVideoPlayer/GPVideoPlayer.modulemap";
+				PRODUCT_MODULE_NAME = GPVideoPlayer;
+				PRODUCT_NAME = GPVideoPlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AD24BC1CB997A87AB399A7D3F3179010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA6D9D5C9F0FA757FD6418A06B583BFE /* Pods-mpt-noticias.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mpt-noticias/Pods-mpt-noticias-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mpt-noticias/Pods-mpt-noticias.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EDE13D2DD3F94A79B5CE4331571BDFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		EF28FFEBD6DBD9CB4B7E48B3848C259E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEBBEDD4DBA01A25F8E9AF04BAF07997 /* GPVideoPlayer.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GPVideoPlayer/GPVideoPlayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GPVideoPlayer/GPVideoPlayer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/GPVideoPlayer/GPVideoPlayer.modulemap";
+				PRODUCT_MODULE_NAME = GPVideoPlayer;
+				PRODUCT_NAME = GPVideoPlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB848F96D8BE1FE0E575BDB1DE18D59D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB610553DE055B1AAC0A40D4A400048F /* Pods-mpt-noticias.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mpt-noticias/Pods-mpt-noticias-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mpt-noticias/Pods-mpt-noticias.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E18B24D146D8A9345A90C45194DEE4F /* Debug */,
+				EDE13D2DD3F94A79B5CE4331571BDFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49B469F86DC9F3D018043067D01C88D0 /* Build configuration list for PBXNativeTarget "Pods-mpt-noticias" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD24BC1CB997A87AB399A7D3F3179010 /* Debug */,
+				FB848F96D8BE1FE0E575BDB1DE18D59D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B9C1138FF256DF55D53381682A0BF3A /* Build configuration list for PBXNativeTarget "GPVideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF28FFEBD6DBD9CB4B7E48B3848C259E /* Debug */,
+				64A28C5571E4A8A87682D1712C6CD23A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
