@@ -335,7 +335,10 @@ extension VideoTableViewController {
             print("Cannot convert string to URL")
             return handler(nil)
         }
+ 
         
+        
+        ///Chamada API
         let configuration : URLSessionConfiguration = {
             let configuration = URLSessionConfiguration.default
             configuration.httpAdditionalHeaders = [
@@ -351,6 +354,7 @@ extension VideoTableViewController {
                 if let data = data,  let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
                     
                     let welcome = try! JSONDecoder().decode(Welcome.self, from: data)
+                    
                     return handler(welcome)
                 }
             }
