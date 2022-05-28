@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -123,6 +121,7 @@
                     </constraints>
                 </imageView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="AEW-7d-6bo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="45e-5o-xpM"/>
@@ -135,7 +134,6 @@
                 <constraint firstItem="AEW-7d-6bo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="t0p-Ca-dRh"/>
                 <constraint firstItem="JjV-pS-w1k" firstAttribute="centerY" secondItem="AEW-7d-6bo" secondAttribute="centerY" id="xUj-M8-mSH"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="loaderView" destination="JjV-pS-w1k" id="pCa-bX-agj"/>
                 <outlet property="playPauseButton" destination="sdm-UN-EEX" id="GPy-1O-cc7"/>
@@ -148,13 +146,13 @@
         </view>
     </objects>
     <resources>
-        <image name="LoadMore" width="180" height="180"/>
-        <image name="expand" width="180" height="180"/>
-        <image name="mute" width="180" height="180"/>
-        <image name="pause" width="180" height="180"/>
-        <image name="play" width="180" height="180"/>
-        <image name="rotateLeft" width="180" height="180"/>
-        <image name="rotateRight" width="180" height="180"/>
-        <image name="volume" width="180" height="180"/>
+        <image name="LoadMore" width="45" height="45"/>
+        <image name="expand" width="50" height="50"/>
+        <image name="mute" width="50" height="50"/>
+        <image name="pause" width="50" height="50"/>
+        <image name="play" width="50" height="50"/>
+        <image name="rotateLeft" width="50" height="50"/>
+        <image name="rotateRight" width="50" height="50"/>
+        <image name="volume" width="50" height="50"/>
     </resources>
 </document>

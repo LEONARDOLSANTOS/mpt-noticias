@@ -38,7 +38,7 @@
 		5C812CCD8ABABCCE854C8641636F8FB1 /* Pods-mpt-noticias */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-mpt-noticias"; path = Pods_mpt_noticias.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		75CEAEF2C33F9DDB55A4C7BC4A4002A4 /* Pods-mpt-noticias-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mpt-noticias-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0B57CB5503471D69DE00B3241104080 /* GPVideoPlayerHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPVideoPlayerHelpers.swift; path = GPVideoPlayer/Classes/GPVideoPlayerHelpers.swift; sourceTree = "<group>"; };
 		AE2FFE63B9AA7559BF2739DD762E0E66 /* GPVideoPlayerAssets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = GPVideoPlayerAssets.xcassets; path = GPVideoPlayer/Assets/GPVideoPlayerAssets.xcassets; sourceTree = "<group>"; };
 		B19351AFB3968201FF9E61EF215DF83F /* Pods-mpt-noticias-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mpt-noticias-dummy.m"; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		C24F6167C51EFC1031AF2C718E73E18D /* GPVideoPlayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GPVideoPlayer-Info.plist"; sourceTree = "<group>"; };
 		C7E02336D06C6A5F5ECDCAC9C979DC9C /* GPVideoPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GPVideoPlayer-umbrella.h"; sourceTree = "<group>"; };
 		C961CF83C2BA00FD78DA9A9BBB4768B5 /* GPVideoPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GPVideoPlayer-dummy.m"; sourceTree = "<group>"; };
-		D777A9207DB079750A58EF0D9B924094 /* GPVideoPlayer */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GPVideoPlayer; path = GPVideoPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D777A9207DB079750A58EF0D9B924094 /* GPVideoPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GPVideoPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7263D9EB5D9693B167AA9E4D367DAAA /* GPVideoPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPVideoPlayer.swift; path = GPVideoPlayer/Classes/GPVideoPlayer.swift; sourceTree = "<group>"; };
 		F082C4A9E7417765993620D591BFE9BF /* GPVideoPlayer.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = GPVideoPlayer.xib; path = GPVideoPlayer/Classes/GPVideoPlayer.xib; sourceTree = "<group>"; };
 		FF7CA29E0F0D1B4F4B536C9023AF0FD6 /* GPVideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GPVideoPlayer.release.xcconfig; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		092F58168B178BA520D05E520157BD92 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D777A9207DB079750A58EF0D9B924094 /* GPVideoPlayer */,
+				D777A9207DB079750A58EF0D9B924094 /* GPVideoPlayer.framework */,
 				5C812CCD8ABABCCE854C8641636F8FB1 /* Pods-mpt-noticias */,
 			);
 			name = Products;
@@ -127,7 +127,6 @@
 				B81C4B164E4C5CC4202F658F2524D32A /* Resources */,
 				D7B9AF89001903258FA00E91A11742E9 /* Support Files */,
 			);
-			name = GPVideoPlayer;
 			path = GPVideoPlayer;
 			sourceTree = "<group>";
 		};
@@ -237,7 +236,7 @@
 			);
 			name = GPVideoPlayer;
 			productName = GPVideoPlayer;
-			productReference = D777A9207DB079750A58EF0D9B924094 /* GPVideoPlayer */;
+			productReference = D777A9207DB079750A58EF0D9B924094 /* GPVideoPlayer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -247,7 +246,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1310;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -400,7 +399,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GPVideoPlayer/GPVideoPlayer-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GPVideoPlayer/GPVideoPlayer-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -535,7 +534,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GPVideoPlayer/GPVideoPlayer-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GPVideoPlayer/GPVideoPlayer-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
