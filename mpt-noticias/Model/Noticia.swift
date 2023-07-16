@@ -14,12 +14,14 @@ class Noticia{
     var body: String
     var info: String
     var image: UIImage
+    var url: String
     
-    init(titulo: String, resumo: String, body: String, info: String, image: UIImage){
+    init(titulo: String, resumo: String, body: String, info: String, image: UIImage, url: String){
         self.titulo = titulo
         self.resumo = resumo
         self.info = info
         self.body = body
         self.image = image
+        self.url = url
     }
 }

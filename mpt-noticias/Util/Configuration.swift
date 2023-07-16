@@ -9,7 +9,9 @@ import Foundation
 
 // enum to prevent typo
 enum UserDefaultKeys: String{
+    // define if app was used before
     case alreadyUsed = "alreadyUsed"
+    // define OK in term of use
     case termOfUseAccepted = "termOfUseAccepted"
 }
 
@@ -19,7 +21,7 @@ class Configuration{
     static var shared: Configuration = Configuration()
     private init(){}
     
-    // Define when user use the app
+    // Define if user use the app
     var alreadyUsed: Bool{
         get{
             return defaults.bool(forKey: UserDefaultKeys.alreadyUsed.rawValue)

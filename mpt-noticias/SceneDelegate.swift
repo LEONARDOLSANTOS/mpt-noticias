@@ -16,24 +16,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             guard let winScene = (scene as? UIWindowScene) else { return }
             
             let config = Configuration.shared
-            print("ja usou o aplicativo? \(config.alreadyUsed)")
+            print("App already use ? \(config.alreadyUsed)")
             
             window = UIWindow(windowScene: winScene)
-            if !config.alreadyUsed { // primeira vez no app
-                config.alreadyUsed = true
+        
+            // if first time, show onboarding pages
+            if !config.alreadyUsed {
+                config.alreadyUsed = true  // primeira vez no app
                 let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
                 let initialViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewControllerID")
                 window?.rootViewController = initialViewController
                 window?.makeKeyAndVisible()
             }else{
-                
+            // if not, show main storyboard
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeID")
                 window?.rootViewController = initialViewController
                 window?.makeKeyAndVisible()
             }
-
-        }
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

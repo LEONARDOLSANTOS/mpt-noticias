@@ -26,7 +26,7 @@ class NewsDetailViewController: UIViewController {
     
     @IBAction func shareNews(_ sender: Any) {
         
-        let items = [new.titulo]
+        let items = ["Acompanhe esta notícia no site do MPT:\n\(new.titulo)", new.url]
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(ac, animated: true)
         
