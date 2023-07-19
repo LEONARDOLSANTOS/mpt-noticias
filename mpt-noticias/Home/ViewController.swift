@@ -36,6 +36,11 @@ class ViewController: UIViewController {
     }
     
     func getAllNews() -> [Noticia]{
+        
+        let news = PortalService()
+        
+        news.getNoticias()
+        
         var fakenews: [Noticia] = []
         fakenews.append(Noticia(titulo: "Eternit e Sama são obrigadas a realizar exames médicos de controle em ex-empregados", resumo: "Trabalhadores tiveram contato com o amianto, que pode causar doenças respiratórias graves e até câncer", body: "<span id='texto-noticia'> <p><strong>Brasília –</strong> O Ministério Público do Trabalho (MPT) firmou acordo de cooperação técnica com o Centro de Excelência contra a Fome do Programa Mundial de Alimentos (WFP) no Brasil para reforçar a erradicação da fome e a promoção da segurança alimentar e nutricional, metas que fazem parte dos Objetivos de Desenvolvimento Sustentável (ODS) da Organização das Nações Unidas (ONU). A assinatura ocorreu no dia 9 de novembro.</p><p>A parceria tem como foco o compartilhamento de boas práticas e o intercâmbio de informações entre o MPT e o Centro de Excelência do WFP em temas como segurança alimentar e nutricional, educação, proteção social, saúde e nutrição.</p><p>A partir do acordo, serão promovidas ações conjuntas que proporcionem a capacitação de gestores e demais envolvidos com essas áreas em conceitos básicos de alimentação adequada e saudável, melhoria dos hábitos alimentares, valorização dos produtos da agricultura familiar da produção à comercialização, aprimoramento na execução do programa de alimentação escolar, combate ao desperdício, entre outros.</p><p>Também está prevista a elaboração de estudos, pesquisas, cursos, oficinas e projetos voltados para educação e saúde, nutrição, segurança alimentar e proteção social bem como a capacitação de docentes e pesquisadores e de estudantes e produção de publicações técnico-científicas sobre esses temas. Todas iniciativas também têm como objetivo o compartilhamento dos conhecimentos e experiências geradas com outros países parceiros, a fim de promover a cooperação internacional.</p></span>", info: "Meio Ambiente do Trabalho - Ontem", image: UIImage(named: "news2.jpeg")!, url: "https://mpt.mp.br/pgt/noticias/trabalho-em-frigorificos-audiencias-publicas-no-pr-e-sc-discutem-revisao-da-nr-36") )
         
