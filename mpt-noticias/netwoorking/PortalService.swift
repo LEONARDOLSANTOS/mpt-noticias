@@ -14,7 +14,7 @@ class PortalService{
     let FOTO_URL = ""
     let VIDEO_URL = ""
     
-    func getNoticias(){
+    func getNoticias() {
 
         let queryString = "@search?&b_start=0&sort_on=modified&sort_order=reverse&review_state=published&portal_type=News+Item&b_size=5"
         // metadata_fields=_all
@@ -34,12 +34,17 @@ class PortalService{
                     //   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
 
                     let jsondata = try JSONDecoder().decode(Model.self, from: data!)
-                    print(jsondata)
+                    print(type(of: jsondata))
+                    print( jsondata )
+                    //return  jsondata
+                    
                 } catch{
                     print(error.localizedDescription)
+                    //return nil
                 }
             case .failure(let error):
                 print(error.localizedDescription)
+                //return nil
             }
         }
         
@@ -69,7 +74,7 @@ struct Model: Codable {
     var batching: Batching
     var items: [Item]
     var itemsTotal: Int
-
+   
     enum CodingKeys: String, CodingKey {
         case id = "@id"
         case batching, items
@@ -91,11 +96,12 @@ struct Batching: Codable {
 struct Item: Codable {
     var id: String
     var type, description, reviewState, title: String
+    var subjects: [String]
 
     enum CodingKeys: String, CodingKey {
         case id = "@id"
         case type = "@type"
-        case description
+        case description, subjects
         case reviewState = "review_state"
         case title
     }

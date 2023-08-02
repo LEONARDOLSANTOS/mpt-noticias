@@ -16,11 +16,11 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet var lbInfo: UILabel!
     @IBOutlet var lbDescricao: UILabel!
     
-    func Prepare(with new: Noticia){
-        self.lbTitulo.text = new.titulo
-        self.lbInfo.text = new.info
-        self.lbDescricao.text = new.resumo
-        self.ivNoticia.image = new.image
+    func Prepare(with new: Item){
+        self.lbTitulo.text = new.title
+        self.lbInfo.text = new.description
+        self.lbDescricao.text = new.description
+        //self.ivNoticia.image = new.image
         
     }
     

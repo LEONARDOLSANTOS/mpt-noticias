@@ -14,11 +14,11 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet var ivNew: UIImageView!
     @IBOutlet var lbResume: UILabel!
     @IBOutlet var lbBody: UILabel!
-    var new: Noticia!
+    var new: Item!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("titulo da noticia \(new.titulo)")
+        print("titulo da noticia \(new.title)")
         // Do any additional setup after loading the view.
         
         config()
@@ -26,17 +26,17 @@ class NewsDetailViewController: UIViewController {
     
     @IBAction func shareNews(_ sender: Any) {
         
-        let items = ["Acompanhe esta notícia no site do MPT:\n\(new.titulo)", new.url]
+        let items = ["Acompanhe esta notícia no site do MPT:\n\(new.title)", new.id]
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(ac, animated: true)
         
     }
     func config(){
-        lbTitle.text = new.titulo
-        lbInfo.text = new.info
-        lbResume.text = new.resumo
-        lbBody.attributedText = new.body.htmlToAttibutedString
-        ivNew.image = new.image
+        lbTitle.text = new.title
+        lbInfo.text = new.description
+        lbResume.text = new.description
+        //lbBody.attributedText = new.description//new.body.htmlToAttibutedString
+        //ivNew.image = new.image
     }
     
     /*

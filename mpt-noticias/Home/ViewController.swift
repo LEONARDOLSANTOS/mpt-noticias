@@ -11,6 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet var tvNews: UITableView!
     var news: [Noticia] = []
+    var destaques: [Item] = []
+     
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +26,25 @@ class ViewController: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         }
-        
-        news = getAllNews()
+        Rest.loadDestaque { (ItemsFromRest) in
+            self.destaques = ItemsFromRest
+            DispatchQueue.main.async {
+                self.tvNews.reloadData()
+            }
+            
+            
+        } onError: { erro in
+            print(erro)
+        }
+
+        //news = getAllNews()
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! NewsDetailViewController
-        let noticia = news[tvNews.indexPathForSelectedRow!.row]
-        vc.new = noticia
+        let destaque = destaques[tvNews.indexPathForSelectedRow!.row]
+        vc.new = destaque
     }
     
     func getAllNews() -> [Noticia]{
@@ -58,13 +70,13 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return news.count
+        return destaques.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tvNews.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
         
-        cell.Prepare(with: news[indexPath.row])
+        cell.Prepare(with: destaques[indexPath.row])
        
         return cell
     }
