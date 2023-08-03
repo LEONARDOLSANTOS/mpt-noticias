@@ -68,41 +68,4 @@ class PortalService{
 //
 //   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
 
-// MARK: - Welcome
-struct Model: Codable {
-    var id: String
-    var batching: Batching
-    var items: [Item]
-    var itemsTotal: Int
-   
-    enum CodingKeys: String, CodingKey {
-        case id = "@id"
-        case batching, items
-        case itemsTotal = "items_total"
-    }
-}
 
-// MARK: - Batching
-struct Batching: Codable {
-    var id, first, last, next: String
-
-    enum CodingKeys: String, CodingKey {
-        case id = "@id"
-        case first, last, next
-    }
-}
-
-// MARK: - Item
-struct Item: Codable {
-    var id: String
-    var type, description, reviewState, title: String
-    var subjects: [String]
-
-    enum CodingKeys: String, CodingKey {
-        case id = "@id"
-        case type = "@type"
-        case description, subjects
-        case reviewState = "review_state"
-        case title
-    }
-}

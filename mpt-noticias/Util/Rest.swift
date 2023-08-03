@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum RestError{
     case url
     case taskError(error: Error)
@@ -16,6 +15,7 @@ enum RestError{
     case responseStatusCode(code: Int)
     case invalidJson
 }
+
 class Rest {
     
     private static let basePath = "https://mpt.mp.br/pgt/"
@@ -29,7 +29,8 @@ class Rest {
     }()
     private static let session = URLSession(configuration:  configuration)
     
-    class func loadDestaque(onComplete: @escaping ([Item]) -> Void, onError: @escaping (RestError) -> Void)  {
+    // utlizando closure para retornar valores
+    class func loadDestaques(onComplete: @escaping ([Item]) -> Void, onError: @escaping (RestError) -> Void)  {
         var  queryString  = "noticias/@search?fullobjects&b_start=0&sort_on=effective&sort_order=reverse"
         queryString += "&review_state=published&portal_type=News+Item&b_size=10"
         guard let url = URL(string: basePath + queryString) else {
@@ -49,7 +50,6 @@ class Rest {
                     do{
                         let destaques = try JSONDecoder().decode(Model.self, from: dataReturned)
                         onComplete(destaques.items)
-                        //return destaques.items?
                     } catch{
                         onError(.invalidJson)
                     }
@@ -60,16 +60,6 @@ class Rest {
                 onError(.taskError(error: erro!))
             }
         }.resume()
-        
-        
     }
-    
-    
-    
-    
-    //URLSession.shared
-    
-    
-
 }
 
