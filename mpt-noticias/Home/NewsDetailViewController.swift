@@ -16,7 +16,7 @@ class NewsDetailViewController: UIViewController {
     // testar com web view
     
     
-    var new: Item!
+    var new: NewsItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()

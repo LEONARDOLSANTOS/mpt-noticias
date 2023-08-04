@@ -14,7 +14,7 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet var lbInfo: UILabel!
     @IBOutlet var lbDescricao: UILabel!
     
-    func Prepare(with new: Item){
+    func Prepare(with new: NewsItem){
         
         
         self.lbTitulo.text = new.title

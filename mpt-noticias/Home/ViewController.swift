@@ -11,8 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var tvNews: UITableView!
     var news: [Noticia] = []
-    var destaques: [Item] = []
-     
+    var destaques: [NewsItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

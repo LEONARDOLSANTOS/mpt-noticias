@@ -30,7 +30,7 @@ class Rest {
     private static let session = URLSession(configuration:  configuration)
     
     // utlizando closure para retornar valores
-    class func loadDestaques(onComplete: @escaping ([Item]) -> Void, onError: @escaping (RestError) -> Void)  {
+    class func loadDestaques(onComplete: @escaping ([NewsItem]) -> Void, onError: @escaping (RestError) -> Void)  {
         var  queryString  = "noticias/@search?fullobjects&b_start=0&sort_on=effective&sort_order=reverse"
         queryString += "&review_state=published&portal_type=News+Item&b_size=10"
         guard let url = URL(string: basePath + queryString) else {

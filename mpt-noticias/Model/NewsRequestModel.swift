@@ -11,7 +11,7 @@ import Foundation
 struct news_request: Codable {
     var id: String
     var batching: Batching
-    var items: [Item]
+    var items: [NewsItem]
     var itemsTotal: Int
    
     enum CodingKeys: String, CodingKey {
@@ -32,7 +32,7 @@ struct Batching: Codable {
 }
 
 // MARK: - Item
-struct Item: Codable {
+struct NewsItem: Codable {
     var id: String
     var type, description, effective, reviewState, title: String
     var subjects, creators, contributors : [String]
