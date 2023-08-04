@@ -136,6 +136,10 @@
                                 <color key="textColor" name="foreground#2"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="UKr-ky-mPr">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="vermelho-mpt"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wzs-6D-19Q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -145,6 +149,8 @@
                             <constraint firstItem="dZW-un-csx" firstAttribute="top" secondItem="0QP-ls-1YX" secondAttribute="bottom" constant="16" id="5e0-yA-lSE"/>
                             <constraint firstItem="wzs-6D-19Q" firstAttribute="trailing" secondItem="x8J-MQ-dBv" secondAttribute="trailing" id="PaF-1g-Z6K"/>
                             <constraint firstItem="dZW-un-csx" firstAttribute="leading" secondItem="wzs-6D-19Q" secondAttribute="leading" constant="16" id="ShR-5V-DSf"/>
+                            <constraint firstItem="UKr-ky-mPr" firstAttribute="centerX" secondItem="BbF-Ut-O9t" secondAttribute="centerX" id="THa-1u-7ip"/>
+                            <constraint firstItem="UKr-ky-mPr" firstAttribute="centerY" secondItem="BbF-Ut-O9t" secondAttribute="centerY" id="fs8-NI-C7Q"/>
                             <constraint firstItem="0QP-ls-1YX" firstAttribute="top" secondItem="wzs-6D-19Q" secondAttribute="top" constant="16" id="h11-oM-C5I"/>
                             <constraint firstItem="x8J-MQ-dBv" firstAttribute="leading" secondItem="wzs-6D-19Q" secondAttribute="leading" id="kip-02-h6c"/>
                             <constraint firstItem="x8J-MQ-dBv" firstAttribute="top" secondItem="M5P-ie-2GM" secondAttribute="bottom" constant="16" id="kk7-aZ-bsp"/>
@@ -157,6 +163,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="7se-Yq-9QN"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="aivLoading" destination="UKr-ky-mPr" id="1gw-Eg-uPA"/>
                         <outlet property="tvNews" destination="x8J-MQ-dBv" id="cCk-BG-hEI"/>
                     </connections>
                 </viewController>

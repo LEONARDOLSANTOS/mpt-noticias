@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     var news: [Noticia] = []
     var destaques: [NewsItem] = []
     
+    @IBOutlet var aivLoading: UIActivityIndicatorView!
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,15 +28,24 @@ class ViewController: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         }
+        DispatchQueue.main.async {
+            self.aivLoading.startAnimating()
+        }
+        
+       
         
         Rest.loadDestaques { (ItemsFromRest) in
             self.destaques = ItemsFromRest
             // necessario para atualizar tableView
             DispatchQueue.main.async {
                 self.tvNews.reloadData()
+                self.aivLoading.stopAnimating()
             }
         } onError: { erro in
             print(erro)
+            DispatchQueue.main.async {
+               self.aivLoading.stopAnimating()
+            }
         }
     }
     
