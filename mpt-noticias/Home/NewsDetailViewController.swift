@@ -11,9 +11,11 @@ class NewsDetailViewController: UIViewController {
 
     @IBOutlet var lbTitle: UILabel!
     @IBOutlet var lbInfo: UILabel!
-    @IBOutlet var ivNew: UIImageView!
     @IBOutlet var lbResume: UILabel!
-    @IBOutlet var lbBody: UILabel!
+    @IBOutlet var tvBody: UITextView!
+    // testar com web view
+    
+    
     var new: Item!
     
     override func viewDidLoad() {
@@ -34,8 +36,12 @@ class NewsDetailViewController: UIViewController {
     func config(){
         lbTitle.text = new.title
         lbInfo.text = new.description
-        lbResume.text = new.description
-        //lbBody.attributedText = new.description//new.body.htmlToAttibutedString
+        lbResume.text = formatDate(ploneDate: new.effective)  + formatSubjects(ploneSubjects: new.subjects)
+        tvBody.attributedText = new.text.data.htmlToAttibutedString
+        tvBody.font = UIFont(name: tvBody.font?.fontName ?? "System", size: 20)
+        
+        
+        //new.body.htmlToAttibutedString
         //ivNew.image = new.image
     }
     

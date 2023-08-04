@@ -48,7 +48,7 @@ class Rest {
                         onError(.noData)
                         return}
                     do{
-                        let destaques = try JSONDecoder().decode(Model.self, from: dataReturned)
+                        let destaques = try JSONDecoder().decode(news_request.self, from: dataReturned)
                         onComplete(destaques.items)
                     } catch{
                         onError(.invalidJson)
