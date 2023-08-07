@@ -22,7 +22,6 @@ class NewsDetailViewController: UIViewController {
         super.viewDidLoad()
         print("titulo da noticia \(new.title)")
         // Do any additional setup after loading the view.
-        
         config()
     }
     

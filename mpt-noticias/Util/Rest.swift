@@ -61,5 +61,39 @@ class Rest {
             }
         }.resume()
     }
+    
+    class func loadImagens(onComplete: @escaping ([ImagemItem]) -> Void, onError: @escaping (RestError) -> Void)  {
+        var queryString  = "noticias/@search?fullobjects&b_start=0&sort_on=effective"
+        queryString+="&sort_order=reverse&getIcon=true&b_size=18"
+       
+        guard let url = URL(string: basePath + queryString) else {
+            onError(.url)
+            return
+        }
+        session.dataTask(with: url) { (data: Data?, response: URLResponse?, erro: Error?) in
+            if erro == nil {
+                guard let retorno = response as? HTTPURLResponse else {
+                    onError(.noResponse)
+                    return
+                }
+                if retorno.statusCode == 200 {
+                    guard let dataReturned = data else {
+                        onError(.noData)
+                        return}
+                    do{
+                        let resposta = try JSONDecoder().decode(imagem_request.self, from: dataReturned)
+                        onComplete(resposta.items)
+                    } catch{
+                        onError(.invalidJson)
+                    }
+                } else {
+                    onError(.responseStatusCode(code: retorno.statusCode))
+                }
+            } else {
+                onError(.taskError(error: erro!))
+            }
+        }.resume()
+    }
+    
 }
 

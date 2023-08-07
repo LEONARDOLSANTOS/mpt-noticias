@@ -10,11 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var tvNews: UITableView!
-    var news: [Noticia] = []
-    var destaques: [NewsItem] = []
-    
     @IBOutlet var aivLoading: UIActivityIndicatorView!
-    
+    var destaques: [NewsItem] = []
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +28,7 @@ class ViewController: UIViewController {
         DispatchQueue.main.async {
             self.aivLoading.startAnimating()
         }
-        
-       
-        
+     
         Rest.loadDestaques { (ItemsFromRest) in
             self.destaques = ItemsFromRest
             // necessario para atualizar tableView
@@ -55,8 +50,6 @@ class ViewController: UIViewController {
         let destaque = destaques[tvNews.indexPathForSelectedRow!.row]
         vc.new = destaque
     }
-    
-    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
