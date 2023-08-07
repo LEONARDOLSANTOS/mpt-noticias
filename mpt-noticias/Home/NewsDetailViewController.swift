@@ -39,9 +39,6 @@ class NewsDetailViewController: UIViewController {
         tvBody.attributedText = new.text.data.htmlToAttibutedString
         tvBody.font = UIFont(name: tvBody.font?.fontName ?? "System", size: 20)
         
-        
-        //new.body.htmlToAttibutedString
-        //ivNew.image = new.image
     }
     
     /*

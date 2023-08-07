@@ -45,6 +45,19 @@ struct NewsItem: Codable {
         case reviewState = "review_state"
         case title, text
     }
+    
+    init(id: String, type: String, description: String, effective: String, reviewState: String, title: String, subjects: [String], creators: [String], contributors: [String], text: Text) {
+        self.id = id
+        self.type = type
+        self.description = description
+        self.effective = effective
+        self.reviewState = reviewState
+        self.title = title
+        self.subjects = subjects
+        self.creators = creators
+        self.contributors = contributors
+        self.text = text
+    }
 }
 
 struct Text: Codable{

@@ -88,6 +88,7 @@
                                         <connections>
                                             <outlet property="ivNoticia" destination="41E-fo-br6" id="WCV-Uf-RwB"/>
                                             <outlet property="labelTitulo" destination="0XH-NG-fOL" id="DlS-z0-6dR"/>
+                                            <segue destination="CLA-Qj-Tdx" kind="show" id="cMH-66-yEx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -127,20 +128,15 @@
             </objects>
             <point key="canvasLocation" x="1733.3333333333335" y="51.5625"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ei8-oD-FKK">
+        <!--idNewsDetailViewController-->
+        <scene sceneID="ZRc-1z-ACg">
             <objects>
-                <viewController id="ZM1-U4-ATt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4BH-o3-vJb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="uqC-ry-feO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5cQ-pp-PxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="idNewsDetailViewController" id="CLA-Qj-Tdx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ArQ-5X-pgG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5v-et-2FW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2590" y="52"/>
+            <point key="canvasLocation" x="2434" y="60"/>
         </scene>
     </scenes>
     <resources>

@@ -23,20 +23,16 @@ class ImagensTableViewCell: UITableViewCell {
 //    }
 
     func Prepare(with imagem: ImagemItem){
-        
-        
         self.labelTitulo.text = imagem.title
         if imagem.image.download != "" {
             let url = URL(string: imagem.image.scales.mini.download)
             DispatchQueue.global().async {
-                
-                let data = try? Data(contentsOf: url!)
-                DispatchQueue.main.async{
-                    self.ivNoticia.image = UIImage(data: data!)
+                if let data = try? Data(contentsOf: url!){
+                    DispatchQueue.main.async{
+                        self.ivNoticia.image = UIImage(data: data)
+                    }
                 }
             }
         }
-        //self.ivNoticia.image =
-        
     }
 }
