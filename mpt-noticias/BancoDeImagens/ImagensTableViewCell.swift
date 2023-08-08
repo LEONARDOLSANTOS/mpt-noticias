@@ -12,7 +12,6 @@ class ImagensTableViewCell: UITableViewCell {
     @IBOutlet var ivNoticia: UIImageView!
     @IBOutlet var labelTitulo: UILabel!
     
-
     func Prepare(with imagem: ImagemItem){
         self.labelTitulo.text = imagem.title
         if imagem.image.download != "" {

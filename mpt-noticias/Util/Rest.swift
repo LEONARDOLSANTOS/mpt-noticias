@@ -95,5 +95,44 @@ class Rest {
         }.resume()
     }
     
+    
+    class func loadPublicacoes(onComplete: @escaping ([PublicacaoItem]) -> Void, onError: @escaping (RestError) -> Void,  tipoPublicacao: String)  {
+        var  queryString  = "publicacoes/@search?fullobjects&review_state=published&portal_type=publicacao"
+        if tipoPublicacao == "" {
+            queryString += "&tipo_de_publicacao=artigos"
+        } else {
+            queryString += "&tipo_de_publicacao=" + tipoPublicacao
+        }
+   
+        
+        guard let url = URL(string: basePath + queryString) else {
+            onError(.url)
+            return
+        }
+        session.dataTask(with: url) { (data: Data?, response: URLResponse?, erro: Error?) in
+            if erro == nil {
+                guard let retorno = response as? HTTPURLResponse else {
+                    onError(.noResponse)
+                    return
+                }
+                if retorno.statusCode == 200 {
+                    guard let dataReturned = data else {
+                        onError(.noData)
+                        return}
+                    do{
+                        let retorno = try JSONDecoder().decode(publicacao_request.self, from: dataReturned)
+                        onComplete(retorno.items)
+                    } catch{
+                        onError(.invalidJson)
+                    }
+                } else {
+                    onError(.responseStatusCode(code: retorno.statusCode))
+                }
+            } else {
+                onError(.taskError(error: erro!))
+            }
+        }.resume()
+    }
+    
 }
 
