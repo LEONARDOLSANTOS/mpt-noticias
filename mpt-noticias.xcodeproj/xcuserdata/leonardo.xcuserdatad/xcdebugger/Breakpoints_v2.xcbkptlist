@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B50BCE30-64D2-4C76-9E66-6748E66E6406"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mpt-noticias/Home/NewsTableViewCell.swift"
@@ -16,8 +16,72 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
             endingLineNumber = "20"
-            landmarkName = "NewsTableViewCell"
-            landmarkType = "3">
+            landmarkName = "Prepare(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC1A5C36-B4DB-4EAD-9F58-DC1EA459874F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/BancoDeImagens/ImagensTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EC1A5C36-B4DB-4EAD-9F58-DC1EA459874F - 1a03f93a0a3b8ca2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mpt_noticias.ImagensTableViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/BancoDeImagens/ImagensTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "EC1A5C36-B4DB-4EAD-9F58-DC1EA459874F - 77904d69f96c4cce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;mpt_noticias.ImagemItem&gt;) -&gt; () in mpt_noticias.ImagensTableViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/BancoDeImagens/ImagensTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A830C81-8FFE-488A-8BF5-8AD002183E08"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/BancoDeImagens/BancoDeImagensViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

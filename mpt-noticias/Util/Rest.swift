@@ -64,7 +64,7 @@ class Rest {
     
     class func loadImagens(onComplete: @escaping ([ImagemItem]) -> Void, onError: @escaping (RestError) -> Void)  {
         var queryString  = "noticias/@search?fullobjects&b_start=0&sort_on=effective"
-        queryString+="&sort_order=reverse&getIcon=true&b_size=18"
+        queryString+="&sort_order=reverse&getIcon=true&b_size=20"
        
         guard let url = URL(string: basePath + queryString) else {
             onError(.url)

@@ -11,16 +11,7 @@ class ImagensTableViewCell: UITableViewCell {
 
     @IBOutlet var ivNoticia: UIImageView!
     @IBOutlet var labelTitulo: UILabel!
-    //    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
-//
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
+    
 
     func Prepare(with imagem: ImagemItem){
         self.labelTitulo.text = imagem.title
