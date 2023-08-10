@@ -99,7 +99,7 @@ class Rest {
     class func loadPublicacoes(onComplete: @escaping ([PublicacaoItem]) -> Void, onError: @escaping (RestError) -> Void,  tipoPublicacao: String)  {
         var  queryString  = "publicacoes/@search?fullobjects&review_state=published&portal_type=publicacao"
         if tipoPublicacao == "" {
-            queryString += "&tipo_de_publicacao=artigos"
+            queryString += "&tipo_de_publicacao=artigos&b_size=20"
         } else {
             queryString += "&tipo_de_publicacao=" + tipoPublicacao
         }
