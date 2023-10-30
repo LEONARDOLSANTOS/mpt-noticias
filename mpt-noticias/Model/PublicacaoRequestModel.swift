@@ -1,19 +1,13 @@
-//
 //  PublicacaoRequestModel.swift
 //  mpt-noticias
-//
 //  Created by LEONARDO LUIZ SILVA SANTOS on 07/08/23.
-//
-
 import Foundation
-
 
 // MARK: - PLONE REQUEST FOR NEWS
 struct publicacao_request: Codable {
     var id: String
     var batching: Batching
     var items: [PublicacaoItem]
-
    
     enum CodingKeys: String, CodingKey {
         case id = "@id"

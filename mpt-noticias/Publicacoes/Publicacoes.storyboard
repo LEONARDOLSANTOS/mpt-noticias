@@ -38,11 +38,11 @@
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" name="vermelho-mpt"/>
                             </activityIndicatorView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fr4-au-GBk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fr4-au-GBk">
                                 <rect key="frame" x="0.0" y="288.5" width="414" height="524.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="240" id="bLI-6E-bsE" customClass="PublicacaoTableViewCell" customModule="mpt_noticias" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="240" id="bLI-6E-bsE" customClass="PublicacaoTableViewCell" customModule="mpt_noticias" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bLI-6E-bsE" id="Ir2-Vb-KWb">
@@ -77,6 +77,7 @@
                                         <connections>
                                             <outlet property="ivPublicacao" destination="m6u-Gv-TZZ" id="U1b-MJ-lHS"/>
                                             <outlet property="labelTitulo" destination="fZy-h4-c99" id="KM3-Jp-aGK"/>
+                                            <segue destination="s4b-eh-KQu" kind="show" id="H0p-tM-qQR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -115,6 +116,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1653.6231884057972" y="66.964285714285708"/>
+        </scene>
+        <!--Publicacoes Detail View Controller-->
+        <scene sceneID="6cN-ST-Css">
+            <objects>
+                <viewController id="s4b-eh-KQu" customClass="PublicacoesDetailViewController" customModule="mpt_noticias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fmW-D7-YKX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yH-zb-U9X">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qGs-wF-JfE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1yH-zb-U9X" firstAttribute="leading" secondItem="qGs-wF-JfE" secondAttribute="leading" id="YYP-KT-Lb5"/>
+                            <constraint firstItem="qGs-wF-JfE" firstAttribute="trailing" secondItem="1yH-zb-U9X" secondAttribute="trailing" id="b9k-aH-LBc"/>
+                            <constraint firstItem="qGs-wF-JfE" firstAttribute="bottom" secondItem="1yH-zb-U9X" secondAttribute="bottom" id="gqV-r0-o2w"/>
+                            <constraint firstItem="1yH-zb-U9X" firstAttribute="top" secondItem="qGs-wF-JfE" secondAttribute="top" id="hm0-rO-kO8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Zh-4a-rw0"/>
+                    <connections>
+                        <outlet property="wkPublicacao" destination="1yH-zb-U9X" id="5aI-zm-qia"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iFA-BV-oMU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2508.6956521739135" y="66.964285714285708"/>
         </scene>
         <!--Publicações-->
         <scene sceneID="7aU-oy-2R6">

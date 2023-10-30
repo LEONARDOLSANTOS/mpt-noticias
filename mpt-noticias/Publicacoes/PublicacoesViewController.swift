@@ -21,14 +21,10 @@ class PublicacoesViewController: UIViewController {
     var tiposDePublicacao: [String] = [String]()
     var areasDeAtuacao: [String] = [String]()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         pvTipoPublicacao.delegate = self
         pvTipoPublicacao.dataSource = self
-
-        
         tiposDePublicacao = ["Artigos","Cartilhas","Estudos","Livros", "Manuais", "MPT na Escola", "Nota Técnica", "Orientações", "Revista Labor"]
         areasDeAtuacao = ["Administração Pública","Criança e Adolescente", "Fraudes Trabalhistas", "Liberdade Sindical", "Meio Ambiente do Trabalho","Promoção da Igualdade", "Trabalho Portuário e Aquaviário", "Trabalho Escravo"]
         
@@ -53,7 +49,13 @@ class PublicacoesViewController: UIViewController {
         }, tipoPublicacao: "")
 
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // recupera proximo viewControler
+        let vc = segue.destination as! PublicacoesDetailViewController
+        let publicacao = publicacoes[tvPublicacao.indexPathForSelectedRow!.row]
+        vc.publicacaoItem = publicacao
+    }
 }
 
 
@@ -66,10 +68,10 @@ extension PublicacoesViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tvPublicacao.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PublicacaoTableViewCell
         
         cell.Prepare(with: publicacoes[indexPath.row])
-       
         return cell
     }
 }
+
 
 
 extension PublicacoesViewController: UIPickerViewDelegate, UIPickerViewDataSource{

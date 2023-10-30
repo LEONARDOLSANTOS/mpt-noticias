@@ -18,8 +18,6 @@ class NewsTableViewCell: UITableViewCell {
         self.lbTitulo.text = new.title
         self.lbInfo.text = #"\#(formatDate(ploneDate: new.effective))  \#( formatSubjects(ploneSubjects: new.subjects) ) "#
         self.lbDescricao.text = new.description
-        print(formatDate(ploneDate: new.effective))
-        //self.ivNoticia.image = new.image
     }
     
 }
