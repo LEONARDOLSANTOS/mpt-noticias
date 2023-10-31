@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             print("App already use ? \(config.alreadyUsed)")
             
             window = UIWindow(windowScene: winScene)
+            window?.overrideUserInterfaceStyle = .light
         
             // if first time, show onboarding pages
             if !config.alreadyUsed {
