@@ -18,7 +18,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaF-9r-2sO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="155" y="530"/>
+            <point key="canvasLocation" x="29" y="524"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qfa-OM-G1H">
@@ -29,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-MQ-dBv">
-                                <rect key="frame" x="0.0" y="250.66666666666669" width="414" height="562.33333333333326"/>
+                                <rect key="frame" x="0.0" y="201" width="414" height="612"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="300" id="uDL-so-xGx" customClass="NewsTableViewCell" customModule="mpt_noticias" customModuleProvider="target">
@@ -94,14 +94,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-header" translatesAutoresizingMaskIntoConstraints="NO" id="0QP-ls-1YX">
                                 <rect key="frame" x="16" y="104" width="267" height="38"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Busca" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="dZW-un-csx">
-                                <rect key="frame" x="16" y="158" width="382" height="34"/>
-                                <color key="backgroundColor" name="background#1"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ultímas Notíçias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5P-ie-2GM">
-                                <rect key="frame" x="16" y="208" width="167.66666666666666" height="26.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ultimas notícias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5P-ie-2GM">
+                                <rect key="frame" x="16" y="158" width="382" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" name="vermelho-mpt"/>
                                 <nil key="highlightedColor"/>
@@ -114,11 +108,10 @@
                         <viewLayoutGuide key="safeArea" id="wzs-6D-19Q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wzs-6D-19Q" firstAttribute="trailing" secondItem="dZW-un-csx" secondAttribute="trailing" constant="16" id="27z-gz-l8x"/>
                             <constraint firstItem="0QP-ls-1YX" firstAttribute="leading" secondItem="wzs-6D-19Q" secondAttribute="leading" constant="16" id="47S-xm-VJT"/>
-                            <constraint firstItem="dZW-un-csx" firstAttribute="top" secondItem="0QP-ls-1YX" secondAttribute="bottom" constant="16" id="5e0-yA-lSE"/>
+                            <constraint firstItem="M5P-ie-2GM" firstAttribute="top" secondItem="0QP-ls-1YX" secondAttribute="bottom" constant="16" id="Dz0-EP-F1k"/>
+                            <constraint firstItem="wzs-6D-19Q" firstAttribute="trailing" secondItem="M5P-ie-2GM" secondAttribute="trailing" constant="16" id="MTk-1A-HJW"/>
                             <constraint firstItem="wzs-6D-19Q" firstAttribute="trailing" secondItem="x8J-MQ-dBv" secondAttribute="trailing" id="PaF-1g-Z6K"/>
-                            <constraint firstItem="dZW-un-csx" firstAttribute="leading" secondItem="wzs-6D-19Q" secondAttribute="leading" constant="16" id="ShR-5V-DSf"/>
                             <constraint firstItem="UKr-ky-mPr" firstAttribute="centerX" secondItem="BbF-Ut-O9t" secondAttribute="centerX" id="THa-1u-7ip"/>
                             <constraint firstItem="UKr-ky-mPr" firstAttribute="centerY" secondItem="BbF-Ut-O9t" secondAttribute="centerY" id="fs8-NI-C7Q"/>
                             <constraint firstItem="0QP-ls-1YX" firstAttribute="top" secondItem="wzs-6D-19Q" secondAttribute="top" constant="16" id="h11-oM-C5I"/>
@@ -126,7 +119,6 @@
                             <constraint firstItem="x8J-MQ-dBv" firstAttribute="top" secondItem="M5P-ie-2GM" secondAttribute="bottom" constant="16" id="kk7-aZ-bsp"/>
                             <constraint firstItem="wzs-6D-19Q" firstAttribute="bottom" secondItem="x8J-MQ-dBv" secondAttribute="bottom" id="nlL-EO-3n5"/>
                             <constraint firstItem="M5P-ie-2GM" firstAttribute="leading" secondItem="wzs-6D-19Q" secondAttribute="leading" constant="16" id="xdd-ld-wSW"/>
-                            <constraint firstItem="M5P-ie-2GM" firstAttribute="top" secondItem="dZW-un-csx" secondAttribute="bottom" constant="16" id="xvV-ZT-Src"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="FVC-WI-W3C">
@@ -203,16 +195,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="MPT Notícias" largeTitleDisplayMode="always" id="Zew-OR-ZHq">
                         <barButtonItem key="backBarButtonItem" title=" " id="0z8-58-9Wc"/>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" image="bookmark" catalog="system" id="bPd-qX-agM">
-                                <color key="tintColor" name="vermelho-mpt"/>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="share" id="cf4-UD-PNz">
-                                <connections>
-                                    <action selector="shareNews:" destination="J2w-s6-rmg" id="0VT-Ht-ywc"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="share" id="cf4-UD-PNz">
+                            <connections>
+                                <action selector="shareNews:" destination="J2w-s6-rmg" id="0VT-Ht-ywc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="lbInfo" destination="4qq-V7-6Vb" id="jnS-FA-R4V"/>
@@ -453,7 +440,6 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
         </scene>
     </scenes>
     <resources>
-        <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="logo-header" width="267" height="38"/>
         <image name="share" width="24" height="24"/>

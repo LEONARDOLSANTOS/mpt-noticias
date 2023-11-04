@@ -30,7 +30,6 @@
 		A7C60B292A81D03E00841380 /* PublicacaoRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C60B282A81D03E00841380 /* PublicacaoRequestModel.swift */; };
 		A7C60B2B2A826DD000841380 /* PublicacaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C60B2A2A826DD000841380 /* PublicacaoTableViewCell.swift */; };
 		A7C60B2D2A85031900841380 /* PublicacoesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C60B2C2A85031900841380 /* PublicacoesDetailViewController.swift */; };
-		A7D81E972AA24A860088A4B9 /* arquivo_pdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A7D81E962AA24A850088A4B9 /* arquivo_pdf.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +58,6 @@
 		A7C60B282A81D03E00841380 /* PublicacaoRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicacaoRequestModel.swift; sourceTree = "<group>"; };
 		A7C60B2A2A826DD000841380 /* PublicacaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicacaoTableViewCell.swift; sourceTree = "<group>"; };
 		A7C60B2C2A85031900841380 /* PublicacoesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicacoesDetailViewController.swift; sourceTree = "<group>"; };
-		A7D81E962AA24A850088A4B9 /* arquivo_pdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = arquivo_pdf.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +137,6 @@
 		A75F06682753D088000FCF3E /* Publicacoes */ = {
 			isa = PBXGroup;
 			children = (
-				A7D81E962AA24A850088A4B9 /* arquivo_pdf.pdf */,
 				A75F067B2753F808000FCF3E /* Publicacoes.storyboard */,
 				A7C60B262A81C8B200841380 /* PublicacoesViewController.swift */,
 				A7C60B2A2A826DD000841380 /* PublicacaoTableViewCell.swift */,
@@ -228,7 +225,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75F065C2753CC7F000FCF3E /* LaunchScreen.storyboard in Resources */,
-				A7D81E972AA24A860088A4B9 /* arquivo_pdf.pdf in Resources */,
 				A75F06592753CC7F000FCF3E /* Assets.xcassets in Resources */,
 				A75F06572753CC7D000FCF3E /* Main.storyboard in Resources */,
 				A75F06742753D658000FCF3E /* Onboarding.storyboard in Resources */,
