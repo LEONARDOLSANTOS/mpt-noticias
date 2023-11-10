@@ -29,6 +29,8 @@ class Rest {
     }()
     private static let session = URLSession(configuration:  configuration)
     
+    
+    
     // utlizando closure para retornar valores
     class func loadDestaques(onComplete: @escaping ([NewsItem]) -> Void, onError: @escaping (RestError) -> Void)  {
         var  queryString  = "noticias/@search?fullobjects&b_start=0&sort_on=effective&sort_order=reverse"
@@ -62,10 +64,8 @@ class Rest {
         }.resume()
     }
     
-    class func loadImagens(onComplete: @escaping ([ImagemItem]) -> Void, onError: @escaping (RestError) -> Void)  {
-        var queryString  = "noticias/@search?fullobjects&b_start=0&sort_on=effective"
-        queryString+="&sort_order=reverse&getIcon=true&b_size=20"
-       
+    class func loadFromUrl(queryString: String, onComplete: @escaping ([Any]) -> Void, onError: @escaping (RestError) -> Void)  {
+        
         guard let url = URL(string: basePath + queryString) else {
             onError(.url)
             return
@@ -81,7 +81,7 @@ class Rest {
                         onError(.noData)
                         return}
                     do{
-                        let resposta = try JSONDecoder().decode(imagem_request.self, from: dataReturned)
+                        let resposta = try JSONDecoder().decode(news_request.self, from: dataReturned)
                         onComplete(resposta.items)
                     } catch{
                         onError(.invalidJson)

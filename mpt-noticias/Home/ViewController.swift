@@ -12,12 +12,56 @@ class ViewController: UIViewController {
     @IBOutlet var tvNews: UITableView!
     @IBOutlet var aivLoading: UIActivityIndicatorView!
     var destaques: [NewsItem] = []
+    private var viewModel = HomeViewModel()
+    
+    private func setupBind(){
+        viewModel.showLoading = { [weak self] in
+            DispatchQueue.main.async {
+                self?.aivLoading.startAnimating()
+            }
+        }
+        
+        viewModel.showLoading = { [weak self] in
+            DispatchQueue.main.async {
+                self?.aivLoading.stopAnimating()
+            }
+        }
+        
+        viewModel.showItens = { [weak self] itens in
+            self?.destaques = itens
+            DispatchQueue.main.async {
+                self?.tvNews.reloadData()
+                self?.aivLoading.stopAnimating()
+            }
+        }
+        
+        
+    }
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Exibe regras de uso do app
+        showTermsUse()
+        
+        // associa a viewmodel
+        setupBind()
+        
+        // recupera noticias para exibicao
+        viewModel.getDataFromUrl()
+    }
+    
+    // configura parametros tela de detalhamento
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! NewsDetailViewController
+        let destaque = destaques[tvNews.indexPathForSelectedRow!.row]
+        vc.new = destaque
+    }
+    
+    func showTermsUse() {
+        // recupera configuraçoes do usuario
         let config = Configuration.shared
         //config.termOfUseAccepted = false
+        // se usuario já aceitou termos nao exibe novamente
         if !config.termOfUseAccepted {
             guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "IDTermsOfUseViewController") else {
                     fatalError("Dont find view controller of terms of use")
@@ -25,32 +69,9 @@ class ViewController: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         }
-        DispatchQueue.main.async {
-            self.aivLoading.startAnimating()
-        }
-     
-        Rest.loadDestaques { (ItemsFromRest) in
-            self.destaques = ItemsFromRest
-            // necessario para atualizar tableView
-            DispatchQueue.main.async {
-                self.tvNews.reloadData()
-                self.aivLoading.stopAnimating()
-            }
-        } onError: { erro in
-            print(erro)
-            DispatchQueue.main.async {
-               self.aivLoading.stopAnimating()
-            }
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // recupera proximo viewControler
-        let vc = segue.destination as! NewsDetailViewController
-        let destaque = destaques[tvNews.indexPathForSelectedRow!.row]
-        vc.new = destaque
     }
 }
+
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,12 +80,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tvNews.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
-        
-        cell.Prepare(with: destaques[indexPath.row])
-       
+        cell.Prepare(with: destaques[indexPath.row] )
         return cell
     }
-    
-    
-    
 }

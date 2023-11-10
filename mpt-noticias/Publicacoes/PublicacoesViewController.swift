@@ -31,8 +31,10 @@ class PublicacoesViewController: UIViewController {
         DispatchQueue.main.async {
             self.aivLoading.startAnimating()
         }
-        // Recupera publicacoes com parametros default
-        Rest.loadPublicacoes(onComplete: { (publicacoesFromRest) in
+        
+        var  queryString  = "publicacoes/@search?fullobjects&review_state=published&portal_type=publicacao"
+        queryString += "&b_size=20"
+        Rest.loadPublicacoes( onComplete: { (publicacoesFromRest) in
             self.publicacoes = publicacoesFromRest
             
             DispatchQueue.main.async {
@@ -47,7 +49,8 @@ class PublicacoesViewController: UIViewController {
                self.aivLoading.stopAnimating()
             }
         }, tipoPublicacao: "")
-
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,7 +70,7 @@ extension PublicacoesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tvPublicacao.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PublicacaoTableViewCell
         
-        cell.Prepare(with: publicacoes[indexPath.row])
+        cell.Prepare(with: publicacoes[indexPath.row] )
         return cell
     }
 }
