@@ -13,17 +13,18 @@ class HomeViewModel{
     var showLoading: (() -> Void)?
     var hideLoading: (() -> Void)?
     var showItens: ((_ destaques: [NewsItem]) -> Void)?
+    var clearTable: (() -> Void)?
 
-    func getDataFromUrl(){
+    func getDataFromUrl(queryString: String){
+        clearTable?()
         showLoading?()
-        
-        Rest.loadDestaques { (ItemsFromRest) in
+        Rest.loadDestaqueswithParam (queryString: queryString, onComplete: { (ItemsFromRest) in
             self.showItens?(ItemsFromRest)
             self.hideLoading?()
-        } onError: { erro in
+        } , onError: { erro in
             print(erro)
             self.hideLoading?()
-        }
+        })
     }
     
     

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,8 +29,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pesquisar" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ClV-ol-6NG">
+                                <rect key="frame" x="16" y="158" width="297" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <imageReference key="background" image="magnifyingglass" catalog="system" symbolScale="default"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notícias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8C3-0Q-Ajp">
+                                <rect key="frame" x="20" y="208" width="85" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" name="vermelho-mpt"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-header" translatesAutoresizingMaskIntoConstraints="NO" id="0QP-ls-1YX">
+                                <rect key="frame" x="16" y="104" width="267" height="38"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="UKr-ky-mPr">
+                                <rect key="frame" x="188.66666666666666" y="429.66666666666669" width="37" height="37"/>
+                                <color key="color" name="vermelho-mpt"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-Ly-3EW">
+                                <rect key="frame" x="321" y="158" width="77" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Buscar">
+                                    <color key="baseBackgroundColor" name="vermelho-mpt"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buscarNoticias:" destination="jQa-ax-lwp" eventType="touchUpInside" id="60c-TW-YEJ"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-MQ-dBv">
-                                <rect key="frame" x="0.0" y="201" width="414" height="612"/>
+                                <rect key="frame" x="0.0" y="243" width="414" height="570"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="300" id="uDL-so-xGx" customClass="NewsTableViewCell" customModule="mpt_noticias" customModuleProvider="target">
@@ -91,34 +122,24 @@
                                     <outlet property="delegate" destination="jQa-ax-lwp" id="pCV-ad-chn"/>
                                 </connections>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-header" translatesAutoresizingMaskIntoConstraints="NO" id="0QP-ls-1YX">
-                                <rect key="frame" x="16" y="104" width="267" height="38"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ultimas notícias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5P-ie-2GM">
-                                <rect key="frame" x="16" y="158" width="382" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" name="vermelho-mpt"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="UKr-ky-mPr">
-                                <rect key="frame" x="188.66666666666666" y="429.66666666666669" width="37" height="37"/>
-                                <color key="color" name="vermelho-mpt"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wzs-6D-19Q"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="x8J-MQ-dBv" firstAttribute="top" secondItem="8C3-0Q-Ajp" secondAttribute="bottom" constant="8" symbolic="YES" id="2bk-T2-hNn"/>
                             <constraint firstItem="0QP-ls-1YX" firstAttribute="leading" secondItem="wzs-6D-19Q" secondAttribute="leading" constant="16" id="47S-xm-VJT"/>
-                            <constraint firstItem="M5P-ie-2GM" firstAttribute="top" secondItem="0QP-ls-1YX" secondAttribute="bottom" constant="16" id="Dz0-EP-F1k"/>
-                            <constraint firstItem="wzs-6D-19Q" firstAttribute="trailing" secondItem="M5P-ie-2GM" secondAttribute="trailing" constant="16" id="MTk-1A-HJW"/>
+                            <constraint firstItem="ClV-ol-6NG" firstAttribute="leading" secondItem="wzs-6D-19Q" secondAttribute="leading" constant="16" id="5hx-wK-eJG"/>
+                            <constraint firstItem="tAa-Ly-3EW" firstAttribute="leading" secondItem="ClV-ol-6NG" secondAttribute="trailing" constant="8" id="7xo-On-RAd"/>
+                            <constraint firstItem="wzs-6D-19Q" firstAttribute="trailing" secondItem="tAa-Ly-3EW" secondAttribute="trailing" constant="16" id="B8a-az-JFd"/>
+                            <constraint firstItem="tAa-Ly-3EW" firstAttribute="top" secondItem="ClV-ol-6NG" secondAttribute="top" id="Fvd-10-dsF"/>
                             <constraint firstItem="wzs-6D-19Q" firstAttribute="trailing" secondItem="x8J-MQ-dBv" secondAttribute="trailing" id="PaF-1g-Z6K"/>
+                            <constraint firstItem="ClV-ol-6NG" firstAttribute="top" secondItem="0QP-ls-1YX" secondAttribute="bottom" constant="16" id="Spj-4O-1ZZ"/>
                             <constraint firstItem="UKr-ky-mPr" firstAttribute="centerX" secondItem="BbF-Ut-O9t" secondAttribute="centerX" id="THa-1u-7ip"/>
+                            <constraint firstItem="8C3-0Q-Ajp" firstAttribute="top" secondItem="ClV-ol-6NG" secondAttribute="bottom" constant="16" id="ee8-a3-I7r"/>
                             <constraint firstItem="UKr-ky-mPr" firstAttribute="centerY" secondItem="BbF-Ut-O9t" secondAttribute="centerY" id="fs8-NI-C7Q"/>
                             <constraint firstItem="0QP-ls-1YX" firstAttribute="top" secondItem="wzs-6D-19Q" secondAttribute="top" constant="16" id="h11-oM-C5I"/>
                             <constraint firstItem="x8J-MQ-dBv" firstAttribute="leading" secondItem="wzs-6D-19Q" secondAttribute="leading" id="kip-02-h6c"/>
-                            <constraint firstItem="x8J-MQ-dBv" firstAttribute="top" secondItem="M5P-ie-2GM" secondAttribute="bottom" constant="16" id="kk7-aZ-bsp"/>
                             <constraint firstItem="wzs-6D-19Q" firstAttribute="bottom" secondItem="x8J-MQ-dBv" secondAttribute="bottom" id="nlL-EO-3n5"/>
-                            <constraint firstItem="M5P-ie-2GM" firstAttribute="leading" secondItem="wzs-6D-19Q" secondAttribute="leading" constant="16" id="xdd-ld-wSW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="FVC-WI-W3C">
@@ -126,6 +147,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="aivLoading" destination="UKr-ky-mPr" id="1gw-Eg-uPA"/>
+                        <outlet property="textBuscar" destination="ClV-ol-6NG" id="oQj-1k-3JJ"/>
                         <outlet property="tvNews" destination="x8J-MQ-dBv" id="cCk-BG-hEI"/>
                     </connections>
                 </viewController>
@@ -442,6 +464,7 @@ Sed sit amet dictum dui, vel dapibus ipsum. Pellentesque commodo, mauris vitae f
     <resources>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="logo-header" width="267" height="38"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="share" width="24" height="24"/>
         <namedColor name="background#1">
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

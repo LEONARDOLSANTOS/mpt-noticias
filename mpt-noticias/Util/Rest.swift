@@ -64,6 +64,45 @@ class Rest {
         }.resume()
     }
     
+    class func loadDestaqueswithParam(queryString: String, onComplete: @escaping ([NewsItem]) -> Void, onError: @escaping (RestError) -> Void)  {
+        
+        var  urlResource  = "noticias/@search?fullobjects"
+        if queryString != "" {
+            urlResource += "&SearchableText=" + queryString
+        }
+        urlResource += "&b_start=0&sort_on=effective&sort_order=reverse"
+        urlResource += "&review_state=published&portal_type=News+Item&b_size=10"
+        
+        guard let url = URL(string: basePath + urlResource) else {
+            onError(.url)
+            return
+        }
+        session.dataTask(with: url) { (data: Data?, response: URLResponse?, erro: Error?) in
+            if erro == nil {
+                guard let retorno = response as? HTTPURLResponse else {
+                    onError(.noResponse)
+                    return
+                }
+                if retorno.statusCode == 200 {
+                    guard let dataReturned = data else {
+                        onError(.noData)
+                        return}
+                    do{
+                        let destaques = try JSONDecoder().decode(news_request.self, from: dataReturned)
+                        onComplete(destaques.items)
+                    } catch{
+                        onError(.invalidJson)
+                    }
+                } else {
+                    onError(.responseStatusCode(code: retorno.statusCode))
+                }
+            } else {
+                onError(.taskError(error: erro!))
+            }
+        }.resume()
+    }
+
+    
     class func loadFromUrl(queryString: String, onComplete: @escaping ([Any]) -> Void, onError: @escaping (RestError) -> Void)  {
         
         guard let url = URL(string: basePath + queryString) else {

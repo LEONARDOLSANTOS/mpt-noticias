@@ -9,10 +9,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var textBuscar: UITextField!
     @IBOutlet var tvNews: UITableView!
     @IBOutlet var aivLoading: UIActivityIndicatorView!
     var destaques: [NewsItem] = []
     private var viewModel = HomeViewModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Exibe regras de uso do app
+        showTermsUse()
+        
+        // associa a viewmodel
+        setupBind()
+        
+        // recupera noticias para exibicao
+        viewModel.getDataFromUrl(queryString: textBuscar.text ?? "")
+    }
     
     private func setupBind(){
         viewModel.showLoading = { [weak self] in
@@ -34,20 +47,21 @@ class ViewController: UIViewController {
                 self?.aivLoading.stopAnimating()
             }
         }
+        viewModel.clearTable = { [weak self] in
+            self?.destaques = []
+            DispatchQueue.main.async {
+                self?.tvNews.reloadData()
+                self?.aivLoading.stopAnimating()
+            }
+        }
         
         
     }
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Exibe regras de uso do app
-        showTermsUse()
+    @IBAction func buscarNoticias(_ sender: Any) {
         
-        // associa a viewmodel
-        setupBind()
+        viewModel.getDataFromUrl(queryString: textBuscar.text ?? "")
         
-        // recupera noticias para exibicao
-        viewModel.getDataFromUrl()
     }
     
     // configura parametros tela de detalhamento
@@ -60,6 +74,7 @@ class ViewController: UIViewController {
     func showTermsUse() {
         // recupera configuraçoes do usuario
         let config = Configuration.shared
+        
         //config.termOfUseAccepted = false
         // se usuario já aceitou termos nao exibe novamente
         if !config.termOfUseAccepted {
