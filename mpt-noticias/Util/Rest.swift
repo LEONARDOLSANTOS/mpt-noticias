@@ -71,7 +71,7 @@ class Rest {
             urlResource += "&SearchableText=" + queryString
         }
         urlResource += "&b_start=0&sort_on=effective&sort_order=reverse"
-        urlResource += "&review_state=published&portal_type=News+Item&b_size=10"
+        urlResource += "&review_state=published&portal_type=News+Item&b_size=20"
         
         guard let url = URL(string: basePath + urlResource) else {
             onError(.url)
@@ -103,47 +103,15 @@ class Rest {
     }
 
     
-    class func loadFromUrl(queryString: String, onComplete: @escaping ([Any]) -> Void, onError: @escaping (RestError) -> Void)  {
-        
-        guard let url = URL(string: basePath + queryString) else {
-            onError(.url)
-            return
-        }
-        session.dataTask(with: url) { (data: Data?, response: URLResponse?, erro: Error?) in
-            if erro == nil {
-                guard let retorno = response as? HTTPURLResponse else {
-                    onError(.noResponse)
-                    return
-                }
-                if retorno.statusCode == 200 {
-                    guard let dataReturned = data else {
-                        onError(.noData)
-                        return}
-                    do{
-                        let resposta = try JSONDecoder().decode(news_request.self, from: dataReturned)
-                        onComplete(resposta.items)
-                    } catch{
-                        onError(.invalidJson)
-                    }
-                } else {
-                    onError(.responseStatusCode(code: retorno.statusCode))
-                }
-            } else {
-                onError(.taskError(error: erro!))
-            }
-        }.resume()
-    }
+
     
     
-    class func loadPublicacoes(onComplete: @escaping ([PublicacaoItem]) -> Void, onError: @escaping (RestError) -> Void,  tipoPublicacao: String)  {
+    class func loadPublicacoes(onComplete: @escaping ([PublicacaoItem]) -> Void, onError: @escaping (RestError) -> Void,  filtros: String)  {
         var  queryString  = "publicacoes/@search?fullobjects&review_state=published&portal_type=publicacao"
-        if tipoPublicacao == "" {
-            queryString += "&tipo_de_publicacao=artigos&b_size=20"
-        } else {
-            queryString += "&tipo_de_publicacao=" + tipoPublicacao
-        }
-   
+        queryString += filtros
+        queryString += "&sort_order=reverse&b_size=10"
         
+        print( basePath + queryString)
         guard let url = URL(string: basePath + queryString) else {
             onError(.url)
             return
@@ -162,6 +130,7 @@ class Rest {
                         let retorno = try JSONDecoder().decode(publicacao_request.self, from: dataReturned)
                         onComplete(retorno.items)
                     } catch{
+                        
                         onError(.invalidJson)
                     }
                 } else {

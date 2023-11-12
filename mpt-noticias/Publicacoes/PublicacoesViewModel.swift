@@ -1,29 +1,31 @@
 //
-//  HomeViewModel.swift
+//  PublicacoesViewModel.swift
 //  mpt-noticias
 //
-//  Created by LEONARDO LUIZ SILVA SANTOS on 08/11/23.
+//  Created by LEONARDO LUIZ SILVA SANTOS on 11/11/23.
 //
 
 import Foundation
 
 
-class HomeViewModel{
+class PublicacaoViewModel{
     
     var showLoading: (() -> Void)?
     var hideLoading: (() -> Void)?
-    var showItens: ((_ destaques: [NewsItem]) -> Void)?
+    var showItens: ((_ destaques: [PublicacaoItem]) -> Void)?
     var clearTable: (() -> Void)?
 
-    func getNewsFromUrl(queryString: String){
+    
+    func getBooksFromUrl(queryString: String){
         clearTable?()
         showLoading?()
-        Rest.loadDestaqueswithParam (queryString: queryString, onComplete: { (ItemsFromRest) in
+        Rest.loadPublicacoes(onComplete: { (ItemsFromRest) in
             self.showItens?(ItemsFromRest)
             self.hideLoading?()
         } , onError: { erro in
             print(erro)
             self.hideLoading?()
-        })
+        }, filtros: queryString)
     }
+
 }

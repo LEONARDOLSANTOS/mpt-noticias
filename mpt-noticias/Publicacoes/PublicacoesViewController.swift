@@ -8,51 +8,114 @@
 import UIKit
 
 class PublicacoesViewController: UIViewController {
-    @IBOutlet var pvTipoPublicacao: UIPickerView!
     @IBOutlet var tvPublicacao: UITableView!
     @IBOutlet var aivLoading: UIActivityIndicatorView!
-    var publicacoes = [PublicacaoItem] (){
-        didSet{
-            DispatchQueue.main.async {
-                self.tvPublicacao.reloadData()
-            }
-        }
-    }
-    var tiposDePublicacao: [String] = [String]()
-    var areasDeAtuacao: [String] = [String]()
+    var publicacoes: [PublicacaoItem] = []
+    private var viewModel = PublicacaoViewModel()
 
+    
+    @IBOutlet var popupButtonTiupoPublicacao: UIButton!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        pvTipoPublicacao.delegate = self
-        pvTipoPublicacao.dataSource = self
-        tiposDePublicacao = ["Artigos","Cartilhas","Estudos","Livros", "Manuais", "MPT na Escola", "Nota Técnica", "Orientações", "Revista Labor"]
-        areasDeAtuacao = ["Administração Pública","Criança e Adolescente", "Fraudes Trabalhistas", "Liberdade Sindical", "Meio Ambiente do Trabalho","Promoção da Igualdade", "Trabalho Portuário e Aquaviário", "Trabalho Escravo"]
         
-        DispatchQueue.main.async {
-            self.aivLoading.startAnimating()
+        setupPopUpButtons()
+        
+        setupBind()
+        
+        showItens()
+
+    }
+    
+    func setupPopUpButtons(){
+              
+        let popUpButtonClosure = { (action: UIAction) in
+                        self.showItens()
         }
         
-        var  queryString  = "publicacoes/@search?fullobjects&review_state=published&portal_type=publicacao"
-        queryString += "&b_size=20"
-        Rest.loadPublicacoes( onComplete: { (publicacoesFromRest) in
-            self.publicacoes = publicacoesFromRest
-            
-            DispatchQueue.main.async {
-                self.tvPublicacao.reloadData()
-                self.aivLoading.stopAnimating()
-
-            }
-            
-        }, onError: { restError in
-            print(restError)
-            DispatchQueue.main.async {
-               self.aivLoading.stopAnimating()
-            }
-        }, tipoPublicacao: "")
-        
+        popupButtonTiupoPublicacao.menu = UIMenu(children: [
+            UIAction(title: "Artigos",handler: popUpButtonClosure),
+            UIAction(title: "Cartilhas",handler: popUpButtonClosure),
+//            UIAction(title: "Estudos",handler: popUpButtonClosure),
+            UIAction(title: "Livros",handler: popUpButtonClosure),
+            UIAction(title: "Manuais",handler: popUpButtonClosure),
+            //UIAction(title: "Mpt na Escola",handler: popUpButtonClosure),
+            //UIAction(title: "Notas Técnicas",handler: popUpButtonClosure),
+            //UIAction(title: "Orientações",handler: popUpButtonClosure),
+            UIAction(title: "Revista Labor",handler: popUpButtonClosure),
+        ])
+        popupButtonTiupoPublicacao.showsMenuAsPrimaryAction = true
         
     }
     
+    private func setupBind(){
+        viewModel.showLoading = { [weak self] in
+            DispatchQueue.main.async {
+                self?.aivLoading.startAnimating()
+            }
+        }
+        
+        viewModel.hideLoading = {[weak self] in
+            DispatchQueue.main.async {
+                self?.aivLoading.stopAnimating()
+            }
+        }
+        
+        viewModel.showItens = { [weak self] itens in
+            self?.publicacoes = itens
+            DispatchQueue.main.async {
+                self?.aivLoading.stopAnimating()
+                self?.tvPublicacao.reloadData()
+               
+            }
+        }
+        
+        viewModel.clearTable = { [weak self] in
+            self?.publicacoes = []
+            DispatchQueue.main.async {
+                self?.tvPublicacao.reloadData()
+                self?.aivLoading.stopAnimating()
+            }
+        }
+    }
+    
+    private func showItens(){
+        
+        let filtros = formatFiltros()
+        viewModel.getBooksFromUrl(queryString: filtros)
+    }
+        
+    func formatFiltros() -> String {
+        var  queryString  = ""
+        queryString += "&tipo_de_publicacao="
+        switch popupButtonTiupoPublicacao.menu?.selectedElements[0].title ?? "" {
+        case "Artigos":
+            queryString += "artigos"
+        case "Cartilhas":
+            queryString += "cartilhas"
+        case "Estudos":
+            queryString += "estudos_unicamp"
+        case "Livros":
+            queryString += "livros"
+        case "Manuais":
+            queryString += "manuais"
+        case "MPT na Escola":
+            queryString += "mpt_na_escola"
+        case "Notas Técnicas":
+            queryString += "notas_tecnicas"
+        case "Orientações":
+            queryString += "orientacoes"
+        case "Revista Labor":
+            queryString += "revista_labor"
+        default:
+            queryString=""
+        }
+       
+       
+        
+        return queryString
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // recupera proximo viewControler
         let vc = segue.destination as! PublicacoesDetailViewController
@@ -75,26 +138,3 @@ extension PublicacoesViewController: UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-
-
-extension PublicacoesViewController: UIPickerViewDelegate, UIPickerViewDataSource{
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if component == 0 {
-            return tiposDePublicacao.count
-        } else{
-            return areasDeAtuacao.count
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if component == 0 {
-            return tiposDePublicacao[row]
-        } else{
-            return areasDeAtuacao[row]
-        }
-    }
-}

@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet var textBuscar: UITextField!
     @IBOutlet var tvNews: UITableView!
     @IBOutlet var aivLoading: UIActivityIndicatorView!
@@ -24,7 +23,7 @@ class ViewController: UIViewController {
         setupBind()
         
         // recupera noticias para exibicao
-        viewModel.getDataFromUrl(queryString: textBuscar.text ?? "")
+        viewModel.getNewsFromUrl(queryString: textBuscar.text ?? "")
     }
     
     private func setupBind(){
@@ -54,13 +53,11 @@ class ViewController: UIViewController {
                 self?.aivLoading.stopAnimating()
             }
         }
-        
-        
     }
   
     @IBAction func buscarNoticias(_ sender: Any) {
         
-        viewModel.getDataFromUrl(queryString: textBuscar.text ?? "")
+        viewModel.getNewsFromUrl(queryString: textBuscar.text ?? "")
         
     }
     
@@ -85,8 +82,16 @@ class ViewController: UIViewController {
             self.present(vc, animated: true, completion: nil)
         }
     }
+    
+   
 }
 
+extension ViewController: UITextFieldDelegate{
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        viewModel.getNewsFromUrl(queryString: "")
+        return true
+      }
+}
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -17,7 +17,8 @@ class PublicacoesDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      //   configWebView()
-        configWebViewFromURL(urlString: "https://mpt.mp.br/pgt/publicacoes/artigos/revista-do-tribunal-superior-do-trabalho-ano-88-no-3-de-julho-a-setembro-de-2022/@@display-file/arquivo_pdf")
+        
+        configWebViewFromURL(urlString: publicacaoItem.arquivoPDF.download )
     }
     
     func configWebView(){

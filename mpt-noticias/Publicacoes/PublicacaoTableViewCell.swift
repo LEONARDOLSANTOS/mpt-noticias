@@ -14,12 +14,21 @@ class PublicacaoTableViewCell: UITableViewCell {
   
     func Prepare(with item: PublicacaoItem){
         self.labelTitulo.text = item.title
+        
+        print(item.title)
         //URLSession
 //        if item.image.download != "" {
 //            setImageFromStringrURL(stringUrl: item.image.scales.mini.download)
 //        }
         
         let url = URL(string: item.image.scales.mini.download)
+//        DispatchQueue.global().async {
+//            if let data = try? Data(contentsOf: url!){
+//                DispatchQueue.main.async{
+//                    self.ivPublicacao.image = UIImage(data: data)
+//                }
+//            }
+//        }
         DispatchQueue.global().async {
             if let data = try? Data(contentsOf: url!){
                 DispatchQueue.main.async{
@@ -27,7 +36,6 @@ class PublicacaoTableViewCell: UITableViewCell {
                 }
             }
         }
-        
         
     }
     

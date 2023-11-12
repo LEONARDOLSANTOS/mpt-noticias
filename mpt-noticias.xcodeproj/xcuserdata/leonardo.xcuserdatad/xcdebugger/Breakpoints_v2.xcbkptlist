@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EC1A5C36-B4DB-4EAD-9F58-DC1EA459874F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mpt-noticias/BancoDeImagens/ImagensTableViewController.swift"
@@ -87,54 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BC05AE8D-A0DF-4199-8BC9-29117303040E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "mpt-noticias/Util/Rest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "loadPublicacoes(onComplete:onError:tipoPublicacao:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BC05AE8D-A0DF-4199-8BC9-29117303040E - 3aaadff8d907700"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static mpt_noticias.Rest.loadPublicacoes(onComplete: (Swift.Array&lt;mpt_noticias.PublicacaoItem&gt;) -&gt; (), onError: (mpt_noticias.RestError) -&gt; (), tipoPublicacao: Swift.String) -&gt; ()"
-                  moduleName = "mpt-noticias"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Util/Rest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "936">
-               </Location>
-               <Location
-                  uuid = "BC05AE8D-A0DF-4199-8BC9-29117303040E - 3aaadff8d907700"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static mpt_noticias.Rest.loadPublicacoes(onComplete: (Swift.Array&lt;mpt_noticias.PublicacaoItem&gt;) -&gt; (), onError: (mpt_noticias.RestError) -&gt; (), tipoPublicacao: Swift.String) -&gt; ()"
-                  moduleName = "mpt-noticias"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Util/Rest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "728">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "82F08470-5279-4BBA-A82D-A057611EAA3E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -142,13 +94,13 @@
             filePath = "mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "config()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "82F08470-5279-4BBA-A82D-A057611EAA3E - da65262e65226580"
+                  uuid = "82F08470-5279-4BBA-A82D-A057611EAA3E - da65262e65226790"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -158,12 +110,12 @@
                   urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "88">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "484">
                </Location>
                <Location
-                  uuid = "82F08470-5279-4BBA-A82D-A057611EAA3E - da65262e65226580"
+                  uuid = "82F08470-5279-4BBA-A82D-A057611EAA3E - da65262e65226790"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -173,24 +125,9 @@
                   urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "204">
-               </Location>
-               <Location
-                  uuid = "82F08470-5279-4BBA-A82D-A057611EAA3E - da65262e65226580"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "mpt_noticias.PublicacoesDetailViewController.config() -&gt; ()"
-                  moduleName = "mpt-noticias"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "196">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "140">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -215,14 +152,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "ABD5AA69-4CDE-404B-92DF-BC955C85012F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "loadPdf(urlString:)"
             landmarkType = "7">
             <Locations>
@@ -323,14 +260,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "95CDD055-E3B5-4D6D-9823-6D6065E08C66"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "loadPdf(urlString:)"
             landmarkType = "7">
             <Locations>
@@ -416,19 +353,19 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6C79F660-A19F-42EE-B6BB-50238767B200"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "loadPdf(urlString:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "6C79F660-A19F-42EE-B6BB-50238767B200 - 5c052e39e0782462"
+                  uuid = "6C79F660-A19F-42EE-B6BB-50238767B200 - 5c052e39e0782252"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -438,12 +375,12 @@
                   urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
                   offsetFromSymbolStart = "348">
                </Location>
                <Location
-                  uuid = "6C79F660-A19F-42EE-B6BB-50238767B200 - 5c052e39e078238d"
+                  uuid = "6C79F660-A19F-42EE-B6BB-50238767B200 - 5c052e39e0782252"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -453,54 +390,9 @@
                   urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "348">
-               </Location>
-               <Location
-                  uuid = "6C79F660-A19F-42EE-B6BB-50238767B200 - 5c052e39e0782275"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "mpt_noticias.PublicacoesDetailViewController.loadPdf(urlString: Swift.String) -&gt; ()"
-                  moduleName = "mpt-noticias"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "348">
-               </Location>
-               <Location
-                  uuid = "6C79F660-A19F-42EE-B6BB-50238767B200 - 5c052e39e0782275"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "mpt_noticias.PublicacoesDetailViewController.loadPdf(urlString: Swift.String) -&gt; ()"
-                  moduleName = "mpt-noticias"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
                   offsetFromSymbolStart = "340">
-               </Location>
-               <Location
-                  uuid = "6C79F660-A19F-42EE-B6BB-50238767B200 - 5c052e39e0782275"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "mpt_noticias.PublicacoesDetailViewController.loadPdf(urlString: Swift.String) -&gt; ()"
-                  moduleName = "mpt-noticias"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "436">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -509,19 +401,19 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4E959346-D6F9-4681-9069-23911EE9EC5B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "configWebView()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "4E959346-D6F9-4681-9069-23911EE9EC5B - e106ed6bd0974a40"
+                  uuid = "4E959346-D6F9-4681-9069-23911EE9EC5B - e106ed6bd0974a02"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -531,12 +423,12 @@
                   urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "276">
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "628">
                </Location>
                <Location
-                  uuid = "4E959346-D6F9-4681-9069-23911EE9EC5B - e106ed6bd0974a40"
+                  uuid = "4E959346-D6F9-4681-9069-23911EE9EC5B - e106ed6bd0974a02"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -546,69 +438,9 @@
                   urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "532">
-               </Location>
-               <Location
-                  uuid = "4E959346-D6F9-4681-9069-23911EE9EC5B - e106ed6bd0974a61"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "mpt_noticias.PublicacoesDetailViewController.configWebView() -&gt; ()"
-                  moduleName = "mpt-noticias"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "276">
-               </Location>
-               <Location
-                  uuid = "4E959346-D6F9-4681-9069-23911EE9EC5B - e106ed6bd0974a61"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "mpt_noticias.PublicacoesDetailViewController.configWebView() -&gt; ()"
-                  moduleName = "mpt-noticias"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "532">
-               </Location>
-               <Location
-                  uuid = "4E959346-D6F9-4681-9069-23911EE9EC5B - e106ed6bd0974a61"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "mpt_noticias.PublicacoesDetailViewController.configWebView() -&gt; ()"
-                  moduleName = "mpt-noticias"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
                   offsetFromSymbolStart = "272">
-               </Location>
-               <Location
-                  uuid = "4E959346-D6F9-4681-9069-23911EE9EC5B - e106ed6bd0974a61"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "mpt_noticias.PublicacoesDetailViewController.configWebView() -&gt; ()"
-                  moduleName = "mpt-noticias"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "352">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -616,17 +448,542 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3F88ABF0-3CD1-4924-9849-A6C349CE8ABC"
+            uuid = "E9C54B4B-EB23-43F0-841D-3FA512696AC8"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "mpt-noticias/Home/ViewController.swift"
+            filePath = "mpt-noticias/Util/Rest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "ViewController"
-            landmarkType = "3">
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "loadPublicacoes(onComplete:onError:filtros:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E9C54B4B-EB23-43F0-841D-3FA512696AC8 - 2bf54237260bdf74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static mpt_noticias.Rest.loadPublicacoes(onComplete: (Swift.Array&lt;mpt_noticias.PublicacaoItem&gt;) -&gt; (), onError: (mpt_noticias.RestError) -&gt; (), filtros: Swift.String) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Util/Rest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "728">
+               </Location>
+               <Location
+                  uuid = "E9C54B4B-EB23-43F0-841D-3FA512696AC8 - 2bf54237260bdf55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static mpt_noticias.Rest.loadPublicacoes(onComplete: (Swift.Array&lt;mpt_noticias.PublicacaoItem&gt;) -&gt; (), onError: (mpt_noticias.RestError) -&gt; (), filtros: Swift.String) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Util/Rest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "648">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C658E241-2A17-4A25-99BC-EE6C98E27BE4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/Util/Rest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "loadPublicacoes(onComplete:onError:filtros:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C658E241-2A17-4A25-99BC-EE6C98E27BE4 - 2bf54237260bdeb6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static mpt_noticias.Rest.loadPublicacoes(onComplete: (Swift.Array&lt;mpt_noticias.PublicacaoItem&gt;) -&gt; (), onError: (mpt_noticias.RestError) -&gt; (), filtros: Swift.String) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Util/Rest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "165"
+                  endingLineNumber = "165"
+                  offsetFromSymbolStart = "960">
+               </Location>
+               <Location
+                  uuid = "C658E241-2A17-4A25-99BC-EE6C98E27BE4 - 2bf54237260bdeb6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static mpt_noticias.Rest.loadPublicacoes(onComplete: (Swift.Array&lt;mpt_noticias.PublicacaoItem&gt;) -&gt; (), onError: (mpt_noticias.RestError) -&gt; (), filtros: Swift.String) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Util/Rest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "165"
+                  endingLineNumber = "165"
+                  offsetFromSymbolStart = "728">
+               </Location>
+               <Location
+                  uuid = "C658E241-2A17-4A25-99BC-EE6C98E27BE4 - 2bf54237260bde13"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static mpt_noticias.Rest.loadPublicacoes(onComplete: (Swift.Array&lt;mpt_noticias.PublicacaoItem&gt;) -&gt; (), onError: (mpt_noticias.RestError) -&gt; (), filtros: Swift.String) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Util/Rest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "728">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B80B8205-0079-4114-83D8-27D1DC5239F0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/Util/Rest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "loadPublicacoes(onComplete:onError:filtros:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B80B8205-0079-4114-83D8-27D1DC5239F0 - 1572d56b3ffb966f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static mpt_noticias.Rest.loadPublicacoes(onComplete: (Swift.Array&lt;mpt_noticias.PublicacaoItem&gt;) -&gt; (), onError: (mpt_noticias.RestError) -&gt; (), filtros: Swift.String) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Util/Rest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  uuid = "B80B8205-0079-4114-83D8-27D1DC5239F0 - 1572d56b3ffb964e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static mpt_noticias.Rest.loadPublicacoes(onComplete: (Swift.Array&lt;mpt_noticias.PublicacaoItem&gt;) -&gt; (), onError: (mpt_noticias.RestError) -&gt; (), filtros: Swift.String) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Util/Rest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "388">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "813E6342-8EDA-45B1-8CAE-1B9BCAF1C49B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/Util/Rest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "loadPublicacoes(onComplete:onError:filtros:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F85C184-F1C6-4CC9-8AD8-017DAD42233F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/Util/Rest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "loadPublicacoes(onComplete:onError:filtros:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6F85C184-F1C6-4CC9-8AD8-017DAD42233F - 2bf54237260bd9be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static mpt_noticias.Rest.loadPublicacoes(onComplete: (Swift.Array&lt;mpt_noticias.PublicacaoItem&gt;) -&gt; (), onError: (mpt_noticias.RestError) -&gt; (), filtros: Swift.String) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Util/Rest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "1032">
+               </Location>
+               <Location
+                  uuid = "6F85C184-F1C6-4CC9-8AD8-017DAD42233F - 2bf54237260bd99f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static mpt_noticias.Rest.loadPublicacoes(onComplete: (Swift.Array&lt;mpt_noticias.PublicacaoItem&gt;) -&gt; (), onError: (mpt_noticias.RestError) -&gt; (), filtros: Swift.String) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Util/Rest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "172"
+                  endingLineNumber = "172"
+                  offsetFromSymbolStart = "1340">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4470A6C1-4CBF-4B12-9DBA-6C20E288BE7F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/Publicacoes/PublicacoesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "formatFiltros()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4470A6C1-4CBF-4B12-9DBA-6C20E288BE7F - 2d740f10e698036e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mpt_noticias.PublicacoesViewController.formatFiltros() -&gt; Swift.String"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "4470A6C1-4CBF-4B12-9DBA-6C20E288BE7F - 2d740f10e698036e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mpt_noticias.PublicacoesViewController.formatFiltros() -&gt; Swift.String"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58567DED-B8C9-4258-993D-190A643E755C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/Util/Rest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "loadDestaqueswithParam(queryString:onComplete:onError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "45DF4BCE-972F-4154-A76D-958A2D6FDE7D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/Util/Rest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "loadPublicacoes(onComplete:onError:filtros:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93D2DF6D-6000-45C1-AE2F-A79348FF44CB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/Publicacoes/PublicacaoTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "Prepare(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "93D2DF6D-6000-45C1-AE2F-A79348FF44CB - a2a0f0b1c509f307"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mpt_noticias.PublicacaoTableViewCell.Prepare(with: mpt_noticias.PublicacaoItem) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacaoTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "700">
+               </Location>
+               <Location
+                  uuid = "93D2DF6D-6000-45C1-AE2F-A79348FF44CB - a2a0f0b1c509f3b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mpt_noticias.PublicacaoTableViewCell.Prepare(with: mpt_noticias.PublicacaoItem) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacaoTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "972">
+               </Location>
+               <Location
+                  uuid = "93D2DF6D-6000-45C1-AE2F-A79348FF44CB - a2a0f0b1c509f3b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mpt_noticias.PublicacaoTableViewCell.Prepare(with: mpt_noticias.PublicacaoItem) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacaoTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "940">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE0D6C5E-2283-441E-8BBB-6EEAD891C24C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/Publicacoes/PublicacaoTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "Prepare(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CE0D6C5E-2283-441E-8BBB-6EEAD891C24C - a2a0f0b1c509f4c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mpt_noticias.PublicacaoTableViewCell.Prepare(with: mpt_noticias.PublicacaoItem) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacaoTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  uuid = "CE0D6C5E-2283-441E-8BBB-6EEAD891C24C - a2a0f0b1c509f4c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mpt_noticias.PublicacaoTableViewCell.Prepare(with: mpt_noticias.PublicacaoItem) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacaoTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "432">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31DAD8F3-5605-4B77-A21B-C0506C65CE87"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/Publicacoes/PublicacaoTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "setImageFromStringrURL(stringUrl:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "31DAD8F3-5605-4B77-A21B-C0506C65CE87 - ce85f10b894f90af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mpt_noticias.PublicacaoTableViewCell.setImageFromStringrURL(stringUrl: Swift.String) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacaoTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  uuid = "31DAD8F3-5605-4B77-A21B-C0506C65CE87 - 21ef061f488bca38"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mpt_noticias.PublicacaoTableViewCell.setImageFromStringrURL(stringUrl: Swift.String) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacaoTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "31DAD8F3-5605-4B77-A21B-C0506C65CE87 - ce85f10b894f90af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mpt_noticias.PublicacaoTableViewCell.setImageFromStringrURL(stringUrl: Swift.String) -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacaoTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58605288-B1FC-47CA-9C5A-1FD5C04EB432"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/Home/NewsTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "Prepare(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11A98ADD-CB1E-47E2-930B-433429BFF0DC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "11A98ADD-CB1E-47E2-930B-433429BFF0DC - ed4c3a00d0fb8bd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mpt_noticias.PublicacoesDetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "11A98ADD-CB1E-47E2-930B-433429BFF0DC - ed4c3a00d0fb8bd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mpt_noticias.PublicacoesDetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "mpt-noticias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonardo/Desktop/IOS/mpt-noticias/mpt-noticias/Publicacoes/PublicacoesDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
