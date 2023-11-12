@@ -152,10 +152,16 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zd6-5s-FVX">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="vermelho-mpt"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qGs-wF-JfE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zd6-5s-FVX" firstAttribute="centerX" secondItem="fmW-D7-YKX" secondAttribute="centerX" id="4fE-5X-xBO"/>
+                            <constraint firstItem="zd6-5s-FVX" firstAttribute="centerY" secondItem="fmW-D7-YKX" secondAttribute="centerY" id="V5e-jd-hmB"/>
                             <constraint firstItem="1yH-zb-U9X" firstAttribute="leading" secondItem="qGs-wF-JfE" secondAttribute="leading" id="YYP-KT-Lb5"/>
                             <constraint firstItem="qGs-wF-JfE" firstAttribute="trailing" secondItem="1yH-zb-U9X" secondAttribute="trailing" id="b9k-aH-LBc"/>
                             <constraint firstItem="qGs-wF-JfE" firstAttribute="bottom" secondItem="1yH-zb-U9X" secondAttribute="bottom" id="gqV-r0-o2w"/>
@@ -164,6 +170,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7Zh-4a-rw0"/>
                     <connections>
+                        <outlet property="aivLoading" destination="zd6-5s-FVX" id="hKw-eb-QZM"/>
                         <outlet property="wkPublicacao" destination="1yH-zb-U9X" id="5aI-zm-qia"/>
                     </connections>
                 </viewController>
