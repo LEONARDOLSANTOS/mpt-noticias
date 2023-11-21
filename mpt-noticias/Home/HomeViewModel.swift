@@ -7,9 +7,7 @@
 
 import Foundation
 
-
 class HomeViewModel{
-    
     var showLoading: (() -> Void)?
     var hideLoading: (() -> Void)?
     var showItens: ((_ destaques: [NewsItem]) -> Void)?
@@ -23,7 +21,6 @@ class HomeViewModel{
             self.showItens?(ItemsFromRest)
             self.hideLoading?()
         } , onError: { erro in
-            // exibir mensagem de erro para usuário e permitir nova tentativa
             print(erro)
             self.showErrorMessage?(erro)
             self.hideLoading?()
