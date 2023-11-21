@@ -24,6 +24,7 @@ class PublicacaoViewModel{
             self.hideLoading?()
         } , onError: { erro in
             print(erro)
+            self.showErrorMessage?(erro)
             self.hideLoading?()
         })
     }

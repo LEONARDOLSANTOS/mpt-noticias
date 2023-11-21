@@ -14,15 +14,12 @@ class TermsOfUseViewController: UIViewController {
         super.viewDidLoad()
     }
     
-
     @IBAction func agreeWithTerms(_ sender: Any) {
         let config = Configuration.shared
         print("Aceitou o termo de uso ? \(config.termOfUseAccepted)")
         config.termOfUseAccepted = true 
         print("Situacao atual(termOfUseAccepted) => \(config.termOfUseAccepted)")
-        
         self.dismiss(animated: true, completion: nil)
-        
     }
     
     @IBAction func back(_ sender: Any) {

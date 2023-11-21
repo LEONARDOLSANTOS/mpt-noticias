@@ -6,7 +6,7 @@ import Foundation
 // MARK: - PLONE REQUEST FOR NEWS
 struct publicacao_request: Codable {
     var id: String
-    var batching: Batching
+    var batching: Batching?
     var items: [PublicacaoItem]
    
     enum CodingKeys: String, CodingKey {
@@ -25,7 +25,7 @@ struct PublicacaoItem: Codable {
     let tipoDePublicacao: String
     let title , description: String
     let created: String
-    let image: Imagem
+    let image: Imagem?
     
     enum CodingKeys: String, CodingKey {
         case id = "@id"

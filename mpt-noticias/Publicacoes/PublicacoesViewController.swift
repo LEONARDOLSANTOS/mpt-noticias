@@ -61,7 +61,8 @@ class PublicacoesViewController: UIViewController {
             DispatchQueue.main.async {
                 self?.tvPublicacao.reloadData()
                 self?.aivLoading.stopAnimating()
-                let alert = UIAlertController(title: "Alert", message: "Erro ao recuperar dados do site MPT. Aguarde um momento e click novamente no botão Publicações", preferredStyle: UIAlertController.Style.alert)
+                print(erro)
+                let alert = UIAlertController(title: "Alert", message: "Erro ao recuperar dados do site MPT. Aguarde um momento e selecione novamente um tipo de publicação para exibir.", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
                 self?.present(alert, animated: true, completion: nil)
             }
@@ -86,12 +87,9 @@ class PublicacoesViewController: UIViewController {
         popupButtonTiupoPublicacao.menu = UIMenu(children: [
             UIAction(title: "Artigos",handler: popUpButtonClosure),
             UIAction(title: "Cartilhas",handler: popUpButtonClosure),
+            UIAction(title: "Estudos",handler: popUpButtonClosure),
             UIAction(title: "Livros",handler: popUpButtonClosure),
             UIAction(title: "Manuais",handler: popUpButtonClosure),
-            //UIAction(title: "Estudos",handler: popUpButtonClosure),
-            //UIAction(title: "Mpt na Escola",handler: popUpButtonClosure),
-            //UIAction(title: "Notas Técnicas",handler: popUpButtonClosure),
-            //UIAction(title: "Orientações",handler: popUpButtonClosure),
             UIAction(title: "Revista Labor",handler: popUpButtonClosure),
         ])
         popupButtonTiupoPublicacao.showsMenuAsPrimaryAction = true

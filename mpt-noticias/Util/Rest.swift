@@ -16,16 +16,6 @@ enum RestError{
 }
 
 class Rest {
-    // variavel publica define endpoint para noticias
-    public static var urlNews = "https://mpt.mp.br/pgt/noticias/@search?fullobjects&review_state=published&portal_type=News+Item"
-    // variavel publica endpoint livors
-    public static var urlBooks = "https://mpt.mp.br/pgt/publicacoes/@search?fullobjects&review_state=published&portal_type=publicacao"
-    // padrao de ordenacao para noticias
-    public static var newsSortOption = "&sort_on=effective&sort_order=reverse"
-    // padrao de ordenacao para publicacoes
-    // padrao de ordenacao
-    public static var booksSortOption = "&sort_order=reverse"
-    
     private static let configuration: URLSessionConfiguration = {
         let config = URLSessionConfiguration.default
         config.allowsCellularAccess = true
@@ -35,6 +25,15 @@ class Rest {
         return config
     }()
     private static let session = URLSession(configuration:  configuration)
+
+    // variavel publica define endpoint para noticias
+    public static var urlNews = "https://mpt.mp.br/pgt/noticias/@search?fullobjects&review_state=published&portal_type=News+Item"
+    // variavel publica endpoint livors
+    public static var urlBooks = "https://mpt.mp.br/pgt/publicacoes/@search?fullobjects&review_state=published&portal_type=publicacao"
+    // padrao de ordenacao para noticias
+    public static var newsSortOption = "&sort_on=effective&sort_order=reverse"
+    // padrao de ordenacao para publicacoes
+    public static var booksSortOption = "&sort_order=reverse"
     
     class func loadNews(filter: String, fromIndex: Int = 0, tabSize: Int = 20, onComplete: @escaping ([NewsItem]) -> Void, onError: @escaping (RestError) -> Void)  {
         
@@ -71,13 +70,14 @@ class Rest {
             }
         }.resume()
     }
-
     
     class func loadPublicacoes(filter: String, fromIndex: Int = 0, tabSize: Int = 20, onComplete: @escaping ([PublicacaoItem]) -> Void, onError: @escaping (RestError) -> Void)  {
         
         var  stringURL  = urlBooks
-        stringURL += "&b_start=\(fromIndex)&b_size=\(tabSize)" + booksSortOption
+        stringURL += "&b_start=\(fromIndex)&b_size=\(tabSize)" 
         stringURL += filter
+        
+        print(stringURL)
         guard let url = URL(string: stringURL) else {
             onError(.url)
             return

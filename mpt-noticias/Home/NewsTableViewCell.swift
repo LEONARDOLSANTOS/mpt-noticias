@@ -19,6 +19,5 @@ class NewsTableViewCell: UITableViewCell {
         self.lbInfo.text = #"\#(formatDate(ploneDate: new.effective))  \#( formatSubjects(ploneSubjects: new.subjects) ) "#
         self.lbDescricao.text = new.description
     }
-    
 }
 
