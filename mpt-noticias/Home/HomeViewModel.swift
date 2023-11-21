@@ -14,15 +14,18 @@ class HomeViewModel{
     var hideLoading: (() -> Void)?
     var showItens: ((_ destaques: [NewsItem]) -> Void)?
     var clearTable: (() -> Void)?
+    var showErrorMessage: ((_ Error: RestError) -> Void)?
 
-    func getNewsFromUrl(queryString: String){
+    func getNews(filter: String = "", fromIndex: Int  = 0, tabSize: Int = 20){
         clearTable?()
         showLoading?()
-        Rest.loadDestaqueswithParam (queryString: queryString, onComplete: { (ItemsFromRest) in
+        Rest.loadNews(filter: filter, fromIndex: fromIndex, tabSize: tabSize, onComplete: { (ItemsFromRest) in
             self.showItens?(ItemsFromRest)
             self.hideLoading?()
         } , onError: { erro in
+            // exibir mensagem de erro para usuário e permitir nova tentativa
             print(erro)
+            self.showErrorMessage?(erro)
             self.hideLoading?()
         })
     }

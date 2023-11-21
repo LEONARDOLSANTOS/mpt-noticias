@@ -1,4 +1,3 @@
-//
 //  Rest.swift
 //  mpt-noticias
 //
@@ -17,8 +16,17 @@ enum RestError{
 }
 
 class Rest {
+    // variavel publica define endpoint para noticias
+    public static var urlNews = "https://mpt.mp.br/pgt/noticias/@search?fullobjects&review_state=published&portal_type=News+Item"
+    // variavel publica endpoint livors
+    public static var urlBooks = "https://mpt.mp.br/pgt/publicacoes/@search?fullobjects&review_state=published&portal_type=publicacao"
+    // padrao de ordenacao para noticias
+    public static var newsSortOption = "&sort_on=effective&sort_order=reverse"
+    // padrao de ordenacao para publicacoes
+    // padrao de ordenacao
+    public static var booksSortOption = "&sort_order=reverse"
     
-    private static let basePath = "https://mpt.mp.br/pgt/"
+    
     private static let configuration: URLSessionConfiguration = {
         let config = URLSessionConfiguration.default
         config.allowsCellularAccess = true
@@ -29,51 +37,15 @@ class Rest {
     }()
     private static let session = URLSession(configuration:  configuration)
     
-    
-    
-    // utlizando closure para retornar valores
-    class func loadDestaques(onComplete: @escaping ([NewsItem]) -> Void, onError: @escaping (RestError) -> Void)  {
-        var  queryString  = "noticias/@search?fullobjects&b_start=0&sort_on=effective&sort_order=reverse"
-        queryString += "&review_state=published&portal_type=News+Item&b_size=10"
-        guard let url = URL(string: basePath + queryString) else {
-            onError(.url)
-            return
-        }
-        session.dataTask(with: url) { (data: Data?, response: URLResponse?, erro: Error?) in
-            if erro == nil {
-                guard let retorno = response as? HTTPURLResponse else {
-                    onError(.noResponse)
-                    return
-                }
-                if retorno.statusCode == 200 {
-                    guard let dataReturned = data else {
-                        onError(.noData)
-                        return}
-                    do{
-                        let destaques = try JSONDecoder().decode(news_request.self, from: dataReturned)
-                        onComplete(destaques.items)
-                    } catch{
-                        onError(.invalidJson)
-                    }
-                } else {
-                    onError(.responseStatusCode(code: retorno.statusCode))
-                }
-            } else {
-                onError(.taskError(error: erro!))
-            }
-        }.resume()
-    }
-    
-    class func loadDestaqueswithParam(queryString: String, onComplete: @escaping ([NewsItem]) -> Void, onError: @escaping (RestError) -> Void)  {
+    class func loadNews(filter: String, fromIndex: Int = 0, tabSize: Int = 20, onComplete: @escaping ([NewsItem]) -> Void, onError: @escaping (RestError) -> Void)  {
         
-        var  urlResource  = "noticias/@search?fullobjects"
-        if queryString != "" {
-            urlResource += "&SearchableText=" + queryString
+        var  stringURL  = urlNews + newsSortOption
+        stringURL += "&b_start=\(fromIndex)&b_size=\(tabSize)"
+        if filter != "" {
+            stringURL += "&SearchableText=" + filter
         }
-        urlResource += "&b_start=0&sort_on=effective&sort_order=reverse"
-        urlResource += "&review_state=published&portal_type=News+Item&b_size=20"
         
-        guard let url = URL(string: basePath + urlResource) else {
+        guard let url = URL(string: stringURL) else {
             onError(.url)
             return
         }
@@ -102,20 +74,21 @@ class Rest {
         }.resume()
     }
 
-    
-
-    
-    
-    class func loadPublicacoes(onComplete: @escaping ([PublicacaoItem]) -> Void, onError: @escaping (RestError) -> Void,  filtros: String)  {
-        var  queryString  = "publicacoes/@search?fullobjects&review_state=published&portal_type=publicacao"
-        queryString += filtros
-        queryString += "&sort_order=reverse&b_size=10"
+    class func loadPublicacoes(filter: String, fromIndex: Int = 0, tabSize: Int = 20, onComplete: @escaping ([PublicacaoItem]) -> Void, onError: @escaping (RestError) -> Void)  {
         
-        print( basePath + queryString)
-        guard let url = URL(string: basePath + queryString) else {
+        var  stringURL  = urlBooks
+        stringURL += "&b_start=\(fromIndex)&b_size=\(tabSize)" + booksSortOption
+        stringURL += filter
+        print(stringURL)
+        /* stringURL = "https://mpt.mp.br/pgt/publicacoes/@search?fullobjects&review_state=published&portal_type=publicacao&sort_order=reverse&tipo_de_publicacao=artigos&b_size=20"
+         */
+        
+        
+        guard let url = URL(string: stringURL) else {
             onError(.url)
             return
         }
+        
         session.dataTask(with: url) { (data: Data?, response: URLResponse?, erro: Error?) in
             if erro == nil {
                 guard let retorno = response as? HTTPURLResponse else {
@@ -130,7 +103,6 @@ class Rest {
                         let retorno = try JSONDecoder().decode(publicacao_request.self, from: dataReturned)
                         onComplete(retorno.items)
                     } catch{
-                        
                         onError(.invalidJson)
                     }
                 } else {

@@ -8,63 +8,79 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var textBuscar: UITextField!
+    
+    @IBOutlet var tfFilter: UITextField!
     @IBOutlet var tvNews: UITableView!
     @IBOutlet var aivLoading: UIActivityIndicatorView!
-    var destaques: [NewsItem] = []
+    var newsItem: [NewsItem] = []
     private var viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Exibe regras de uso do app
+        // Exibe VIEW com  termos de uso do app
         showTermsUse()
-        
         // associa a viewmodel
         setupBind()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         // recupera noticias para exibicao
-        viewModel.getNewsFromUrl(queryString: textBuscar.text ?? "")
+        viewModel.getNews()
     }
     
     private func setupBind(){
+        
         viewModel.showLoading = { [weak self] in
             DispatchQueue.main.async {
                 self?.aivLoading.startAnimating()
             }
         }
-        
-        viewModel.showLoading = { [weak self] in
+        viewModel.hideLoading = { [weak self] in
             DispatchQueue.main.async {
                 self?.aivLoading.stopAnimating()
             }
         }
-        
         viewModel.showItens = { [weak self] itens in
-            self?.destaques = itens
+            self?.newsItem = itens
             DispatchQueue.main.async {
                 self?.tvNews.reloadData()
                 self?.aivLoading.stopAnimating()
+                self?.tfFilter.endEditing(true)
             }
         }
         viewModel.clearTable = { [weak self] in
-            self?.destaques = []
+            self?.newsItem = []
             DispatchQueue.main.async {
                 self?.tvNews.reloadData()
                 self?.aivLoading.stopAnimating()
+                self?.tfFilter.endEditing(true)
             }
+        }
+        viewModel.showErrorMessage = { [weak self] erro in
+            self?.newsItem = []
+            DispatchQueue.main.async {
+                self?.tvNews.reloadData()
+                self?.aivLoading.stopAnimating()
+                self?.tfFilter.endEditing(true)
+                let alert = UIAlertController(title: "Alert", message: "Erro ao recuperar dados do site MPT. Agurade um momento e click em BUSCAR", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+                self?.present(alert, animated: true, completion: nil)
+            }
+            print(erro)
         }
     }
   
+    // açao do botao filtrar/buscar
     @IBAction func buscarNoticias(_ sender: Any) {
         
-        viewModel.getNewsFromUrl(queryString: textBuscar.text ?? "")
+        viewModel.getNews(filter: tfFilter.text ?? "")
         
     }
     
     // configura parametros tela de detalhamento
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! NewsDetailViewController
-        let destaque = destaques[tvNews.indexPathForSelectedRow!.row]
+        let destaque = newsItem[tvNews.indexPathForSelectedRow!.row]
         vc.new = destaque
     }
     
@@ -72,7 +88,6 @@ class ViewController: UIViewController {
         // recupera configuraçoes do usuario
         let config = Configuration.shared
         
-        //config.termOfUseAccepted = false
         // se usuario já aceitou termos nao exibe novamente
         if !config.termOfUseAccepted {
             guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "IDTermsOfUseViewController") else {
@@ -83,24 +98,24 @@ class ViewController: UIViewController {
         }
     }
     
-   
 }
 
 extension ViewController: UITextFieldDelegate{
+    // recupera novos itens ao limpar campo de filtro
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        viewModel.getNewsFromUrl(queryString: "")
+        viewModel.getNews()
         return true
       }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return destaques.count
+        return newsItem.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tvNews.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
-        cell.Prepare(with: destaques[indexPath.row] )
+        cell.Prepare(with: newsItem[indexPath.row] )
         return cell
     }
 }
