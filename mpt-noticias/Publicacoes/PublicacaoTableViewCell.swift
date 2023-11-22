@@ -15,6 +15,7 @@ class PublicacaoTableViewCell: UITableViewCell {
     func Prepare(with item: PublicacaoItem){
         self.labelTitulo.text = item.title
         
+        // imagem padrao qdo nao existe imagem de capa para o livro
         let url = URL(string: item.image?.scales.mini.download ?? "https://mpt.mp.br/++theme++mpt/images/publicacao.png")
 
         DispatchQueue.global().async {

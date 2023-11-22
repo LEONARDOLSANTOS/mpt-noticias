@@ -15,8 +15,10 @@ enum RestError{
     case invalidJson
 }
 
-class Rest {
-    private static let configuration: URLSessionConfiguration = {
+final class Rest {
+    public static var shared: Rest = Rest()
+    
+    private let configuration: URLSessionConfiguration = {
         let config = URLSessionConfiguration.default
         config.allowsCellularAccess = true
         config.httpAdditionalHeaders = ["Content-Type": "application/json", "Accept": "application/json"]
@@ -24,20 +26,24 @@ class Rest {
         config.httpMaximumConnectionsPerHost = 5
         return config
     }()
-    private static let session = URLSession(configuration:  configuration)
+    private  let session: URLSession
 
     // variavel publica define endpoint para noticias
-    public static var urlNews = "https://mpt.mp.br/pgt/noticias/@search?fullobjects&review_state=published&portal_type=News+Item"
+    public  var urlNews = "https://mpt.mp.br/pgt/noticias/@search?fullobjects&review_state=published&portal_type=News+Item"
     // variavel publica endpoint livors
-    public static var urlBooks = "https://mpt.mp.br/pgt/publicacoes/@search?fullobjects&review_state=published&portal_type=publicacao"
+    public  var urlBooks = "https://mpt.mp.br/pgt/publicacoes/@search?fullobjects&review_state=published&portal_type=publicacao"
     // padrao de ordenacao para noticias
-    public static var newsSortOption = "&sort_on=effective&sort_order=reverse"
+    public  var newsSortOption = "&sort_on=effective&sort_order=reverse"
     // padrao de ordenacao para publicacoes
-    public static var booksSortOption = "&sort_order=reverse"
+    public  var booksSortOption = "&sort_order=reverse"
     
-    class func loadNews(filter: String, fromIndex: Int = 0, tabSize: Int = 20, onComplete: @escaping ([NewsItem]) -> Void, onError: @escaping (RestError) -> Void)  {
+    init(){
+        session = URLSession(configuration:  configuration)
+    }
+    
+    func loadNews(filter: String, fromIndex: Int = 0, tabSize: Int = 20, onComplete: @escaping ([NewsItem]) -> Void, onError: @escaping (RestError) -> Void)  {
         
-        var  stringURL  = urlNews + newsSortOption
+        var  stringURL  = urlNews +  newsSortOption
         stringURL += "&b_start=\(fromIndex)&b_size=\(tabSize)"
         if filter != "" {
             stringURL += "&SearchableText=" + filter
@@ -71,7 +77,7 @@ class Rest {
         }.resume()
     }
     
-    class func loadPublicacoes(filter: String, fromIndex: Int = 0, tabSize: Int = 20, onComplete: @escaping ([PublicacaoItem]) -> Void, onError: @escaping (RestError) -> Void)  {
+    func loadPublicacoes(filter: String, fromIndex: Int = 0, tabSize: Int = 20, onComplete: @escaping ([PublicacaoItem]) -> Void, onError: @escaping (RestError) -> Void)  {
         
         var  stringURL  = urlBooks
         stringURL += "&b_start=\(fromIndex)&b_size=\(tabSize)" 

@@ -17,7 +17,7 @@ class HomeViewModel{
     func getNews(filter: String = "", fromIndex: Int  = 0, tabSize: Int = 20){
         clearTable?()
         showLoading?()
-        Rest.loadNews(filter: filter, fromIndex: fromIndex, tabSize: tabSize, onComplete: { (ItemsFromRest) in
+        Rest.shared.loadNews(filter: filter, fromIndex: fromIndex, tabSize: tabSize, onComplete: { (ItemsFromRest) in
             self.showItens?(ItemsFromRest)
             self.hideLoading?()
         } , onError: { erro in

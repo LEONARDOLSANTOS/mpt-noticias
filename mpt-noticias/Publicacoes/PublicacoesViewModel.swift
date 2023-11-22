@@ -19,7 +19,7 @@ class PublicacaoViewModel{
     func getBooks(filter: String){
         clearTable?()
         showLoading?()
-        Rest.loadPublicacoes(filter:formatFilters(filter: filter), onComplete: { (ItemsFromRest) in
+        Rest.shared.loadPublicacoes(filter:formatFilters(filter: filter), onComplete: { (ItemsFromRest) in
             self.showItens?(ItemsFromRest)
             self.hideLoading?()
         } , onError: { erro in

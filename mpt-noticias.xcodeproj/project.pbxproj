@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7340E912B0E43C900891FEC /* RestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7340E902B0E43C900891FEC /* RestTests.swift */; };
 		A75F06502753CC7D000FCF3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F064F2753CC7D000FCF3E /* AppDelegate.swift */; };
 		A75F06522753CC7D000FCF3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F06512753CC7D000FCF3E /* SceneDelegate.swift */; };
 		A75F06542753CC7D000FCF3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F06532753CC7D000FCF3E /* ViewController.swift */; };
@@ -34,7 +35,18 @@
 		A7DCE4752AFBF39500A0B854 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DCE4742AFBF39500A0B854 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A77DED792B0D7B9600B544AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A75F06442753CC7D000FCF3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A75F064B2753CC7D000FCF3E;
+			remoteInfo = "mpt-noticias";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A7340E902B0E43C900891FEC /* RestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTests.swift; sourceTree = "<group>"; };
 		A75F064C2753CC7D000FCF3E /* mpt-noticias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mpt-noticias.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F064F2753CC7D000FCF3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75F06512753CC7D000FCF3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +64,7 @@
 		A75F067F27540570000FCF3E /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
 		A75F068B275544B2000FCF3E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		A76436C82AFFA15400BC42AB /* PublicacoesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicacoesViewModel.swift; sourceTree = "<group>"; };
+		A77DED752B0D7B9600B544AF /* mpt-noticiasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mpt-noticiasTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B1F69927558539008FA773 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		A7C60B182A81B98F00841380 /* ImagemRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagemRequestModel.swift; sourceTree = "<group>"; };
 		A7C60B192A81B98F00841380 /* NewsRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRequestModel.swift; sourceTree = "<group>"; };
@@ -72,6 +85,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A77DED722B0D7B9600B544AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				A75F064E2753CC7D000FCF3E /* mpt-noticias */,
+				A77DED762B0D7B9600B544AF /* mpt-noticiasTests */,
 				A75F064D2753CC7D000FCF3E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				A75F064C2753CC7D000FCF3E /* mpt-noticias.app */,
+				A77DED752B0D7B9600B544AF /* mpt-noticiasTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +194,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A77DED762B0D7B9600B544AF /* mpt-noticiasTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7340E902B0E43C900891FEC /* RestTests.swift */,
+			);
+			path = "mpt-noticiasTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,6 +222,24 @@
 			productReference = A75F064C2753CC7D000FCF3E /* mpt-noticias.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A77DED742B0D7B9600B544AF /* mpt-noticiasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A77DED7B2B0D7B9600B544AF /* Build configuration list for PBXNativeTarget "mpt-noticiasTests" */;
+			buildPhases = (
+				A77DED712B0D7B9600B544AF /* Sources */,
+				A77DED722B0D7B9600B544AF /* Frameworks */,
+				A77DED732B0D7B9600B544AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A77DED7A2B0D7B9600B544AF /* PBXTargetDependency */,
+			);
+			name = "mpt-noticiasTests";
+			productName = "mpt-noticiasTests";
+			productReference = A77DED752B0D7B9600B544AF /* mpt-noticiasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -199,11 +247,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					A75F064B2753CC7D000FCF3E = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					A77DED742B0D7B9600B544AF = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = A75F064B2753CC7D000FCF3E;
 					};
 				};
 			};
@@ -221,6 +273,7 @@
 			projectRoot = "";
 			targets = (
 				A75F064B2753CC7D000FCF3E /* mpt-noticias */,
+				A77DED742B0D7B9600B544AF /* mpt-noticiasTests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,6 +288,13 @@
 				A75F06572753CC7D000FCF3E /* Main.storyboard in Resources */,
 				A75F06742753D658000FCF3E /* Onboarding.storyboard in Resources */,
 				A75F067C2753F808000FCF3E /* Publicacoes.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A77DED732B0D7B9600B544AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +328,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A77DED712B0D7B9600B544AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7340E912B0E43C900891FEC /* RestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A77DED7A2B0D7B9600B544AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A75F064B2753CC7D000FCF3E /* mpt-noticias */;
+			targetProxy = A77DED792B0D7B9600B544AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A75F06552753CC7D000FCF3E /* Main.storyboard */ = {
@@ -472,6 +548,61 @@
 			};
 			name = Release;
 		};
+		A77DED7C2B0D7B9600B544AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R98N4JJF2;
+				FUSE_BUILD_SCRIPT_PHASES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leonardo.l.santos.mpt-noticiasTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mpt-noticias.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mpt-noticias";
+			};
+			name = Debug;
+		};
+		A77DED7D2B0D7B9600B544AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R98N4JJF2;
+				FUSE_BUILD_SCRIPT_PHASES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leonardo.l.santos.mpt-noticiasTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mpt-noticias.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mpt-noticias";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -489,6 +620,15 @@
 			buildConfigurations = (
 				A75F06612753CC7F000FCF3E /* Debug */,
 				A75F06622753CC7F000FCF3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A77DED7B2B0D7B9600B544AF /* Build configuration list for PBXNativeTarget "mpt-noticiasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A77DED7C2B0D7B9600B544AF /* Debug */,
+				A77DED7D2B0D7B9600B544AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
